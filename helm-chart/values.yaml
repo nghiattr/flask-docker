@@ -1,4 +1,4 @@
-image: nhtua/flask-docker:latest
+image: trongnghiattr/flask-docker-test:latest
 imagePullPolicy: IfNotPresent
 replicaCount: 1
 
