@@ -45,7 +45,7 @@ pipeline {
 
   post {
     success {
-      echo "SUCCESSFUL 921"
+      echo "SUCCESSFUL 921 TEst trigger"
     }
     failure {
       echo "FAILED"
