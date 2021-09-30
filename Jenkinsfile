@@ -21,7 +21,7 @@ pipeline {
       }
     }
 
-    stage("build") {
+    stage("Build") {
       agent { node {label 'master'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
@@ -41,11 +41,25 @@ pipeline {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
+
+    // stage("Deploy"){
+    //   agent { docker {
+    //         image 'alpine/helm'
+    //         args '-u 0:0 -v /tmp:/root/.cache'
+    //       }}
+    //   steps{
+    //     sh "echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/jenkins/.zprofile""  
+    //     sh "eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)""
+    //     sh "brew install helm"
+    //     sh "helm install testflaskdocker ~/helm-chart/ --values ~/helm-chart/values.yaml"
+    //   }
+    // }
   }
+
 
   post {
     success {
-      echo "SUCCESSFUL 921 TEst trigger"
+      echo "SUCCESSFUL asd"
     }
     failure {
       echo "FAILED"

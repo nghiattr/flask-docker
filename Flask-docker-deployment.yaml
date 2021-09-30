@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-docker-deployment
+  labels:
+    app: flask-docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-docker
+  template:
+    metadata:
+      labels:
+        app: flask-docker
+    spec:
+      containers:
+      - name: flask-docker
+        image: trongnghiattr/flask-docker-test:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
