@@ -45,6 +45,7 @@ pipeline {
     stage("Deploy"){
       agent { node {label 'master'}}
       steps{
+        sh "export KUBECONFIG=Kuberconfig.yaml"
         sh "kubectl apply -f Flask-docker-deployment.yaml"
         sh "kubectl apply -f Flask-docker-service.yaml"
       }
