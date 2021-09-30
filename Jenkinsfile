@@ -45,6 +45,7 @@ pipeline {
     stage("Deploy"){
       agent { node {label 'master'}}
       steps{
+        sh "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" "
         sh "brew install helm"
         sh "helm install testflaskdocker ~/helm-chart/ --values ~/helm-chart/values.yaml"
       }
