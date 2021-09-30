@@ -4,6 +4,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
+    MY_KUBECONFIG = credentials('my-kubeconfig')
   }
 
   stages {
@@ -21,7 +22,7 @@ pipeline {
       }
     }
 
-    stage("build") {
+    stage("Build") {
       agent { node {label 'master'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
@@ -41,11 +42,20 @@ pipeline {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
+
+    stage("Deploy"){
+      agent { node {label 'master'}}
+      steps{
+        sh "export KUBECONFIG=~/Kuberconfig.yaml"
+        sh "helm install Flask-Docker ~/helm-chart/"
+      }
+    }
   }
+
 
   post {
     success {
-      echo "SUCCESSFUL 921 TEst trigger"
+      echo "SUCCESSFUL asd"
     }
     failure {
       echo "FAILED"
