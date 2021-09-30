@@ -45,9 +45,16 @@ pipeline {
 
     stage("Deploy"){
       agent { node {label 'master'}}
+      environment {
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+      }
       steps{
-        sh "export KUBECONFIG=~/Kuberconfig.yaml"
-        sh "helm install Flask-Docker ~/helm-chart/"
+        withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+            sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+            sh "docker pull ${DOCKER_IMAGE}:latest"
+            sh "export KUBECONFIG=~/Kuberconfig.yaml"
+            sh "helm install Flask-Docker ~/helm-chart/"
+        }
       }
     }
   }
