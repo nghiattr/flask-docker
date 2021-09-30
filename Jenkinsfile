@@ -42,17 +42,18 @@ pipeline {
       }
     }
 
-    stage("Deploy"){
-      agent { node {label 'master'}}
-      steps{
-        // sh "curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl"
-        // sh "chmod +x ./kubectl"
-        // sh "mv ./kubectl /usr/local/bin/kubectl"
-        sh "kubectl version"
-        sh "export KUBECONFIG=~/Kuberconfig.yaml"
-        sh "kubectl get pods"
-      }
-    }
+    // stage("Deploy"){
+    //   agent { docker {
+    //         image 'alpine/helm'
+    //         args '-u 0:0 -v /tmp:/root/.cache'
+    //       }}
+    //   steps{
+    //     sh "echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/jenkins/.zprofile""  
+    //     sh "eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)""
+    //     sh "brew install helm"
+    //     sh "helm install testflaskdocker ~/helm-chart/ --values ~/helm-chart/values.yaml"
+    //   }
+    // }
   }
 
 
