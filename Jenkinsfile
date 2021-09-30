@@ -43,7 +43,12 @@ pipeline {
     }
 
     stage("Deploy"){
-      agent { node {label 'master'}}
+      agent {
+          docker {
+            image 'bitnami/kubectl:latest'
+            args '-u 0:0 -v /tmp:/root/.cache'
+          }
+      }
       steps{
         sh "export KUBECONFIG=Kuberconfig.yaml"
         sh "kubectl apply -f Flask-docker-deployment.yaml"
