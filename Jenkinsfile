@@ -42,18 +42,13 @@ pipeline {
       }
     }
 
-    // stage("Deploy"){
-    //   agent { docker {
-    //         image 'alpine/helm'
-    //         args '-u 0:0 -v /tmp:/root/.cache'
-    //       }}
-    //   steps{
-    //     sh "echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/jenkins/.zprofile""  
-    //     sh "eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)""
-    //     sh "brew install helm"
-    //     sh "helm install testflaskdocker ~/helm-chart/ --values ~/helm-chart/values.yaml"
-    //   }
-    // }
+    stage("Deploy"){
+      agent { node {label 'master'}}
+      steps{
+        sh "kubectl apply -f Flask-docker-deployment.yaml"
+        sh "kubectl apply -f Flask-docker-service.yaml"
+      }
+    }
   }
 
 
