@@ -4,7 +4,6 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
-    MY_KUBECONFIG = credentials('my-kubeconfig')
   }
 
   stages {
