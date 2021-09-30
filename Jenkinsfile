@@ -55,6 +55,9 @@ pipeline {
             sh "export KUBECONFIG=~/Kuberconfig.yaml"
             sh "helm install Flask-Docker ~/helm-chart/"
         }
+        //clean to save disk
+        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
   }
