@@ -44,12 +44,10 @@ pipeline {
 
     stage("Deploy"){
       agent { node {label 'master'}}
-      
       steps{
         sh "brew install helm"
         sh "helm install testflaskdocker ~/helm-chart/ --values ~/helm-chart/values.yaml"
       }
-      
     }
   }
 
