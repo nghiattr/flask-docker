@@ -53,7 +53,8 @@ pipeline {
         sh "pwd"
         sh "ls"
         sh "export KUBECONFIG=Kuberconfig.yaml"
-        sh "helm install -f helm-chart/values.yaml helm-deploy-flask helm-chart/"
+        sh "kubectl get pods"
+        sh "helm install -f helm-chart/values.yaml testhelm helm-chart/"
         sh "helm list"
         sh "kubectl get svc"
       }
