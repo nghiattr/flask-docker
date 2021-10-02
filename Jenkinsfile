@@ -1,6 +1,6 @@
 pipeline {
 
-  agent any
+  agent none
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
@@ -8,14 +8,13 @@ pipeline {
 
   stages {
     stage("Test") {
-      agent { 
-          docker { 
+      agent { node {label 'Agent-deploy'}}
+      docker { 
             image 'python:3.8-slim-buster'
             args '-u 0:0 -v /tmp:/root/.cache'
           }
-      }
       steps {
-        sh "pwd"
+        sh "docker run -it python:3.8-slim-buster"
         sh "pip install poetry"
         sh "poetry install"
         sh "poetry run pytest"
