@@ -46,10 +46,9 @@ pipeline {
       agent { node {label 'Agent-deploy'}}
       steps{
         sh "pwd"
-        sh "ls"
-        sh "git clone https://github.com/nghiattr/flask-docker.git"        
-        sh "export KUBECONFIG=flask-docker/Kuberconfig.yaml"
-        sh "helm install -f flask-docker/helm-chart/values.yaml helm-deploy-flask helm-chart/"
+        sh "ls"   
+        sh "export KUBECONFIG=Kuberconfig.yaml"
+        sh "helm install -f helm-chart/values.yaml helm-deploy-flask helm-chart/"
         sh "helm list"
         sh "kubectl get svc"
       }
