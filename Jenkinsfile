@@ -49,7 +49,8 @@ pipeline {
     stage("Deploy"){
       // agent { node {label 'Agent-deploy'}}
       steps{
-        sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
+        //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
+        sh "helm  upgrade --install --wait testhelmdeploy helm-chart/"
       }
     }
   }
