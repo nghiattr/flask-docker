@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage("Test") {
       agent {
-          docker {
+          docker { 
             image 'python:3.8-slim-buster'
             args '-u 0:0 -v /tmp:/root/.cache'
           }
@@ -46,7 +46,8 @@ pipeline {
       agent { node {label 'Agent-deploy'}}
       steps{
         sh "pwd"
-        sh "ls"   
+        sh "pwd"
+        sh "ls"
         sh "export KUBECONFIG=Kuberconfig.yaml"
         sh "helm install -f helm-chart/values.yaml helm-deploy-flask helm-chart/"
         sh "helm list"
