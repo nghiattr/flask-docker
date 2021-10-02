@@ -8,7 +8,7 @@ pipeline {
 
   stages {
     stage("Test") {
-      agent {
+      agent { node {label 'Agent-deploy'}
           docker { 
             image 'python:3.8-slim-buster'
             args '-u 0:0 -v /tmp:/root/.cache'
