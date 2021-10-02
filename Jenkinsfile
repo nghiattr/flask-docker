@@ -43,16 +43,15 @@ pipeline {
     }
 
     stage("Deploy"){
-      agent {
-          docker {
-            image 'bitnami/kubectl:latest'
-            args '-u 0:0 -v /tmp:/root/.cache'
-          }
-      }
+      agent { node {label 'Agent-deploy'}}
       steps{
-        sh "export KUBECONFIG=Kuberconfig.yaml"
-        sh "kubectl apply -f Flask-docker-deployment.yaml"
-        sh "kubectl apply -f Flask-docker-service.yaml"
+        sh "pwd"
+        sh "ls"
+        sh "git clone https://github.com/nghiattr/flask-docker.git"        
+        sh "export KUBECONFIG=flask-docker/Kuberconfig.yaml"
+        sh "helm install -f flask-docker/helm-chart/values.yaml helm-deploy-flask helm-chart/"
+        sh "helm list"
+        sh "kubectl get svc"
       }
     }
   }
