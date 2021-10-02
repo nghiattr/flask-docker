@@ -1,6 +1,6 @@
 pipeline {
 
-  agent node {label 'Agent-deploy'}
+  agent { node {label 'Agent-deploy'}}
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
@@ -8,10 +8,11 @@ pipeline {
 
   stages {
     stage("Test") {
-      // agent { node {label 'Agent-deploy'}}
-      docker { 
+      agent { 
+         docker {
             image 'python:3.8-slim-buster'
             args '-u 0:0 -v /tmp:/root/.cache'
+          }
       }
       steps {
         // sh "docker run -d -v /tmp:/root/.cache -w /var/jenkins_home/workspace/Flask-Docker --name pythontest123 python:3.8-slim-buster"
