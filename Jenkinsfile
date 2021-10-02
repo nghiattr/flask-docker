@@ -1,6 +1,6 @@
 pipeline {
 
-  agent none
+  agent node {label 'Agent-deploy'}
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
@@ -8,24 +8,24 @@ pipeline {
 
   stages {
     stage("Test") {
-      agent { node {label 'Agent-deploy'}}
-      // docker { 
-      //       image 'python:3.8-slim-buster'
-      //       args '-u 0:0 -v /tmp:/root/.cache'
-      //     }
+      // agent { node {label 'Agent-deploy'}}
+      docker { 
+            image 'python:3.8-slim-buster'
+            args '-u 0:0 -v /tmp:/root/.cache'
+      }
       steps {
-        sh "docker run -d -v /tmp:/root/.cache -w /var/jenkins_home/workspace/Flask-Docker --name pythontest123 python:3.8-slim-buster"
-        // sh "docker exec -it pythontest123 bash"
+        // sh "docker run -d -v /tmp:/root/.cache -w /var/jenkins_home/workspace/Flask-Docker --name pythontest123 python:3.8-slim-buster"
+        // // sh "docker exec -it pythontest123 bash"
         sh "pip install poetry"
         sh "poetry install"
         sh "poetry run pytest"
-        sh "docker stop pythontest123"
-        sh "docker rm pythontest123"
+        // sh "docker stop pythontest123"
+        // sh "docker rm pythontest123"
       }
     }
 
     stage("Build") {
-      agent { node {label 'Agent-deploy'}}
+      // agent { node {label 'Agent-deploy'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
@@ -46,7 +46,7 @@ pipeline {
     }
 
     stage("Deploy"){
-      agent { node {label 'Agent-deploy'}}
+      // agent { node {label 'Agent-deploy'}}
       steps{
         sh "pwd"
         sh "pwd"
