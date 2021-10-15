@@ -58,7 +58,7 @@ pipeline {
 
   post {
     success {
-      echo "SUCCESSFULL"
+      echo "SUCCESSFULL test 15.10"
     }
     failure {
       echo "FAILED"
