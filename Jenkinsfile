@@ -29,8 +29,9 @@ pipeline {
         node {label 'Sonarqube-Agent'}
       }
       steps {
-       script{
-         def scannerHome = tool 'sonarqube';
+        sh "docker exec -it sonarqube bash"
+        script{
+          def scannerHome = tool 'sonarqube';
            withSonarQubeEnv("sonarqube") {
            sh "${tool("sonarqube")}/bin/sonar-scanner \
            -Dsonar.projectKey=sonarqube-test \
@@ -38,7 +39,7 @@ pipeline {
            -Dsonar.host.url=http://172.104.186.34:9000 \
            -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
            -Dsonar.exclusions=tests/* "
-          }
+               }
         }
       }
     }
