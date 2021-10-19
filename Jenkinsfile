@@ -24,25 +24,14 @@ pipeline {
         // sh "docker rm pythontest123"
       }
     }
-    stage('Code Quality Check via SonarQube') {
-      agent{
-        node {label 'Sonarqube-Agent'}
-      }
-      steps {
-        sh "docker exec -it sonarqube bash"
-        script{
-          def scannerHome = tool 'sonarqube';
-           withSonarQubeEnv("sonarqube") {
-           sh "${tool("sonarqube")}/bin/sonar-scanner \
-           -Dsonar.projectKey=sonarqube-test \
-           -Dsonar.sources=. \
-           -Dsonar.host.url=http://172.104.186.34:9000 \
-           -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
-           -Dsonar.exclusions=tests/* "
-               }
-        }
-      }
-    }
+    // stage('Code Quality Check via SonarQube') {
+    //   agent{
+    //     node {label 'Sonarqube-Agent'}
+    //   }
+    //   steps {
+        
+    //   }
+    // }
     
     stage("Build") {
       // agent { node {label 'Agent-deploy'}}
