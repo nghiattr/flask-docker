@@ -17,19 +17,18 @@ pipeline {
       steps {
          sh '''
           docker run \
-              --rm \
-              --net host \
-              -e SONAR_HOST_URL="http://172.104.186.34:9000" \
-              -v ${PWD}:/sonarqube-agent/workspace/sonarqube-test \
-              sonarsource/sonar-scanner-cli \
-              -Dsonar.projectKey=sonarqube-test \
-              -Dsonar.sonar.projectName=sonarqube-test \
-              -Dsonar.sonar-scanner= \
-              -Dsonar.sonar.sources=. \
-              -Dsonar.sonar.host.url=http://172.104.186.34:9000 \
-              -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
-              -Dsonar.sonar.exclusions=tests/* \
-              -Dsonar.sonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test
+            --rm \
+            --net host \
+            -e SONAR_HOST_URL="http://172.104.186.34:9000" \
+            -v ${PWD}:/root/src  \
+            sonarsource/sonar-scanner-cli \
+            -Dsonar.verbose=true \
+            -Dsonar.host.url=http://172.104.186.34:9000 \
+            -Dsonar.projectName=sonarqube-test \
+            -Dsonar.projectKey=sonarqube-test \
+            -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test \
+            -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
+            -Dsonar.sources=. "
          '''
       }
     }
