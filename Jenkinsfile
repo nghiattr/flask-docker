@@ -20,15 +20,16 @@ pipeline {
               --rm \
               --net host \
               -e SONAR_HOST_URL="http://172.104.186.34:9000" \
-              -v ${PWD}:/root/src \
+              -v ${PWD}:/sonarqube-agent/workspace/sonarqube-test \
               sonarsource/sonar-scanner-cli \
-              -Dsonar.projectKey=sonarqube-test \
-              -Dsonar-scanner= \
-              -Dsonar.sources=. \
+              -DsonarprojectKey=sonarqube-test \
+              -Dsonar.sonar.projectName=sonarqube-test \
+              -Dsonar.sonar-scanner= \
+              -Dsonar.sonar.sources=. \
               -Dsonar.sonar.host.url=http://172.104.186.34:9000 \
               -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
-              -Dsonar.exclusions=tests/* \
-              -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test
+              -Dsonar.sonar.exclusions=tests/* \
+              -Dsonar.sonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test
          '''
       }
     }
