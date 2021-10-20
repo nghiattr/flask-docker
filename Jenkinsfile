@@ -4,9 +4,34 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
+
+    SONAR_PROJECT_KEY = "sonarqube-test"
+    SONAR_SOURCES = './'
+    SONAR_HOST_URL = "172.104.186.34:9000"
+    SONAR_AUTH_TOKEN = "0c943233fe7741a82d27de1d70c3aa4269b62914"
   }
 
   stages {
+    stage("SonarScanner"){
+      agent{ node {label 'Sonarqube-Agent'}}
+      steps {
+         sh '''
+          docker run \
+              --rm \
+              --net host \
+              -e SONAR_HOST_URL="http://172.104.186.34:9000" \
+              -v ${PWD}:/root/src  \
+              sonarsource/sonar-scanner-cli \
+              -Dsonar.projectKey=sonarqube-test \
+              -Dsonar.sonar.projectName=sonarqube-test \
+              -Dsonar.sonar.sourceEncoding=UTF-8 \
+              -Dsonar.exclusions=tests/* \
+              -Dsonar.sonar.host.url=http://172.104.186.34:9000 \
+              -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914
+         '''
+      }
+    }
+
     stage("Test") {
       agent { 
          docker {
@@ -24,14 +49,21 @@ pipeline {
         // sh "docker rm pythontest123"
       }
     }
-    // stage('Code Quality Check via SonarQube') {
-    //   agent{
-    //     node {label 'Sonarqube-Agent'}
-    //   }
-    //   steps {
-        
-    //   }
-    // }
+  //   stage('Code Quality Check via SonarQube') {
+  //     steps {
+  //       script {
+  //       def scannerHome = tool 'sonarqube';
+  //           withSonarQubeEnv("sonarqube-container") {
+  //           sh "${tool("sonarqube")}/bin/sonar-scanner \
+  //           -Dsonar.projectKey=test-node-js \
+  //           -Dsonar.sources=. \
+  //           -Dsonar.css.node=. \
+  //           -Dsonar.host.url=http://your-ip-here:9000 \
+  //           -Dsonar.login=your-generated-token-from-sonarqube-container"
+  //               }
+  //          }
+  //      }
+  //  }
     
     stage("Build") {
       // agent { node {label 'Agent-deploy'}}
