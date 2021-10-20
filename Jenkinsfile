@@ -20,7 +20,7 @@ pipeline {
               --rm \
               --net host \
               -e SONAR_HOST_URL="http://172.104.186.34:9000" \
-              -v ${PWD}:/sonarqube-agent/workspace/Flask-Docker  \
+              -v ${PWD}:/root/.cache \
               sonarsource/sonar-scanner-cli \
               -Dsonar.projectKey=sonarqube-test \
               -Dsonar.sonar.projectName=sonarqube-test \
