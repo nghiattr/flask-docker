@@ -1,28 +1,97 @@
 pipeline {
 
-  agent none
+  agent none 
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
+
+    SONAR_PROJECT_KEY = "sonarqube-test"
+    SONAR_SOURCES = './'
+    SONAR_HOST_URL = "172.104.186.34:9000"
+    SONAR_AUTH_TOKEN = "0c943233fe7741a82d27de1d70c3aa4269b62914"
   }
 
   stages {
+    stage("SonarScanner"){
+      // agent{ node {label 'Sonarqube-Agent'}}
+      // steps {
+      //    sh '''
+      //     docker run \
+      //       --rm \
+      //       --net host \
+      //       -e SONAR_HOST_URL="http://172.104.186.34:9000" \
+      //       -v ${PWD}:/sonarqube-agent/workspace/sonarqube-test \
+      //       sonarsource/sonar-scanner-cli \
+      //       -Dsonar.host.url=http://172.104.186.34:9000 \
+      //       -Dsonar.projectName=sonarqube-test \
+      //       -Dsonar.projectKey=sonarqube-test \
+      //       -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test \
+      //       -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
+      //       -Dsonar.sources=. "
+      //    '''
+      // }
+      agent { node {label 'Sonarqube-Agent'}}
+      // agent { node {label 'Agent-deploy'}}
+      // agent {
+      //    docker {
+      //       image 'sonarsource/sonar-scanner-cli'
+      //       args '--rm -u 0:0 -v /tmp:/root/src --net host -e SONAR_HOST_URL="http://172.104.186.34:9000"'
+      //     }
+      // }
+      steps{
+        sh"pwd"
+        sh '''
+        docker run \
+            --rm \
+            --net host \
+            -e SONAR_HOST_URL="http://172.104.186.34:9000" \
+            -v ${PWD}:/usr/src  \
+            sonarsource/sonar-scanner-cli \
+            -Dsonar.verbose=true \
+            -Dsonar.host.url=http://172.104.186.34:9000 \
+            -Dsonar.projectName=sonarqube-test \
+            -Dsonar.projectKey=sonarqube-test \
+            -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
+            -Dsonar.sources=.
+         '''
+      }
+    }
+
     stage("Test") {
       agent {
-          docker {
+         docker {
             image 'python:3.8-slim-buster'
             args '-u 0:0 -v /tmp:/root/.cache'
           }
       }
       steps {
+        // sh "docker run -d -v /tmp:/root/.cache -w /var/jenkins_home/workspace/Flask-Docker --name pythontest123 python:3.8-slim-buster"
+        // // sh "docker exec -it pythontest123 bash"
         sh "pip install poetry"
         sh "poetry install"
         sh "poetry run pytest"
+        // sh "docker stop pythontest123"
+        // sh "docker rm pythontest123"
       }
     }
-
+  //   stage('Code Quality Check via SonarQube') {
+  //     steps {
+  //       script {
+  //       def scannerHome = tool 'sonarqube';
+  //           withSonarQubeEnv("sonarqube-container") {
+  //           sh "${tool("sonarqube")}/bin/sonar-scanner \
+  //           -Dsonar.projectKey=test-node-js \
+  //           -Dsonar.sources=. \
+  //           -Dsonar.css.node=. \
+  //           -Dsonar.host.url=http://your-ip-here:9000 \
+  //           -Dsonar.login=your-generated-token-from-sonarqube-container"
+  //               }
+  //          }
+  //      }
+  //  }
+    
     stage("Build") {
-      agent { node {label 'master'}}
+      agent { node {label 'Agent-deploy'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
@@ -42,24 +111,20 @@ pipeline {
       }
     }
 
-    // stage("Deploy"){
-    //   agent { docker {
-    //         image 'alpine/helm'
-    //         args '-u 0:0 -v /tmp:/root/.cache'
-    //       }}
-    //   steps{
-    //     sh "echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/jenkins/.zprofile""  
-    //     sh "eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)""
-    //     sh "brew install helm"
-    //     sh "helm install testflaskdocker ~/helm-chart/ --values ~/helm-chart/values.yaml"
-    //   }
-    // }
+    stage("Deploy"){
+      agent { node {label 'Agent-deploy'}}
+      steps{
+        //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
+        //helm install -f helm-chart/values.yaml testhelmdeploy helm-chart/
+        sh "helm  upgrade --install --wait testhelmdeploy helm-chart/"
+      }
+    }
   }
 
 
   post {
     success {
-      echo "SUCCESSFUL asd"
+      echo "SUCCESSFULL test 15.10a"
     }
     failure {
       echo "FAILED"
