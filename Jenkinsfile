@@ -30,11 +30,11 @@ pipeline {
       //       -Dsonar.sources=. "
       //    '''
       // }
-      agent { node {label 'Sonarqube-Agent'}}
+      //agent { node {label 'Sonarqube-Agent'}}
       // agent { node {label 'Agent-deploy'}}
       agent {
          docker {
-            image 'sonarsource/sonar-scanner-cli'
+            image 'sonarsource/sonar-scanner-cli:lts'
             args '--rm -u 0:0 -v /tmp:/root/src --net host -e SONAR_HOST_URL="http://172.104.186.34:9000"'
           }
       }
