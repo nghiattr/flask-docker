@@ -30,7 +30,8 @@ pipeline {
       //       -Dsonar.sources=. "
       //    '''
       // }
-
+      agent { node {label 'Sonarqube-Agent'}}
+      // agent { node {label 'Agent-deploy'}}
       agent {
          docker {
             image 'sonarsource/sonar-scanner-cli'
