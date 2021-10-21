@@ -34,7 +34,7 @@ pipeline {
       // agent { node {label 'Agent-deploy'}}
       agent {
          docker {
-            image 'sonarsource/sonar-scanner-cli:lts'
+            image 'sonarsource/sonar-scanner-cli'
             args '--rm -u 0:0 -v /tmp:/root/src --net host -e SONAR_HOST_URL="http://172.104.186.34:9000"'
           }
       }
