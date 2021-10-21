@@ -39,12 +39,13 @@ pipeline {
       //     }
       // }
       steps{
+        sh"pwd"
         sh '''
         docker run \
             --rm \
             --net host \
             -e SONAR_HOST_URL="http://172.104.186.34:9000" \
-            -v ${PWD}:/root/src  \
+            -v /sonarqube-agent/workspace/sonarqube-test:/root/src  \
             sonarsource/sonar-scanner-cli \
             -Dsonar.verbose=true \
             -Dsonar.host.url=http://172.104.186.34:9000 \
