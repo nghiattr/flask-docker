@@ -50,13 +50,12 @@ pipeline {
             -Dsonar.host.url=http://172.104.186.34:9000 \
             -Dsonar.projectName=sonarqube-test \
             -Dsonar.projectKey=sonarqube-test \
-            -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test \
             -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
-            -Dsonar.sources=. 
+            -Dsonar.sources=.
          '''
       }
     }
-    
+
     stage("Test") {
       agent {
          docker {
