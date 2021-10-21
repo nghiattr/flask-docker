@@ -55,7 +55,8 @@ pipeline {
             -Dsonar.sources=. 
          '''
       }
-
+    }
+    
     stage("Test") {
       agent {
          docker {
