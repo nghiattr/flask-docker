@@ -45,7 +45,7 @@ pipeline {
             --rm \
             --net host \
             -e SONAR_HOST_URL="http://172.104.186.34:9000" \
-            -v /sonarqube-agent/workspace/sonarqube-test:/root/src  \
+            -v ${PWD}:/usr/src  \
             sonarsource/sonar-scanner-cli \
             -Dsonar.verbose=true \
             -Dsonar.host.url=http://172.104.186.34:9000 \
