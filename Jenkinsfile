@@ -1,6 +1,6 @@
 pipeline {
 
-  agent { node {label 'Agent-deploy'}}
+  agent none 
 
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
@@ -11,29 +11,29 @@ pipeline {
     SONAR_AUTH_TOKEN = "0c943233fe7741a82d27de1d70c3aa4269b62914"
   }
 
-  stages {
-    stage("SonarScanner"){
-      agent{ node {label 'Sonarqube-Agent'}}
-      steps {
-         sh '''
-          docker run \
-            --rm \
-            --net host \
-            -e SONAR_HOST_URL="http://172.104.186.34:9000" \
-            -v ${PWD}:/sonarqube-agent/workspace/sonarqube-test \
-            sonarsource/sonar-scanner-cli \
-            -Dsonar.host.url=http://172.104.186.34:9000 \
-            -Dsonar.projectName=sonarqube-test \
-            -Dsonar.projectKey=sonarqube-test \
-            -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test \
-            -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
-            -Dsonar.sources=. "
-         '''
-      }
-    }
+  // stages {
+  //   stage("SonarScanner"){
+  //     agent{ node {label 'Sonarqube-Agent'}}
+  //     steps {
+  //        sh '''
+  //         docker run \
+  //           --rm \
+  //           --net host \
+  //           -e SONAR_HOST_URL="http://172.104.186.34:9000" \
+  //           -v ${PWD}:/sonarqube-agent/workspace/sonarqube-test \
+  //           sonarsource/sonar-scanner-cli \
+  //           -Dsonar.host.url=http://172.104.186.34:9000 \
+  //           -Dsonar.projectName=sonarqube-test \
+  //           -Dsonar.projectKey=sonarqube-test \
+  //           -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test \
+  //           -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
+  //           -Dsonar.sources=. "
+  //        '''
+  //     }
+  //   }
 
     stage("Test") {
-      agent { 
+      agent {
          docker {
             image 'python:3.8-slim-buster'
             args '-u 0:0 -v /tmp:/root/.cache'
@@ -66,7 +66,7 @@ pipeline {
   //  }
     
     stage("Build") {
-      // agent { node {label 'Agent-deploy'}}
+      agent { node {label 'Agent-deploy'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
@@ -87,7 +87,7 @@ pipeline {
     }
 
     stage("Deploy"){
-      // agent { node {label 'Agent-deploy'}}
+      agent { node {label 'Agent-deploy'}}
       steps{
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //helm install -f helm-chart/values.yaml testhelmdeploy helm-chart/
