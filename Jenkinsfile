@@ -3,7 +3,7 @@ pipeline {
   agent none 
 
   environment {
-    DOCKER_IMAGE = "docker-hosted"
+    DOCKER_IMAGE = "flask-docker"
 
     registryCredentials = "nexus"
     registry = "172.104.188.246:5000"
@@ -109,16 +109,18 @@ pipeline {
         //     sh "docker push ${DOCKER_IMAGE}:latest"
         // }
 
+        sh "docker logout"
         script {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
-             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-             sh "docker push ${DOCKER_IMAGE}:latest"
+             sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+             sh "docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+             //sh "docker push ${DOCKER_IMAGE}:latest"
           }
         }
 
         //clean to save disk
         sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${DOCKER_IMAGE}:latest"
+        //sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
 
