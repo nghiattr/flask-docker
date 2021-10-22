@@ -5,7 +5,7 @@ pipeline {
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
 
-    imageName = "myphpapp"
+    registryCredentials = "nexus"
     registry = "172.104.188.246:8085/"
   }
 
