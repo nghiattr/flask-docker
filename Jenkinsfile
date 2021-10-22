@@ -6,7 +6,7 @@ pipeline {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
 
     registryCredentials = "nexus"
-    registry = "172.104.188.246:8085/"
+    registry = "http://172.104.188.246:8081/#admin/repository/repositories:docker-image-test"
   }
 
   stages {
@@ -110,7 +110,7 @@ pipeline {
         // }
 
         script {
-             docker.withRegistry( 'http://'+registry, registryCredentials ) {
+             docker.withRegistry( registry, registryCredentials ) {
              //DOCKER_IMAGE.push(${DOCKER_TAG})
              DOCKER_IMAGE.push('test1') 
           }
