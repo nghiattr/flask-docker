@@ -109,29 +109,36 @@ pipeline {
         //     sh "docker push ${DOCKER_IMAGE}:latest"
         // }
 
-        //clean to save disk
-        // sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        // sh "docker image rm ${DOCKER_IMAGE}:latest"
-      }
-    }
-
-    stage("Uploading to Nexus"){
-      agent {node {label 'Agent-deploy'}}
-      environment {
-        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
-      }
-      steps{
         script {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
-             DOCKER_IMAGE.push(${DOCKER_TAG})
-             DOCKER_IMAGE.push('latest')
+             //DOCKER_IMAGE.push(${DOCKER_TAG})
+             DOCKER_IMAGE.push('test1') 
           }
         }
-        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${DOCKER_IMAGE}:latest"
-      }
 
+        //clean to save disk
+        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        sh "docker image rm ${DOCKER_IMAGE}:test1"
+      }
     }
+
+    // stage("Uploading to Nexus"){
+    //   agent {node {label 'Agent-deploy'}}
+    //   environment {
+    //     DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+    //   }
+    //   steps{
+    //     script {
+    //          docker.withRegistry( 'http://'+registry, registryCredentials ) {
+    //          //DOCKER_IMAGE.push(${DOCKER_TAG})
+    //          DOCKER_IMAGE.push('latest')
+    //       }
+    //     }
+    //     sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+    //     sh "docker image rm ${DOCKER_IMAGE}:latest"
+    //   }
+
+    // }
 
     stage("Deploy"){
       agent { node {label 'Agent-deploy'}}
