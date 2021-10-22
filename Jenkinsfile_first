@@ -5,8 +5,10 @@ pipeline {
   environment {
     DOCKER_IMAGE = "trongnghiattr/flask-docker-test"
 
-    imageName = "myphpapp"
-    registry = "172.104.188.246:8085/"
+    SONAR_PROJECT_KEY = "sonarqube-test"
+    SONAR_SOURCES = './'
+    SONAR_HOST_URL = "172.104.186.34:9000"
+    SONAR_AUTH_TOKEN = "0c943233fe7741a82d27de1d70c3aa4269b62914"
   }
 
   stages {
@@ -97,40 +99,16 @@ pipeline {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
         sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
         sh "docker image ls | grep ${DOCKER_IMAGE}"
-
-        //Push to Nexus repo
-
-
-
-        //Push to dockerhub
-        // withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-        //     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
-        //     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        //     sh "docker push ${DOCKER_IMAGE}:latest"
-        // }
+        withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+            sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+            sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+            sh "docker push ${DOCKER_IMAGE}:latest"
+        }
 
         //clean to save disk
-        // sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        // sh "docker image rm ${DOCKER_IMAGE}:latest"
-      }
-    }
-
-    stage("Uploading to Nexus"){
-      agent {node {label 'Agent-deploy'}}
-      environment {
-        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
-      }
-      steps{
-        script {
-             docker.withRegistry( 'http://'+registry, registryCredentials ) {
-             DOCKER_IMAGE.push(${DOCKER_TAG})
-             DOCKER_IMAGE.push('latest')
-          }
-        }
         sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
-
     }
 
     stage("Deploy"){
