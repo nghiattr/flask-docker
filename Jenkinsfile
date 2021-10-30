@@ -94,7 +94,7 @@ pipeline {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
       steps {
-        //sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
+        sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
         sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
         sh "docker image ls | grep ${DOCKER_IMAGE}"
 
@@ -121,6 +121,8 @@ pipeline {
         }
 
         //clean to save disk
+        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        sh "docker image rm ${DOCKER_IMAGE}:latest"
         sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
         sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
         sh "docker image ls | grep ${DOCKER_IMAGE}"
