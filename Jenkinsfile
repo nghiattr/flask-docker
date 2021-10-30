@@ -114,13 +114,13 @@ pipeline {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
              sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
              sh "docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
-             //sh "docker push ${DOCKER_IMAGE}:latest"
+             sh "docker push ${DOCKER_IMAGE}:latest"
           }
         }
 
         //clean to save disk
         sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        //sh "docker image rm ${DOCKER_IMAGE}:latest"
+        sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
 
