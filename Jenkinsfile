@@ -125,7 +125,7 @@ pipeline {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
         sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
         sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
-        sh "docker image ls | grep ${DOCKER_IMAGE}"
+        sh "docker image ls"
       }
     }
 
