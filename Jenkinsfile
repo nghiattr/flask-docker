@@ -154,7 +154,7 @@ pipeline {
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
         script {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
-             sh "helm  upgrade --install --wait flask2 helm-chart/"
+             sh "helm  upgrade -f helm-chart/values.yaml --install --wait flask2 helm-chart/"
              sh "helm list"
           }
         }
