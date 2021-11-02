@@ -121,11 +121,11 @@ pipeline {
         }
 
         //clean to save disk
-        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${DOCKER_IMAGE}:latest"
-        sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
-        sh "docker image ls"
+        // sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        // sh "docker image rm ${DOCKER_IMAGE}:latest"
+        // sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+        // sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
+        // sh "docker image ls"
       }
     }
 
@@ -156,6 +156,11 @@ pipeline {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
              sh "helm  upgrade -f helm-chart/values.yaml --install --wait flask2 helm-chart/"
              sh "helm list"
+             sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+             sh "docker image rm ${DOCKER_IMAGE}:latest"
+             sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+             sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
+             sh "docker image ls"
           }
         }
         // sh "helm  upgrade --install --wait flask2 helm-chart/"
