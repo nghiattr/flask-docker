@@ -152,8 +152,14 @@ pipeline {
       steps{
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
-        sh "helm  upgrade --install --wait flask2 helm-chart/"
-        sh "helm list"
+        script {
+             docker.withRegistry( 'http://'+registry, registryCredentials ) {
+             sh "helm  upgrade --install --wait flask2 helm-chart/"
+             sh "helm list"
+          }
+        }
+        // sh "helm  upgrade --install --wait flask2 helm-chart/"
+        // sh "helm list"
       }
     }
   }
