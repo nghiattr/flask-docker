@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v3
 name: flask-docker
 description: A helm chart demo Flask in Docker
 version: 0.1.4
