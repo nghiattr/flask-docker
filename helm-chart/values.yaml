@@ -1,4 +1,4 @@
-image: 172.104.188.246:5000/flask-docker:latest
+image: trongnghiattr/flask-docker-test:latest
 imagePullPolicy: IfNotPresent
 replicaCount: 1
 
