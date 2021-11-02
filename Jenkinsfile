@@ -153,6 +153,7 @@ pipeline {
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //helm install -f helm-chart/values.yaml testhelmdeploy helm-chart/
         sh "helm  upgrade --install --wait testhelmdeploy helm-chart/"
+        sh "helm list"
       }
     }
   }

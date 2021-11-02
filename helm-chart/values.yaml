@@ -1,9 +1,11 @@
-image: 172.104.188.246:5000/flask-docker:latest
-imagePullPolicy: IfNotPresent
-replicaCount: 1
+nexus:
+  image: 172.104.188.246:5000/flask-docker:latest
+  imagePullPolicy: IfNotPresent
+  replicaCount: 1
+  service:
+    type: LoadBalancer
+    port: 3200
+    targetPort: 5000
+    nodePort: 30200
 
-service:
-  type: LoadBalancer
-  port: 3200
-  targetPort: 5000
-  nodePort: 30200
+
