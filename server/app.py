@@ -16,7 +16,7 @@ def hello():
     return 'hello world!'
 
 @app.route('/nghia')
-def hello():
+def nghia():
     return render_template('index.html')
 
 @app.route('/sum/<int:a>/<int:b>')
