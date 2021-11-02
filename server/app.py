@@ -11,9 +11,9 @@ def home():
     }
     return render_template('index.html', info=info)
 
-@app.route('/hello')
+@app.route('/nghia')
 def hello():
-    return 'hello world!'
+    return render_template('nghia.html')
 
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a,b):
