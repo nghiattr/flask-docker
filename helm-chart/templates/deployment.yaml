@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: flask-docker-demo
-        image: {{ .Values.nexus.image }}
-        imagePullPolicy: {{ .Values.nexus.imagePullPolicy }}
+        image: {{ .Values.image }}
+        imagePullPolicy: {{ .Values.imagePullPolicy }}
         ports:
         - containerPort: {{ .Values.service.targetPort }}
