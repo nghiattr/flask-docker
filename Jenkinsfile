@@ -4,7 +4,7 @@ pipeline {
 
   environment {
     DOCKER_IMAGE = "flask-docker"
-    DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+    
     registryCredentials = "nexus"
     registry = "172.104.188.246:5000"
   }
@@ -90,9 +90,9 @@ pipeline {
     
     stage("Build") {
       agent { node {label 'Agent-deploy'}}
-      // environment {
-      //   DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
-      // }
+      environment {
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+      }
       steps {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
         sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
@@ -149,6 +149,9 @@ pipeline {
 
     stage("Deploy"){
       agent { node {label 'Agent-deploy'}}
+      environment {
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+      }
       steps{
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
