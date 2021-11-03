@@ -1,4 +1,4 @@
-image: flask-docker:latest
+image: trongnghiattr/flask-docker-test:latest
 imagePullPolicy: Never
 replicaCount: 1
 
