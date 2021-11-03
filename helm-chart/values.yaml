@@ -1,5 +1,5 @@
-image: 172.104.188.246:5000/flask-docker:develop-036c344
-imagePullPolicy: Always
+image: flask-docker:latest
+imagePullPolicy: Never
 replicaCount: 1
 
 service:
