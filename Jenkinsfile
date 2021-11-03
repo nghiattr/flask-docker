@@ -168,8 +168,8 @@ pipeline {
         //      sh "docker image ls"
         //   }
         // }
-        //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
-        sh "helm  upgrade --install --wait flask2 helm-chart/"
+        sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
+        //sh "helm  upgrade --install --wait flask2 helm-chart/"
         sh "helm list"
       }
     }
