@@ -1,4 +1,4 @@
-image: flask-docker:develop-036c344
+image: 172.104.188.246:5000/flask-docker:develop-036c344
 imagePullPolicy: Always
 replicaCount: 1
 
