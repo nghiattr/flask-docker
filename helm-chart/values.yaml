@@ -1,5 +1,5 @@
 image:
-  repository: http://172.104.188.246:5000/flask-docker
+  repository: trongnghiattr/flask-docker-test
   tag: latest
 imagePullPolicy: Always
 replicaCount: 1
