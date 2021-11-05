@@ -94,9 +94,9 @@ pipeline {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
       steps {
-        sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
-        sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-        sh "docker image ls | grep ${DOCKER_IMAGE}"
+        // sh "docker build -t ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} . "
+        // sh "docker tag ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+        // sh "docker image ls | grep ${DOCKER_IMAGE}"
 
         //Push to Nexus repo
 
@@ -112,6 +112,9 @@ pipeline {
         sh "docker logout"
         script {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
+             sh "docker build -t ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} . "
+             //sh "docker tag ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} ${registry}/${DOCKER_IMAGE}:latest"
+             sh "docker image ls | grep ${DOCKER_IMAGE}"
              sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
              sh "docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
              sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest"

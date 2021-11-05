@@ -1,4 +1,4 @@
-image: flask-docker:latest
+image: 172.104.188.246:5000/flask-docker:latest
 imagePullPolicy: Always
 replicaCount: 1
 
