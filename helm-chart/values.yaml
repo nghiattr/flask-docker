@@ -1,5 +1,5 @@
 image: flask-docker:latest
-imagePullPolicy: IfNotPresent
+imagePullPolicy: Always
 replicaCount: 1
 
 service:
