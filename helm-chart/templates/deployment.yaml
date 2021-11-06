@@ -15,7 +15,7 @@ spec:
       - name: flask-docker
         image: {{ .Values.image}}
         imagePullPolicy: {{ .Values.imagePullPolicy }}
-      imagePullSecrets:
-      - name: secret-tiger-docker
         ports:
         - containerPort: {{ .Values.service.targetPort }}
+      imagePullSecrets:
+      - name: secret-tiger-docker
