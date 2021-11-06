@@ -120,6 +120,7 @@ pipeline {
              sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest"
              sh "docker push ${registry}/${DOCKER_IMAGE}:latest"
              sh "docker image ls | grep ${DOCKER_IMAGE}"
+             sh "helm  upgrade --install  flask2 helm-chart/"
           }
         }
 
@@ -173,7 +174,7 @@ pipeline {
         // }
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
         //sh "helm  upgrade --install --wait flask2 helm-chart/"
-        sh "helm  upgrade --install  flask2 helm-chart/"
+        //sh "helm  upgrade --install  flask2 helm-chart/"
         sh "helm list"
       }
     }
