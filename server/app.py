@@ -21,7 +21,7 @@ def nghia():
         "hostname": socket.gethostname(),
         "your_ip": request.remote_addr
     }
-    return render_template('nghia.html',info=info)
+    return render_template('tea-flower/index.html',info=info)
 
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a,b):
