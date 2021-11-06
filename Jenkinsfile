@@ -113,7 +113,7 @@ pipeline {
         script {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
              sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
-             //sh "docker tag ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} ${registry}/${DOCKER_IMAGE}:latest"
+             sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
              sh "docker image ls | grep ${DOCKER_IMAGE}"
              sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
              sh "docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
