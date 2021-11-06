@@ -1,4 +1,4 @@
-image: 139.162.47.247:5000/flask-docker:latest
+image: flask-docker:latest
 imagePullPolicy: IfNotPresent
 replicaCount: 1
 
