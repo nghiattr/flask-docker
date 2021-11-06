@@ -120,7 +120,6 @@ pipeline {
              sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest"
              sh "docker push ${registry}/${DOCKER_IMAGE}:latest"
              sh "docker image ls | grep ${DOCKER_IMAGE}"
-             sh "helm  upgrade --install  flask2 helm-chart/"
           }
         }
 
@@ -153,28 +152,11 @@ pipeline {
 
     stage("Deploy"){
       agent { node {label 'Agent-deploy'}}
-      environment {
-        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
-      }
       steps{
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
-        // script {
-        //      docker.withRegistry( 'http://'+registry, registryCredentials ) {
-        //      sh "helm  upgrade -f helm-chart/values.yaml --install --wait flask2 helm-chart/"
-        //      //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
-        //      sh "helm list"
-             
-        //      sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        //      sh "docker image rm ${DOCKER_IMAGE}:latest"
-        //      sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
-        //      sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
-        //      sh "docker image ls"
-        //   }
-        // }
-        //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
         //sh "helm  upgrade --install --wait flask2 helm-chart/"
-        //sh "helm  upgrade --install  flask2 helm-chart/"
+        sh "helm  upgrade --install  flask2 helm-chart/"
         sh "helm list"
       }
     }
