@@ -17,11 +17,7 @@ def hello():
 
 @app.route('/nghia')
 def nghia():
-    info = {
-        "hostname": socket.gethostname(),
-        "your_ip": request.remote_addr
-    }
-    return render_template('tea-flower/index.html',info=info)
+    return render_template('tea-flower/index.html')
 
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a,b):
