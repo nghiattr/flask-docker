@@ -28,7 +28,7 @@ pipeline {
       //       -Dsonar.sources=. "
       //    '''
       // }
-      agent { node {label 'Sonarqube-Agent'}}
+      agent { node {label 'jenkins-agent'}}
       // agent { node {label 'Agent-deploy'}}
       // agent {
       //    docker {
@@ -89,7 +89,7 @@ pipeline {
   //  }
     
     stage("Build") {
-      agent { node {label 'Agent-deploy'}}
+      agent { node {label 'jenkins-agent'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
@@ -151,7 +151,7 @@ pipeline {
     // }
 
     stage("Deploy"){
-      agent { node {label 'Agent-deploy'}}
+      agent { node {label 'jenkins-agent'}}
       steps{
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"

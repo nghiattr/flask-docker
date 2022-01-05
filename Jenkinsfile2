@@ -1,0 +1,26 @@
+pipeline {
+
+  agent none 
+
+  environment {
+    DOCKER_IMAGE = "flask-docker"
+  }
+
+  stages {
+    stage("Deploy"){
+      agent { node {label 'jenkins-agent'}}
+      steps{
+        sh "whoami"
+        sh "echo "hello nghia"" 
+      }
+    }
+  }
+  post {
+    success {
+      echo "SUCCESSFULLLLL123"
+    }
+    failure {
+      echo "FAILED"
+    }
+  }
+}
