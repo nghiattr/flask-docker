@@ -154,7 +154,7 @@ pipeline {
       agent { node {label 'jenkins-agent'}}
       steps{
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
-        sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
+        sh "helm install -f helm-chart/values.yaml flaskdocker helm-chart/"
         //sh "helm  upgrade --install --wait flask2 helm-chart/"
         //sh "helm uninstall flask2"
         //sh "helm  upgrade --install -f helm-chart/values.yaml flask2 helm-chart/"
