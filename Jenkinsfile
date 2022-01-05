@@ -109,7 +109,7 @@ pipeline {
         //     sh "docker push ${DOCKER_IMAGE}:latest"
         // }
 
-        sh "docker logout"
+        //sh "docker logout"
         script {
              docker.withRegistry( 'http://'+registry, registryCredentials ) {
              sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
