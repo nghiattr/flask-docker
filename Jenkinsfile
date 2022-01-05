@@ -6,7 +6,7 @@ pipeline {
     DOCKER_IMAGE = "flask-docker"
     
     registryCredentials = "nexus-server"
-    registry = "139.162.47.247:5000"
+    registry = "34.150.85.230:5000"
   }
 
   stages {
@@ -42,14 +42,14 @@ pipeline {
         docker run \
             --rm \
             --net host \
-            -e SONAR_HOST_URL="http://172.104.186.34:9000" \
+            -e SONAR_HOST_URL="http://35.247.164.137:9000" \
             -v ${PWD}:/usr/src  \
             sonarsource/sonar-scanner-cli \
             -Dsonar.verbose=true \
-            -Dsonar.host.url=http://172.104.186.34:9000 \
+            -Dsonar.host.url=http://35.247.164.137:9000 \
             -Dsonar.projectName=sonarqube-test \
             -Dsonar.projectKey=sonarqube-test \
-            -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
+            -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8 \
             -Dsonar.sources=.
          '''
       }
