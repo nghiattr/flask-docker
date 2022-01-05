@@ -157,7 +157,7 @@ pipeline {
         //sh "helm install -f helm-chart/values.yaml flask2 helm-chart/"
         //sh "helm  upgrade --install --wait flask2 helm-chart/"
         //sh "helm uninstall flask2"
-        sh "helm  upgrade --install -f helm-chart/values.yaml --wait flask2 helm-chart/"
+        sh "helm  upgrade --install -f helm-chart/values.yaml flask2 helm-chart/"
         sh "helm list"
       }
     }
