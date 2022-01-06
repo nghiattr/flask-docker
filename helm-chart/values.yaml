@@ -4,6 +4,6 @@ replicaCount: 1
 
 service:
   type: LoadBalancer
-  port: 4000
-  targetPort: 3200
+  port: 3200
+  targetPort: 5000
   nodePort: 30222
