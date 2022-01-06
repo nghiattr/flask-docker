@@ -1,9 +1,9 @@
 image: 34.150.85.230:5000/flask-docker:latest
-imagePullPolicy: Always
+imagePullPolicy: IfNotPresent
 replicaCount: 1
 
 service:
   type: LoadBalancer
   port: 4000
-  targetPort: 5000
-  nodePort: 30201
+  targetPort: 3200
+  nodePort: 30222
