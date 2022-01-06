@@ -18,4 +18,4 @@ spec:
         ports:
         - containerPort: {{ .Values.service.targetPort }}
       imagePullSecrets:
-      - name: regcred
+      - name: regcred2
