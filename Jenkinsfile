@@ -153,6 +153,7 @@ pipeline {
     stage("Deploy"){
       agent { node {label 'jenkins-agent'}}
       steps{
+        sh "gcloud container clusters get-credentials myk8scluster --zone asia-southeast1-a --project jenkins-cicd-project-335209"
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml flaskdockerrr helm-chart/"
         //sh "helm  upgrade --install --wait flask2 helm-chart/"
