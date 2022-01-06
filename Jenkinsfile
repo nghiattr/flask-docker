@@ -156,9 +156,9 @@ pipeline {
         sh "gcloud container clusters get-credentials myk8scluster --zone asia-southeast1-a --project jenkins-cicd-project-335209"
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml testdocker helm-chart/"
-        sh "helm  upgrade --install  flask2 helm-chart/"
+        //sh "helm  upgrade --install  flask2 helm-chart/"
         //sh "helm uninstall flask2"
-        //sh "helm  upgrade --install -f helm-chart/values.yaml flaskdockerrr helm-chart/"
+        sh "helm  upgrade --install -f helm-chart/values.yaml flaskdockerrr helm-chart/"
         sh "helm list"
       }
     }
