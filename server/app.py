@@ -15,6 +15,10 @@ def home():
 def hello():
     return 'hello world!'
 
+@app.route('/nghia')
+def nghia():
+    return render_template('haha.html')
+
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a,b):
     return str(a+b)

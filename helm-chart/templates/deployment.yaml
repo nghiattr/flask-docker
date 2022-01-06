@@ -12,8 +12,8 @@ spec:
       labels: {{ include "common.labels" . | nindent 8 }}
     spec:
       containers:
-      - name: flask-docker-demo
-        image: {{ .Values.image }}
+      - name: flask-docker
+        image: {{ .Values.image}}
         imagePullPolicy: {{ .Values.imagePullPolicy }}
         ports:
         - containerPort: {{ .Values.service.targetPort }}
