@@ -1,0 +1,11 @@
+commit 7084ddcada6eef207a1bc89933940b9bc5ba861c
+tree 164cfa1bae5d4b4b273dc1c1651d8791cda9d613
+parent d18c893c5d37615f287b47c9bf533fe38a1e3b1f
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 18:08:11 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 18:08:11 +0700
+
+    asdasd
+
+
+:100644 100644 0624abb91ece097d99dce60e4a29c9b0cc0d6a4e 81e3efdb58b8e49b9c0ee6c88c721f0b92fe9b9f M	Jenkinsfile
+:100644 100644 8e407a17dd4304996c6f211e308713a37d0af669 44a2c329b7759da340a05655f17c780d59dbf981 M	helm-chart/values.yaml

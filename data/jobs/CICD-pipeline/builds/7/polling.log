@@ -1,0 +1,42 @@
+Started on Jan 5, 2022, 7:18:13 PM
+Started by event from 140.82.115.100 ⇒ http://35.198.201.41:8080/github-webhook/ on Wed Jan 05 19:18:13 UTC 2022
+Using strategy: Default
+[poll] Last Built Revision: Revision 0f98895073497c8795b06daadc1c59aba6224701 (origin/develop)
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/CICD-pipeline@script/.git # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Polling for changes in
+Seen branch in repository origin/develop
+Seen branch in repository origin/feature/testpullrq
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+ > git log --full-history --no-abbrev --format=raw -M -m 0f98895073497c8795b06daadc1c59aba6224701..de416a4f317d211fc9afbfaca66bffd2664d62c4 # timeout=10
+Using strategy: Default
+[poll] Last Built Revision: Revision 0f98895073497c8795b06daadc1c59aba6224701 (origin/develop)
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git rev-parse --resolve-git-dir /jenkins-agent/workspace/CICD-pipeline/.git # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Polling for changes in
+Seen branch in repository origin/develop
+Seen branch in repository origin/feature/testpullrq
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+ > git log --full-history --no-abbrev --format=raw -M -m 0f98895073497c8795b06daadc1c59aba6224701..de416a4f317d211fc9afbfaca66bffd2664d62c4 # timeout=10
+Done. Took 1.8 sec
+Changes found

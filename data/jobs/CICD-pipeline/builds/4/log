@@ -1,0 +1,75 @@
+Started by GitHub push by nghiattr
+Lightweight checkout support not available, falling back to full checkout.
+Checking out git https://github.com/nghiattr/flask-docker.git into /var/jenkins_home/workspace/CICD-pipeline@script to read Jenkinsfile2
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/CICD-pipeline@script/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/develop
+Seen branch in repository origin/feature/testpullrq
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 6f554c929ff8259b163c191155e02b3115ec8c18 (origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6f554c929ff8259b163c191155e02b3115ec8c18 # timeout=10
+Commit message: "fdgfd"
+ > git rev-list --no-walk e40e6202fd146db911d610ffdc103eb6bf5bdc43 # timeout=10
+[8mha:////4HOQyhtRN6BYPCfZoaC4t6X005cLacOr/i0de2nNLleuAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4F/s7/NoWvjr0vCN9EAZthd1TuZQPg4JazwCDGuITzfqAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] withEnv
+[8mha:////4HEYXE9y1eFYyQUomacZgNwvs7xXyqhM+vSjcPSLvMgSAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4CMUgZyjsrY4/QPwaLH9GgYOA9JZEyYm4bY/MOAiEMeIAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4HZiYjbHQ+7KG26siAhOg2dIUqwTviAqmxWiEmcL7l1GAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Deploy)
+[8mha:////4M9wuEAldvnHQTYqV8LrjvdXugEYYhEpBJ9rrbC4YlyVAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gwExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jcChmMxwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4GcGUJYILzcXDUILh5IX5PSxj+2hDQ3DlKcvAXQn/vDZAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYp/eT83ILSktQi/azUvOzMvGJVI5fE9NS8En0A4Zrl388AAAA=[0mjenkins-agent in /jenkins-agent/workspace/CICD-pipeline
+[8mha:////4B2Rt5yE6SJ+uuoI+Rf5/m3KFGpfQXwtYdNJC+o0ryBSAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0BAkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfpX/cvwAAAAA==[0m[Pipeline] {
+[8mha:////4G93A90MnnohGMLPCKemxnPXnlqxfI0/NYYy6t7SLiHmAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaoyVLaHxBMgiwpL/WWDdrTyRV/MOEjexcpJJ5k3zXm9Y5wQnSpZ7g73DrB2PYbR18YlSfws0cU9XrgkzBcOlmSR15rygpGJgCWtgJWBjUAfKDm2BrfDqodqg0LaXkup3FNC4boAnMFHNRaXyhTnB7j52mfDn+SuAORZg+9pD/AAeoCAqvAAAAA==[0m[Pipeline] checkout
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+Cloning the remote Git repository
+Cloning repository https://github.com/nghiattr/flask-docker.git
+ > git init /jenkins-agent/workspace/CICD-pipeline # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/develop
+Seen branch in repository origin/feature/testpullrq
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 6f554c929ff8259b163c191155e02b3115ec8c18 (origin/develop)
+Commit message: "fdgfd"
+[8mha:////4IYUMR+AvW5OQYcIn0nLzon5D0VHYk+kHO9O28O17TjmAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDHRKiorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INcXYwW8EAAAA=[0m[Pipeline] withEnv
+[8mha:////4GCXLqx/wb5vhYgCosonXXJTNRlHNZyj9c8Z1zYsi6mjAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4HvxyKWAMllCGes4B9xahu9kJ2SdeGwNk54bfssvwD0uAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggysXWsbBkaT4AJIoT5nwCRVJ7Iq3kH0cxYucXOvm3e8wXrGOBIQTOrcDAYO8O8m3RZLFMYro4ys3RhHWEkp5hQWVCvTgsKSgqWVDWsOGwUdo6iQZ1gy628y8ZJ1M05hfIdONSmH+EBFS/mJEP6whxgd5v6SPjz/BXA7BPUbfupvX8DpQJrNb4AAAA=[0m[Pipeline] sh
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6f554c929ff8259b163c191155e02b3115ec8c18 # timeout=10
++ whoami
+root
+[8mha:////4AxuvdAgYcC7knA1R2pRYH/xcQtFkuLMLyUhulFMiTQ+AAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyGUvHypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzN4nqNv9p9o3geV5574AAAA=[0m[Pipeline] }
+[8mha:////4HnYo75GwHt5TN4JH8MYvByERAKKOuiMyjYyTpXb0p+vAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICEh2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7Bq/le42+AAAA[0m[Pipeline] // withEnv
+[8mha:////4DsISTmQpyPGhCtZS9srnw5O8ohr83B7NYyBTqXXNVKYAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRBRISoqK10vACkxjjxLoL9oWk4kV8jT8QEYmKrXammdcbyxRx5OhUY6n1lCqvutC76amBY3sNPKiGL6piShysKu1Qcm1PM5YsFvOyHAuNlaUqcPLkBGvdmIcpgiFXnCVO7qCR+/qOJzI9lcVE+cIYsbn1dWL6df4GMHadIN/uBNn+A97oExO9AAAA[0m[Pipeline] }
+[8mha:////4EXM/HQ7e1brf0cNkO2AyHAVK9/goFcC9lJUJPJ3xFPBAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRDRSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsTZPsPn48MxL0AAAA=[0m[Pipeline] // node
+[8mha:////4AjCiRETA5ekYr1UIa6TDG9h7uANWXEFD7K7HeNLrVTNAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRDRSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPuZZrjr0AAAA=[0m[Pipeline] }
+[8mha:////4GJ9jSPeoUe5U/kegaU15yXrCawXGUUvC27eVJmUrGCIAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRBRISoqK10vACkxjjxLoL9oWk4kV8jT8QEYmKrXammdcbyxRx5OhUY6n1lCqvutC76amBY3sNPKiGL6piShysKu1Qcm1PM5YsFvOyHAuNlaUqcPLkBGvdmIcpgiFXnCVO7qCR+/qOJzI9lcVE+cIYsbn1dWL6df4GMHadIN/uBdnuA9JQMpW9AAAA[0m[Pipeline] // stage
+[8mha:////4Jp4nZ8VUKsGxdf4jkOO9j+EAK4Z+k2SHos2YbU2LNZzAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjJBqEqGgtN7zAxMY4se6CfSGpeBFf4w8EIlGx1c5Kq3m+oMwJDpS8bBy2AXMdZBd7PzU5UGovkQbZ0FnWhJmik9oNmqw7zqiJHcwRBSwULB3WkXJAz7BSjbmbKhr01YnTtO0VFMHe4AFCTWY2ib8wJlhfe5sJf56/Ahg7BrFlKDa7z7F8A361JXbBAAAA[0m[Pipeline] stage
+[8mha:////4DbNTwfQBP4Y1RTA0LqAeULdq0j7IzOL9+z0qpFj3XD/AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogU2BDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrN7xWSV3CAAAA[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4Drt/zlPi5qhgUiRYiUHBWXH1Jts1NpquhWdGBVGWpB/AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICtIgqreWGF5jYGCfWnbEdkooX8TX+QCASFVusdraZ5wuWKcKRo8XWUOcoNQ6D7+20cODYXTwP2PIZG6bE3qA0g2Rt6hklZwNzihIWAlaGGs/Jkc2wFq26q8orstUpx+k7CCidvsEDCjGZs4r5C2OEzbXXienn+SuAMWQo99tP7cIbaOP4NL4AAAA=[0m[Pipeline] echo
+SUCCESSFULLLLL123
+[8mha:////4HZx7MJFeWkrrCd5O5nzecQ+ZvtwDTlzZmGPtaKeZFK7AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJu8TlHX9qf0b7E/nQb4AAAA=[0m[Pipeline] }
+[8mha:////4O0lF4goNZYde6XkzBDvfqAwqbypSH4gAzIIY1OUGpBEAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdPtf28AEud0rYvgAAAA==[0m[Pipeline] // stage
+[8mha:////4Euke2yaxkOy+oOi5hN20rHvbt40kNwSjOp8YJY9KegqAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6Ikhs04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwA6/9Rob0AAAA=[0m[Pipeline] }
+[8mha:////4NufVj8QJvHHlDQi403A/RPREPXNRP3JpPl/spY2cGklAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRQFSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsP+ENVAr0AAAA=[0m[Pipeline] // withEnv
+[8mha:////4PJtk/GmugUM5dOoWEpqGe5vX/xdwq8KztfO2DyhZpr8AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkDC7GybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8FebkXZOUHvgnyMr0AAAA=[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

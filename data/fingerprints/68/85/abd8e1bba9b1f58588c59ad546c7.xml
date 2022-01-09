@@ -1,0 +1,19 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2022-01-05 12:37:52.667 UTC</timestamp>
+  <md5sum>6885abd8e1bba9b1f58588c59ad546c7</md5sum>
+  <fileName>Credential id=cc06d1e1-44a5-4361-9e9c-eadedc84103a name=nghiattr/****** (github-acc-nghiattr)</fileName>
+  <usages>
+    <entry>
+      <string>CICD-pipeline</string>
+      <ranges>1-38</ranges>
+    </entry>
+  </usages>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@1055.v1346ba467ba1">
+      <timestamp>1641743218701</timestamp>
+      <itemFullName>CICD-pipeline</itemFullName>
+      <timestamp0>1641498973382</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>

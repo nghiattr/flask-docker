@@ -1,0 +1,10 @@
+commit 51904f1ed4bd609efdc6c0aea18e9f766f605f0d
+tree 8d1899e0e0a4e2acb1543f9a9279a1653d5f4463
+parent 0e1f3a178704a8fc0f24637be05575089ce166d5
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 22:13:33 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 22:13:33 +0700
+
+    tagerport
+
+
+:100644 100644 b34099f3bec62cbdfa6443a94c839b87e50f89f8 3b48f2c1c50c483f06a84301e9f1254c201c84f5 M	helm-chart/values.yaml

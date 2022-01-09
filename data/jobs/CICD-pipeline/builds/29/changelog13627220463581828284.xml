@@ -1,0 +1,11 @@
+commit 1a1b8771e4e09d22a382a1a5b5312458354f25ca
+tree e6b2f750187c362296a545e6ec7b949005c0597f
+parent ca272d4406aeaf97b8da6c9d65742e268d3eb7c2
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 19:18:18 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 19:18:18 +0700
+
+    asdasd
+
+
+:100644 100644 81e3efdb58b8e49b9c0ee6c88c721f0b92fe9b9f e52279e7759e4037041a54a3e200242db6f6449c M	Jenkinsfile
+:100644 100644 ab1466df631e2e16cbfec4af11869132c88aa647 b6b8d81b0ac88f12800f34126e281e5999d5380b M	helm-chart/templates/deployment.yaml

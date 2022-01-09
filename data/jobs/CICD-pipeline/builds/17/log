@@ -1,0 +1,142 @@
+Started by GitHub push by nghiattr
+Obtained Jenkinsfile from git https://github.com/nghiattr/flask-docker.git
+[8mha:////4HOQyhtRN6BYPCfZoaC4t6X005cLacOr/i0de2nNLleuAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4F/s7/NoWvjr0vCN9EAZthd1TuZQPg4JazwCDGuITzfqAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] withEnv
+[8mha:////4HEYXE9y1eFYyQUomacZgNwvs7xXyqhM+vSjcPSLvMgSAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4CMUgZyjsrY4/QPwaLH9GgYOA9JZEyYm4bY/MOAiEMeIAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4HZiYjbHQ+7KG26siAhOg2dIUqwTviAqmxWiEmcL7l1GAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (SonarScanner)
+[8mha:////4M9wuEAldvnHQTYqV8LrjvdXugEYYhEpBJ9rrbC4YlyVAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gwExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jcChmMxwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4GcGUJYILzcXDUILh5IX5PSxj+2hDQ3DlKcvAXQn/vDZAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYp/eT83ILSktQi/azUvOzMvGJVI5fE9NS8En0A4Zrl388AAAA=[0mjenkins-agent in /jenkins-agent/workspace/CICD-pipeline
+[8mha:////4B2Rt5yE6SJ+uuoI+Rf5/m3KFGpfQXwtYdNJC+o0ryBSAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0BAkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfpX/cvwAAAAA==[0m[Pipeline] {
+[8mha:////4G93A90MnnohGMLPCKemxnPXnlqxfI0/NYYy6t7SLiHmAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaoyVLaHxBMgiwpL/WWDdrTyRV/MOEjexcpJJ5k3zXm9Y5wQnSpZ7g73DrB2PYbR18YlSfws0cU9XrgkzBcOlmSR15rygpGJgCWtgJWBjUAfKDm2BrfDqodqg0LaXkup3FNC4boAnMFHNRaXyhTnB7j52mfDn+SuAORZg+9pD/AAeoCAqvAAAAA==[0m[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /jenkins-agent/workspace/CICD-pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 4fa9d63a806e89cf882aa7368836b2e48246575c (refs/remotes/origin/develop)
+Commit message: "asd"
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4fa9d63a806e89cf882aa7368836b2e48246575c # timeout=10
+ > git rev-list --no-walk 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d # timeout=10
+[8mha:////4IYUMR+AvW5OQYcIn0nLzon5D0VHYk+kHO9O28O17TjmAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDHRKiorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INcXYwW8EAAAA=[0m[Pipeline] withEnv
+[8mha:////4GCXLqx/wb5vhYgCosonXXJTNRlHNZyj9c8Z1zYsi6mjAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4HvxyKWAMllCGes4B9xahu9kJ2SdeGwNk54bfssvwD0uAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggysXWsbBkaT4AJIoT5nwCRVJ7Iq3kH0cxYucXOvm3e8wXrGOBIQTOrcDAYO8O8m3RZLFMYro4ys3RhHWEkp5hQWVCvTgsKSgqWVDWsOGwUdo6iQZ1gy628y8ZJ1M05hfIdONSmH+EBFS/mJEP6whxgd5v6SPjz/BXA7BPUbfupvX8DpQJrNb4AAAA=[0m[Pipeline] sh
++ pwd
+/jenkins-agent/workspace/CICD-pipeline
+[8mha:////4BSxGPh393zK7KiE4G5Fb4tg7tbKDVyDY/Hz0Id2vDA9AAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyGUvHypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzD5B3baf2vs35DNwLL4AAAA=[0m[Pipeline] sh
++ docker run --rm --net host -e SONAR_HOST_URL=http://35.247.164.137:9000 -v /jenkins-agent/workspace/CICD-pipeline:/usr/src sonarsource/sonar-scanner-cli -Dsonar.verbose=true -Dsonar.host.url=http://35.247.164.137:9000 -Dsonar.projectName=sonarqube-test -Dsonar.projectKey=sonarqube-test -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8 -Dsonar.sources=.
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+07:21:32.013 INFO: SonarScanner 4.6.2.2472
+07:21:32.017 INFO: Java 11.0.12 Alpine (64-bit)
+07:21:32.017 INFO: Linux 5.11.0-1023-gcp amd64
+07:21:32.888 DEBUG: keyStore is : 
+07:21:32.889 DEBUG: keyStore type is : pkcs12
+07:21:32.890 DEBUG: keyStore provider is : 
+07:21:32.890 DEBUG: init keystore
+07:21:32.892 DEBUG: init keymanager of type SunX509
+07:21:33.424 DEBUG: Create: /opt/sonar-scanner/.sonar/cache
+07:21:33.440 INFO: User cache: /opt/sonar-scanner/.sonar/cache
+07:21:33.441 DEBUG: Create: /opt/sonar-scanner/.sonar/cache/_tmp
+07:21:33.446 DEBUG: Extract sonar-scanner-api-batch in temp...
+07:21:33.453 DEBUG: Get bootstrap index...
+07:21:33.454 DEBUG: Download: http://35.247.164.137:9000/batch/index
+07:26:33.683 ERROR: SonarQube server [http://35.247.164.137:9000] can not be reached
+07:26:33.684 INFO: ------------------------------------------------------------------------
+07:26:33.684 INFO: EXECUTION FAILURE
+07:26:33.685 INFO: ------------------------------------------------------------------------
+07:26:33.685 INFO: Total time: 5:01.937s
+07:26:33.745 INFO: Final Memory: 3M/14M
+07:26:33.745 INFO: ------------------------------------------------------------------------
+07:26:33.745 ERROR: Error during SonarScanner execution
+org.sonarsource.scanner.api.internal.ScannerException: Unable to execute SonarScanner analysis
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.lambda$createLauncher$0(IsolatedLauncherFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.createLauncher(IsolatedLauncherFactory.java:74)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.createLauncher(IsolatedLauncherFactory.java:70)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doStart(EmbeddedScanner.java:185)
+	at org.sonarsource.scanner.api.EmbeddedScanner.start(EmbeddedScanner.java:123)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:73)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+Caused by: java.lang.IllegalStateException: Fail to get bootstrap index from server
+	at org.sonarsource.scanner.api.internal.BootstrapIndexDownloader.getIndex(BootstrapIndexDownloader.java:42)
+	at org.sonarsource.scanner.api.internal.JarDownloader.getScannerEngineFiles(JarDownloader.java:58)
+	at org.sonarsource.scanner.api.internal.JarDownloader.download(JarDownloader.java:53)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherFactory.lambda$createLauncher$0(IsolatedLauncherFactory.java:76)
+	... 7 more
+Caused by: java.net.SocketTimeoutException: timeout
+	at org.sonarsource.scanner.api.internal.shaded.okio.Okio$4.newTimeoutException(Okio.java:232)
+	at org.sonarsource.scanner.api.internal.shaded.okio.AsyncTimeout.exit(AsyncTimeout.java:286)
+	at org.sonarsource.scanner.api.internal.shaded.okio.AsyncTimeout$2.read(AsyncTimeout.java:241)
+	at org.sonarsource.scanner.api.internal.shaded.okio.RealBufferedSource.indexOf(RealBufferedSource.java:358)
+	at org.sonarsource.scanner.api.internal.shaded.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:230)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.java:242)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.java:213)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.Exchange.readResponseHeaders(Exchange.java:115)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:94)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:43)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.RealCall.getResponseWithInterceptorChain(RealCall.java:221)
+	at org.sonarsource.scanner.api.internal.shaded.okhttp.RealCall.execute(RealCall.java:81)
+	at org.sonarsource.scanner.api.internal.ServerConnection.callUrl(ServerConnection.java:115)
+	at org.sonarsource.scanner.api.internal.ServerConnection.downloadString(ServerConnection.java:99)
+	at org.sonarsource.scanner.api.internal.BootstrapIndexDownloader.getIndex(BootstrapIndexDownloader.java:39)
+	... 10 more
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at org.sonarsource.scanner.api.internal.shaded.okio.Okio$2.read(Okio.java:140)
+	at org.sonarsource.scanner.api.internal.shaded.okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+	... 33 more
+07:26:33.758 ERROR: 
+07:26:33.758 ERROR: Re-run SonarScanner using the -X switch to enable full debug logging.
+[8mha:////4PY2ylSuOd8VFZMiuUjaL7BMc+jhhtCAnfMtRFZQDobvAAAApB+LCAAAAAAAAP9tjbEOwiAURV9rHFwd/QiaJm7GyZWw+AXYIkLJexSodPKL/DX/QbSJk3e4uecu5/mCdQxwpKCZVTgYjJ1h3k26LJYpDFdHmVm6sI4wklNMqCyoV6cFBSUFS6oaVhw2CjtH0aBOsOVW3mXjJOrmnEL5Dhxq04/wgIoXc5IhfWEOsLtNfST8ef4KYPY+Qd3uP9W+ATnVfPq+AAAA[0m[Pipeline] }
+[8mha:////4G90YOhVE9ElXDLEUbeNsh9vcotYkaENjZCm88yZYD+GAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBRWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7Bgo2J0a+AAAA[0m[Pipeline] // withEnv
+[8mha:////4InHiv49BaznE/9jmb4GlorGc68SSF75fCZwuwHX2BFAAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRDUJCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5NudINt/AA6Ss1S9AAAA[0m[Pipeline] }
+[8mha:////4HT781CSvcE0ZTUUJcQSLsxjjenxxByKGsNq1QqhahpgAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiKMFYVjZZuh8QQRYgxkdjFZhMoTeTXvICMzVv7qv9e81xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwAL6Zs+b0AAAA=[0m[Pipeline] // node
+[8mha:////4KAikXtBBRQ3MnDUeqwi48GvCd8gTVp0XwJQdzQNeWmFAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRDUJCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9AGgBOwy9AAAA[0m[Pipeline] }
+[8mha:////4P5nS0rbifIefR6LfS5PVWTshUvpbIkfSwbB/tcCTFWgAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRBQVCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9AGJ5Uqi9AAAA[0m[Pipeline] // stage
+[8mha:////4EyRWlY8SQkeLEpldBk1Lc30dnPFYemlWsuqqxdK9xBcAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYSDEB2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INK/7CYMEAAAA=[0m[Pipeline] stage
+[8mha:////4PHr1cY8mcvneRiJm9diAFb3QqCjRXyRTiIAnEBuEXTdAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUWBFT1ygLJwhNCGmj/8tPSjtxIq7GHWipxIQHy7ZkvdcbishwInaisdh6jLUXXejdlMRA3F4DDaKhi6gJIwUrlB0UGVstVVGysCjLYSVhbbEOFD26BBvZ6Icug0ZXnhNP21FC7s0dnpDJiZw0p28ZGba33kTCH+cvAMYuQX7Yzbafn8UHbGnGmsIAAAA=[0m[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[8mha:////4PPDlOOs2X7tIyqWGnEmronxX9s+AZckl0jGU/V4We+QAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJu8TlHX9qf0ben/gNr4AAAA=[0m[Pipeline] }
+[8mha:////4L3U5cyxPm3kxVfg8exkDkmGFe60AhaEa5tGFM7hVSdtAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFkKHf7T23fSZy7ir4AAAA=[0m[Pipeline] // stage
+[8mha:////4KS2CIEAat0Q7GZfwnD1kdR1rLxrbnUDSGncf2Phjej0AAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjoXSIitZywwtMYowT6y7YF5KKF/E1/oAhEhVb7ay0mucLyhThQNHJzmLvMTVeDmF0ucmJYn8JNMmOzrIhTBSs1HbS1NrjgprYwhJRwErB2mITKHl0DBvVmbupgkFXnTjmba+g8O0NHiBUNrOJ/IU5wvY6tonw5/krgHlgEDVDsas/x/INPbxT+8EAAAA=[0m[Pipeline] stage
+[8mha:////4EAgGCXrBqZvUlObplGGXtUwnQVrP/ISFUB5kx16Li/SAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] { (Build)
+Stage "Build" skipped due to earlier failure(s)
+[8mha:////4EApkWoRidA4UElL93aXtrXQb+Oj8x9SSyoL24SsEP44AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQF1+RyqvgAAAA==[0m[Pipeline] }
+[8mha:////4KN9hhOuxrL9crwFjN8IbxWxcj1GqaPeNOeAhj2Lq2m9AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISQKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyu//U7g1GGkcWvgAAAA==[0m[Pipeline] // stage
+[8mha:////4KrV6RH/owV01WkEac59ttxB9eVYGWJTDCB4ja/mIwkFAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjIQokREVrueEFJjbGiXUX7AtJxYv4Gn8gEImKrXZWWs3zBWVOcKDkZeOwDZjrILvY+6nJgVJ7iTTIhs6yJswUndRu0GTdcUZN7GCOKGChYOmwjpQDeoaVaszdVNGgr06cpm2voAj2Bg8QajKzSfyFMcH62ttM+PP8FcDYMYgtQ7HZfY7lG0Z8kYzBAAAA[0m[Pipeline] stage
+[8mha:////4EKD9QhTDXTFEhTXeB6h1menH1LYZItBtTKkJ2j6pmm5AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgIhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0QKVszCAAAA[0m[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[8mha:////4BZv4QYuj4w/jIogj8m7ANMAPxKINDFPh2+nUwjkVibkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AH3XYTTvgAAAA==[0m[Pipeline] }
+[8mha:////4DprRymlte7wOAbAJW73PAc43gJGU8B7I6qqBj7f012YAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw/Evt9vvgAAAA==[0m[Pipeline] // stage
+[8mha:////4HAXJn6wgy2VAATzcdH/Rs2y5KHdM5TL8VigVtmY9EKlAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjAR2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INlFR9i8EAAAA=[0m[Pipeline] stage
+[8mha:////4D503dOOXV/d5Q8yWGADUUOyEmYAnre9DmQmKRsIZ/xiAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohUoiNiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsPfTawssIAAAA=[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4CEodQ1CbmAKgN5yFzjO6CGHRuQckFbGVfzPKSklRrXKAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSxM6xsmVoPAEmiBDmfwJEUnkir+YdRDNj5RY7+7Z5zxesY4AjBc2swsFg7AzzbtJlsUxhuDrKzNKFdYSRnGJCZUG9Oi0oKClYUtWw4rBR2DmKBnWCLbfyLhsnUTfnFMp34FCbfoQHVLyYkwzpC3OA3W3qI+HP81cAs09Qt+2n9v4NGWcPtb4AAAA=[0m[Pipeline] echo
+FAILED
+[8mha:////4DQQbInj1UF/e/e0Iuk1w6icW16C2XL0ikNmh3kanfYIAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSZKwcK1uGxhNggghh/idAJJUn8mreQTQzVm6xs2+b93zBOgY4UtDMKhwMxs4w7yZdFssUhqujzCxdWEcYySkmVBbUq9OCgpKCJVUNKw4bhZ2jaFAn2HIr77JxEnVzTqF8Bw616Ud4QMWLOcmQvjAH2N2mPhL+PH8FMHufoG73n2rfGxSHer4AAAA=[0m[Pipeline] }
+[8mha:////4H2YmH8p6mDYlLpG+6YDnx45Swd5vonR8ug9FF+Ltho2AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigUSDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgEjVhSLvgAAAA==[0m[Pipeline] // stage
+[8mha:////4NUealVdVfoVMel28LTCTcdPxAc+3Z32TTDsOLSkoZoSAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIpQKJAVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9AJ5WrS29AAAA[0m[Pipeline] }
+[8mha:////4Pj1XUnIIkRALcjY/AV0kHxX2MwM9giOLH+NsuRTRDkjAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IMLCbGybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8FebkXZOUH7FSZMb0AAAA=[0m[Pipeline] // withEnv
+[8mha:////4FSafwpyblD4l9g0KBuCNScQioVFIoh6GZ2DP7xkKoUAAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRoEKIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLcXZNsPyk3+e70AAAA=[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

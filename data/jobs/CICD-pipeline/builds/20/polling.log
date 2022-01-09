@@ -1,0 +1,48 @@
+Started on Jan 6, 2022, 8:43:41 AM
+Started by event from 140.82.115.144 ⇒ http://35.198.201.41:8080/github-webhook/ on Thu Jan 06 08:43:41 UTC 2022
+Using strategy: Default
+[poll] Last Built Revision: Revision 4fa9d63a806e89cf882aa7368836b2e48246575c (refs/remotes/origin/develop)
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git ls-remote -h -- https://github.com/nghiattr/flask-docker.git # timeout=10
+Found 3 remote heads on https://github.com/nghiattr/flask-docker.git
+[poll] Latest remote head revision on refs/heads/develop is: 942149604c218be7d8d675096400eb1bd61a9c54
+Using strategy: Default
+[poll] Last Built Revision: Revision 4fa9d63a806e89cf882aa7368836b2e48246575c (refs/remotes/origin/develop)
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git ls-remote -h -- https://github.com/nghiattr/flask-docker.git # timeout=10
+Found 3 remote heads on https://github.com/nghiattr/flask-docker.git
+[poll] Latest remote head revision on refs/heads/develop is: 942149604c218be7d8d675096400eb1bd61a9c54
+Using strategy: Default
+[poll] Last Built Revision: Revision 4fa9d63a806e89cf882aa7368836b2e48246575c (refs/remotes/origin/develop)
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git ls-remote -h -- https://github.com/nghiattr/flask-docker.git # timeout=10
+Found 3 remote heads on https://github.com/nghiattr/flask-docker.git
+[poll] Latest remote head revision on refs/heads/develop is: 942149604c218be7d8d675096400eb1bd61a9c54
+Using strategy: Default
+[poll] Last Built Revision: Revision 4fa9d63a806e89cf882aa7368836b2e48246575c (refs/remotes/origin/develop)
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git ls-remote -h -- https://github.com/nghiattr/flask-docker.git # timeout=10
+Found 3 remote heads on https://github.com/nghiattr/flask-docker.git
+[poll] Latest remote head revision on refs/heads/develop is: 942149604c218be7d8d675096400eb1bd61a9c54
+Done. Took 3.6 sec
+Changes found

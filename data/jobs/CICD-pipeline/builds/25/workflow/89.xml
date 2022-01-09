@@ -1,0 +1,32 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@804.vba10a18a1476">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@2648.va9433432b33c">
+    <parentIds>
+      <string>88</string>
+    </parentIds>
+    <id>89</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.EnvStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2648.va9433432b33c">
+      <arguments>
+        <entry>
+          <string>overrides</string>
+          <list>
+            <string>GIT_BRANCH=origin/develop</string>
+            <string>GIT_COMMIT=305e1f9752108c3db6d8bc5c2123635a66ad9e21</string>
+            <string>GIT_PREVIOUS_COMMIT=305e1f9752108c3db6d8bc5c2123635a66ad9e21</string>
+            <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT=942149604c218be7d8d675096400eb1bd61a9c54</string>
+            <string>GIT_URL=https://github.com/nghiattr/flask-docker.git</string>
+          </list>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1108.v57edf648f5d4">
+      <startTime>1641463511799</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>

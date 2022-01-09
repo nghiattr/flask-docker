@@ -1,0 +1,11 @@
+commit 305e1f9752108c3db6d8bc5c2123635a66ad9e21
+tree c28cffbaf1b69d19be2bd3df8f2fe827aa6c401c
+parent 942149604c218be7d8d675096400eb1bd61a9c54
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 16:01:16 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 16:01:16 +0700
+
+    asds
+
+
+:100644 100644 74a9b72bb3a24e644ebc7d0c2c7690152f39cf0e 90c519f5553d25e236e0a64516cab94b2487de66 M	Flask-docker-deployment.yaml
+:100644 100644 44a2c329b7759da340a05655f17c780d59dbf981 8e407a17dd4304996c6f211e308713a37d0af669 M	helm-chart/values.yaml

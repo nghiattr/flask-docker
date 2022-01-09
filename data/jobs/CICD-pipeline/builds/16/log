@@ -1,0 +1,968 @@
+Started by GitHub push by nghiattr
+Obtained Jenkinsfile from git https://github.com/nghiattr/flask-docker.git
+[8mha:////4HOQyhtRN6BYPCfZoaC4t6X005cLacOr/i0de2nNLleuAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4F/s7/NoWvjr0vCN9EAZthd1TuZQPg4JazwCDGuITzfqAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] withEnv
+[8mha:////4HEYXE9y1eFYyQUomacZgNwvs7xXyqhM+vSjcPSLvMgSAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4CMUgZyjsrY4/QPwaLH9GgYOA9JZEyYm4bY/MOAiEMeIAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4HZiYjbHQ+7KG26siAhOg2dIUqwTviAqmxWiEmcL7l1GAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (SonarScanner)
+[8mha:////4M9wuEAldvnHQTYqV8LrjvdXugEYYhEpBJ9rrbC4YlyVAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gwExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jcChmMxwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4GcGUJYILzcXDUILh5IX5PSxj+2hDQ3DlKcvAXQn/vDZAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYp/eT83ILSktQi/azUvOzMvGJVI5fE9NS8En0A4Zrl388AAAA=[0mjenkins-agent in /jenkins-agent/workspace/CICD-pipeline
+[8mha:////4B2Rt5yE6SJ+uuoI+Rf5/m3KFGpfQXwtYdNJC+o0ryBSAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0BAkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfpX/cvwAAAAA==[0m[Pipeline] {
+[8mha:////4G93A90MnnohGMLPCKemxnPXnlqxfI0/NYYy6t7SLiHmAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaoyVLaHxBMgiwpL/WWDdrTyRV/MOEjexcpJJ5k3zXm9Y5wQnSpZ7g73DrB2PYbR18YlSfws0cU9XrgkzBcOlmSR15rygpGJgCWtgJWBjUAfKDm2BrfDqodqg0LaXkup3FNC4boAnMFHNRaXyhTnB7j52mfDn+SuAORZg+9pD/AAeoCAqvAAAAA==[0m[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+Fetching changes from the remote Git repository
+Checking out Revision 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d (refs/remotes/origin/develop)
+Commit message: "ff"
+ > git rev-parse --resolve-git-dir /jenkins-agent/workspace/CICD-pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d # timeout=10
+ > git rev-list --no-walk 865c9215bc9bcfa7e724f0c6e4b37971375ec503 # timeout=10
+[8mha:////4IYUMR+AvW5OQYcIn0nLzon5D0VHYk+kHO9O28O17TjmAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDHRKiorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INcXYwW8EAAAA=[0m[Pipeline] withEnv
+[8mha:////4GCXLqx/wb5vhYgCosonXXJTNRlHNZyj9c8Z1zYsi6mjAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4HvxyKWAMllCGes4B9xahu9kJ2SdeGwNk54bfssvwD0uAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggysXWsbBkaT4AJIoT5nwCRVJ7Iq3kH0cxYucXOvm3e8wXrGOBIQTOrcDAYO8O8m3RZLFMYro4ys3RhHWEkp5hQWVCvTgsKSgqWVDWsOGwUdo6iQZ1gy628y8ZJ1M05hfIdONSmH+EBFS/mJEP6whxgd5v6SPjz/BXA7BPUbfupvX8DpQJrNb4AAAA=[0m[Pipeline] sh
++ pwd
+/jenkins-agent/workspace/CICD-pipeline
+[8mha:////4BSxGPh393zK7KiE4G5Fb4tg7tbKDVyDY/Hz0Id2vDA9AAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyGUvHypah8QSYIEKY/wkQSeWJvJp3EM2MlVvs7NvmPV+wjgGOFDSzCgeDsTPMu0mXxTKF4eooM0sX1hFGcooJlQX16rSgoKRgSVXDisNGYecoGtQJttzKu2ycRN2cUyjfgUNt+hEeUPFiTjKkL8wBdrepj4Q/z18BzD5B3baf2vs35DNwLL4AAAA=[0m[Pipeline] sh
++ docker run --rm --net host -e SONAR_HOST_URL=http://35.247.164.137:9000 -v /jenkins-agent/workspace/CICD-pipeline:/usr/src sonarsource/sonar-scanner-cli -Dsonar.verbose=true -Dsonar.host.url=http://35.247.164.137:9000 -Dsonar.projectName=sonarqube-test -Dsonar.projectKey=sonarqube-test -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8 -Dsonar.sources=.
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+20:43:57.665 INFO: SonarScanner 4.6.2.2472
+20:43:57.668 INFO: Java 11.0.12 Alpine (64-bit)
+20:43:57.669 INFO: Linux 5.11.0-1023-gcp amd64
+20:43:58.308 DEBUG: keyStore is : 
+20:43:58.309 DEBUG: keyStore type is : pkcs12
+20:43:58.310 DEBUG: keyStore provider is : 
+20:43:58.310 DEBUG: init keystore
+20:43:58.311 DEBUG: init keymanager of type SunX509
+20:43:58.741 DEBUG: Create: /opt/sonar-scanner/.sonar/cache
+20:43:58.743 INFO: User cache: /opt/sonar-scanner/.sonar/cache
+20:43:58.744 DEBUG: Create: /opt/sonar-scanner/.sonar/cache/_tmp
+20:43:58.750 DEBUG: Extract sonar-scanner-api-batch in temp...
+20:43:58.784 DEBUG: Get bootstrap index...
+20:43:58.784 DEBUG: Download: http://35.247.164.137:9000/batch/index
+20:43:59.025 DEBUG: Get bootstrap completed
+20:43:59.037 DEBUG: Download http://35.247.164.137:9000/batch/file?name=sonar-scanner-engine-shaded-9.2.4.50792-all.jar to /opt/sonar-scanner/.sonar/cache/_tmp/fileCache10345871982127295912.tmp
+20:43:59.672 DEBUG: Create isolated classloader...
+20:43:59.702 DEBUG: Start temp cleaning...
+20:43:59.708 DEBUG: Temp cleaning done
+20:43:59.709 INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+20:43:59.710 INFO: Project root configuration file: NONE
+20:43:59.712 DEBUG: Execution getVersion
+20:43:59.757 INFO: Analyzing on SonarQube server 9.2.4
+20:43:59.758 INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+20:43:59.763 DEBUG: Work directory: /usr/src/.scannerwork
+20:43:59.768 DEBUG: Execution execute
+20:44:00.328 DEBUG: Community 9.2.4.50792
+20:44:00.606 INFO: Load global settings
+20:44:00.698 DEBUG: GET 200 http://35.247.164.137:9000/api/settings/values.protobuf | time=86ms
+20:44:00.737 INFO: Load global settings (done) | time=131ms
+20:44:00.740 INFO: Server id: BF41A1F2-AX4rm8QDNcwuSSX-5F4V
+20:44:00.766 DEBUG: Create : /opt/sonar-scanner/.sonar/_tmp
+20:44:00.767 INFO: User cache: /opt/sonar-scanner/.sonar/cache
+20:44:00.771 INFO: Load/download plugins
+20:44:00.772 INFO: Load plugins index
+20:44:00.813 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/installed | time=41ms
+20:44:00.919 INFO: Load plugins index (done) | time=147ms
+20:44:00.925 DEBUG: Download plugin 'csharp' to '/opt/sonar-scanner/.sonar/_tmp/fileCache2532639403630989445.tmp'
+20:44:00.957 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=csharp&acceptCompressions=pack200 | time=28ms
+20:44:01.146 DEBUG: Download plugin 'config' to '/opt/sonar-scanner/.sonar/_tmp/fileCache16943995016537315549.tmp'
+20:44:01.167 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=config&acceptCompressions=pack200 | time=21ms
+20:44:01.173 DEBUG: Download plugin 'flex' to '/opt/sonar-scanner/.sonar/_tmp/fileCache9218413641409307918.tmp'
+20:44:01.180 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=flex&acceptCompressions=pack200 | time=7ms
+20:44:01.258 DEBUG: Download plugin 'go' to '/opt/sonar-scanner/.sonar/_tmp/fileCache14829879682510108211.tmp'
+20:44:01.310 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=go&acceptCompressions=pack200 | time=51ms
+20:44:01.475 DEBUG: Download plugin 'web' to '/opt/sonar-scanner/.sonar/_tmp/fileCache9651081446198025525.tmp'
+20:44:01.485 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=web&acceptCompressions=pack200 | time=9ms
+20:44:01.517 DEBUG: Download plugin 'iac' to '/opt/sonar-scanner/.sonar/_tmp/fileCache18284963548764850305.tmp'
+20:44:01.526 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=iac&acceptCompressions=pack200 | time=8ms
+20:44:01.542 DEBUG: Download plugin 'jacoco' to '/opt/sonar-scanner/.sonar/_tmp/fileCache17314265683249767518.tmp'
+20:44:01.553 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=jacoco&acceptCompressions=pack200 | time=10ms
+20:44:01.556 DEBUG: Download plugin 'java' to '/opt/sonar-scanner/.sonar/_tmp/fileCache11454713218101412084.tmp'
+20:44:01.578 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=java&acceptCompressions=pack200 | time=21ms
+20:44:01.974 DEBUG: Download plugin 'javascript' to '/opt/sonar-scanner/.sonar/_tmp/fileCache6500301892585784960.tmp'
+20:44:01.984 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=javascript&acceptCompressions=pack200 | time=10ms
+20:44:02.564 DEBUG: Download plugin 'kotlin' to '/opt/sonar-scanner/.sonar/_tmp/fileCache2995637771473826112.tmp'
+20:44:02.586 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=kotlin&acceptCompressions=pack200 | time=21ms
+20:44:03.828 DEBUG: Download plugin 'php' to '/opt/sonar-scanner/.sonar/_tmp/fileCache9137073136240678287.tmp'
+20:44:03.850 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=php&acceptCompressions=pack200 | time=20ms
+20:44:04.017 DEBUG: Download plugin 'python' to '/opt/sonar-scanner/.sonar/_tmp/fileCache16811096104253620028.tmp'
+20:44:04.041 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=python&acceptCompressions=pack200 | time=24ms
+20:44:04.209 DEBUG: Download plugin 'ruby' to '/opt/sonar-scanner/.sonar/_tmp/fileCache8133690032452961399.tmp'
+20:44:04.218 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=ruby&acceptCompressions=pack200 | time=8ms
+20:44:04.477 DEBUG: Download plugin 'sonarscala' to '/opt/sonar-scanner/.sonar/_tmp/fileCache7788787310843106937.tmp'
+20:44:04.484 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=sonarscala&acceptCompressions=pack200 | time=7ms
+20:44:04.764 DEBUG: Download plugin 'vbnet' to '/opt/sonar-scanner/.sonar/_tmp/fileCache5229778687923530864.tmp'
+20:44:04.791 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=vbnet&acceptCompressions=pack200 | time=25ms
+20:44:05.198 DEBUG: Download plugin 'xml' to '/opt/sonar-scanner/.sonar/_tmp/fileCache65285698102630881.tmp'
+20:44:05.207 DEBUG: GET 200 http://35.247.164.137:9000/api/plugins/download?plugin=xml&acceptCompressions=pack200 | time=8ms
+20:44:05.250 INFO: Load/download plugins (done) | time=4479ms
+20:44:05.661 DEBUG: Plugins:
+20:44:05.671 DEBUG:   * Python Code Quality and Security 3.8.0.8883 (python)
+20:44:05.673 DEBUG:   * Go Code Quality and Security 1.8.3.2219 (go)
+20:44:05.673 DEBUG:   * JaCoCo 1.1.1.1157 (jacoco)
+20:44:05.674 DEBUG:   * Kotlin Code Quality and Security 2.7.0.948 (kotlin)
+20:44:05.675 DEBUG:   * IaC Code Quality and Security 1.4.0.1294 (iac)
+20:44:05.679 DEBUG:   * JavaScript/TypeScript Code Quality and Security 8.6.0.16913 (javascript)
+20:44:05.680 DEBUG:   * Ruby Code Quality and Security 1.8.3.2219 (ruby)
+20:44:05.681 DEBUG:   * Scala Code Quality and Security 1.8.3.2219 (sonarscala)
+20:44:05.681 DEBUG:   * C# Code Quality and Security 8.32.0.39516 (csharp)
+20:44:05.682 DEBUG:   * Java Code Quality and Security 7.5.0.28054 (java)
+20:44:05.683 DEBUG:   * HTML Code Quality and Security 3.4.0.2754 (web)
+20:44:05.683 DEBUG:   * Flex Code Quality and Security 2.6.2.2641 (flex)
+20:44:05.683 DEBUG:   * XML Code Quality and Security 2.4.0.3273 (xml)
+20:44:05.683 DEBUG:   * PHP Code Quality and Security 3.21.2.8292 (php)
+20:44:05.683 DEBUG:   * VB.NET Code Quality and Security 8.32.0.39516 (vbnet)
+20:44:05.683 DEBUG:   * Configuration detection fot Code Quality and Security 1.1.0.185 (config)
+20:44:07.090 INFO: Process project properties
+20:44:07.107 INFO: Process project properties (done) | time=17ms
+20:44:07.108 INFO: Execute project builders
+20:44:07.109 DEBUG: Execute project builder: org.sonar.plugins.csharp.CSharpGlobalProtobufFileProcessor
+20:44:07.125 DEBUG: Execute project builder: org.sonar.plugins.vbnet.VbNetGlobalProtobufFileProcessor
+20:44:07.127 INFO: Execute project builders (done) | time=19ms
+20:44:07.141 INFO: Project key: sonarqube-test
+20:44:07.143 INFO: Base dir: /usr/src
+20:44:07.143 INFO: Working dir: /usr/src/.scannerwork
+20:44:07.146 DEBUG: Project global encoding: UTF-8, default locale: en_US
+20:44:07.148 DEBUG: Creating module hierarchy
+20:44:07.149 DEBUG:   Init module 'sonarqube-test'
+20:44:07.150 DEBUG:     Base dir: /usr/src
+20:44:07.151 DEBUG:     Working dir: /usr/src/.scannerwork
+20:44:07.151 DEBUG:     Module global encoding: UTF-8, default locale: en_US
+20:44:07.427 INFO: Load project settings for component key: 'sonarqube-test'
+20:44:07.452 DEBUG: GET 200 http://35.247.164.137:9000/api/settings/values.protobuf?component=sonarqube-test | time=15ms
+20:44:07.454 INFO: Load project settings for component key: 'sonarqube-test' (done) | time=28ms
+20:44:07.573 DEBUG: Available languages:
+20:44:07.574 DEBUG:   * Python => "py"
+20:44:07.574 DEBUG:   * Go => "go"
+20:44:07.575 DEBUG:   * Kotlin => "kotlin"
+20:44:07.575 DEBUG:   * Terraform => "terraform"
+20:44:07.576 DEBUG:   * CloudFormation => "cloudformation"
+20:44:07.576 DEBUG:   * JavaScript => "js"
+20:44:07.577 DEBUG:   * TypeScript => "ts"
+20:44:07.577 DEBUG:   * CSS => "css"
+20:44:07.578 DEBUG:   * Ruby => "ruby"
+20:44:07.578 DEBUG:   * Scala => "scala"
+20:44:07.579 DEBUG:   * C# => "cs"
+20:44:07.579 DEBUG:   * Java => "java"
+20:44:07.579 DEBUG:   * HTML => "web"
+20:44:07.579 DEBUG:   * JSP => "jsp"
+20:44:07.580 DEBUG:   * Flex => "flex"
+20:44:07.580 DEBUG:   * XML => "xml"
+20:44:07.580 DEBUG:   * PHP => "php"
+20:44:07.580 DEBUG:   * VB.NET => "vbnet"
+20:44:07.580 DEBUG:   * YAML => "yaml"
+20:44:07.580 DEBUG:   * JSON => "json"
+20:44:07.635 INFO: Load quality profiles
+20:44:07.846 DEBUG: GET 200 http://35.247.164.137:9000/api/qualityprofiles/search.protobuf?project=sonarqube-test | time=209ms
+20:44:07.973 INFO: Load quality profiles (done) | time=338ms
+20:44:07.986 INFO: Load active rules
+20:44:08.286 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnR8CNcwuSSX-5Jx2&ps=500&p=1 | time=299ms
+20:44:08.505 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnSMMNcwuSSX-5JzT&ps=500&p=1 | time=40ms
+20:44:08.540 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnSb9NcwuSSX-5Jzz&ps=500&p=1 | time=20ms
+20:44:08.583 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnSfRNcwuSSX-5J0u&ps=500&p=1 | time=40ms
+20:44:08.678 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnSu8NcwuSSX-5J36&ps=500&p=1 | time=88ms
+20:44:09.044 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnTKSNcwuSSX-5J_W&ps=500&p=1 | time=338ms
+20:44:09.426 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnTqGNcwuSSX-5KHN&ps=500&p=1 | time=343ms
+20:44:09.491 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnT5yNcwuSSX-5KKn&ps=500&p=1 | time=38ms
+20:44:09.640 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnUFaNcwuSSX-5KTQ&ps=500&p=1 | time=144ms
+20:44:09.982 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnUgNNcwuSSX-5KmS&ps=500&p=1 | time=306ms
+20:44:10.092 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnU3jNcwuSSX-5Kui&ps=500&p=1 | time=48ms
+20:44:10.140 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnU_wNcwuSSX-5Kwm&ps=500&p=1 | time=43ms
+20:44:10.173 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnVPSNcwuSSX-5Kx4&ps=500&p=1 | time=28ms
+20:44:10.195 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnVTbNcwuSSX-5KyK&ps=500&p=1 | time=20ms
+20:44:10.306 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnVXVNcwuSSX-5K3Q&ps=500&p=1 | time=110ms
+20:44:10.354 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnV6MNcwuSSX-5K9L&ps=500&p=1 | time=40ms
+20:44:10.435 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnWJwNcwuSSX-5LBW&ps=500&p=1 | time=78ms
+20:44:10.478 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnWZoNcwuSSX-5LD-&ps=500&p=1 | time=37ms
+20:44:10.591 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnWlYNcwuSSX-5LKO&ps=500&p=1 | time=111ms
+20:44:10.611 DEBUG: GET 200 http://35.247.164.137:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt,updatedAt,deprecatedKeys&activation=true&qprofile=AX4rnWhLNcwuSSX-5LEa&ps=500&p=1 | time=14ms
+20:44:10.630 INFO: Load active rules (done) | time=2645ms
+20:44:10.765 DEBUG: Declared extensions of language Python were converted to sonar.lang.patterns.py : **/*.py
+20:44:10.766 DEBUG: Declared extensions of language Go were converted to sonar.lang.patterns.go : **/*.go
+20:44:10.767 DEBUG: Declared extensions of language Kotlin were converted to sonar.lang.patterns.kotlin : **/*.kt
+20:44:10.767 DEBUG: Declared extensions of language Terraform were converted to sonar.lang.patterns.terraform : **/*.tf
+20:44:10.768 DEBUG: Declared extensions of language CloudFormation were converted to sonar.lang.patterns.cloudformation : 
+20:44:10.769 DEBUG: Declared extensions of language JavaScript were converted to sonar.lang.patterns.js : **/*.js,**/*.jsx,**/*.mjs,**/*.vue
+20:44:10.770 DEBUG: Declared extensions of language TypeScript were converted to sonar.lang.patterns.ts : **/*.ts,**/*.tsx
+20:44:10.771 DEBUG: Declared extensions of language CSS were converted to sonar.lang.patterns.css : **/*.css,**/*.less,**/*.scss
+20:44:10.772 DEBUG: Declared extensions of language Ruby were converted to sonar.lang.patterns.ruby : **/*.rb
+20:44:10.772 DEBUG: Declared extensions of language Scala were converted to sonar.lang.patterns.scala : **/*.scala
+20:44:10.773 DEBUG: Declared extensions of language C# were converted to sonar.lang.patterns.cs : **/*.cs
+20:44:10.774 DEBUG: Declared extensions of language Java were converted to sonar.lang.patterns.java : **/*.java,**/*.jav
+20:44:10.775 DEBUG: Declared extensions of language HTML were converted to sonar.lang.patterns.web : **/*.html,**/*.xhtml,**/*.cshtml,**/*.vbhtml,**/*.aspx,**/*.ascx,**/*.rhtml,**/*.erb,**/*.shtm,**/*.shtml
+20:44:10.776 DEBUG: Declared extensions of language JSP were converted to sonar.lang.patterns.jsp : **/*.jsp,**/*.jspf,**/*.jspx
+20:44:10.777 DEBUG: Declared extensions of language Flex were converted to sonar.lang.patterns.flex : **/*.as
+20:44:10.778 DEBUG: Declared extensions of language XML were converted to sonar.lang.patterns.xml : **/*.xml,**/*.xsd,**/*.xsl
+20:44:10.779 DEBUG: Declared extensions of language PHP were converted to sonar.lang.patterns.php : **/*.php,**/*.php3,**/*.php4,**/*.php5,**/*.phtml,**/*.inc
+20:44:10.779 DEBUG: Declared extensions of language VB.NET were converted to sonar.lang.patterns.vbnet : **/*.vb
+20:44:10.780 DEBUG: Declared extensions of language YAML were converted to sonar.lang.patterns.yaml : **/*.yaml,**/*.yml
+20:44:10.781 DEBUG: Declared extensions of language JSON were converted to sonar.lang.patterns.json : **/*.json
+20:44:10.788 DEBUG: Will ignore generated code
+20:44:10.790 DEBUG: Will ignore generated code
+20:44:10.791 INFO: Indexing files...
+20:44:10.792 INFO: Project configuration:
+20:44:10.811 DEBUG: loading config FileBasedConfig[/tmp/jgit/config]
+20:44:10.814 DEBUG: readpipe [/usr/bin/git, --version],/usr/bin
+20:44:11.125 DEBUG: readpipe may return 'git version 2.32.0'
+20:44:11.129 DEBUG: remaining output:
+
+20:44:11.129 DEBUG: readpipe [/usr/bin/git, config, --system, --edit],/usr/bin
+20:44:11.155 DEBUG: readpipe may return '/etc/gitconfig'
+20:44:11.155 DEBUG: remaining output:
+
+20:44:11.157 DEBUG: loading config FileBasedConfig[/etc/gitconfig]
+20:44:11.159 DEBUG: loading config FileBasedConfig[/root/.gitconfig]
+20:44:11.184 DEBUG: Thread[JGit-FileStoreAttributeReader-1,5,main]: start measure timestamp resolution /usr/src (/dev/root) in /usr/src/.git
+20:44:11.186 DEBUG: Thread[JGit-FileStoreAttributeReader-1,5,main]: end measure timestamp resolution /usr/src (/dev/root) in /usr/src/.git; got PT0.000006S
+20:44:11.187 DEBUG: Thread[JGit-FileStoreAttributeReader-1,5,main]: start measure minimal racy interval in /usr/src/.git
+20:44:11.283 DEBUG: Thread[main,5,main]: use fallback timestamp resolution for directory /usr/src/.git
+20:44:11.472 DEBUG: 50 non excluded files in this Git repository
+20:44:11.504 DEBUG: 'Flask-docker-service.yaml' indexed with language 'yaml'
+20:44:11.569 DEBUG: 'Dockerfile' indexed with no language
+20:44:11.575 DEBUG: 'LICENSE' indexed with no language
+20:44:11.581 DEBUG: 'terraform/provider.tf' indexed with language 'terraform'
+20:44:11.586 DEBUG: 'terraform/main.tf' indexed with language 'terraform'
+20:44:11.590 DEBUG: 'pyproject.toml' indexed with no language
+20:44:11.604 DEBUG: Average line length for server/templates/style.css is 12
+20:44:11.606 DEBUG: 'server/templates/style.css' indexed with language 'css'
+20:44:11.609 DEBUG: 'server/templates/nghia.html' indexed with language 'web'
+20:44:11.615 DEBUG: 'server/templates/images/people/2.jpeg' indexed with no language
+20:44:11.621 DEBUG: 'server/templates/images/people/3.jpeg' indexed with no language
+20:44:11.627 DEBUG: 'server/templates/images/people/1.jpeg' indexed with no language
+20:44:11.633 DEBUG: 'server/templates/images/2.jpeg' indexed with no language
+20:44:11.636 DEBUG: 'server/templates/images/3.jpeg' indexed with no language
+20:44:11.641 DEBUG: 'server/templates/images/cup/5.jpeg' indexed with no language
+20:44:11.643 DEBUG: 'server/templates/images/cup/2.jpeg' indexed with no language
+20:44:11.647 DEBUG: 'server/templates/images/cup/3.jpeg' indexed with no language
+20:44:11.651 DEBUG: 'server/templates/images/cup/6.jpeg' indexed with no language
+20:44:11.654 DEBUG: 'server/templates/images/cup/7.jpeg' indexed with no language
+20:44:11.658 DEBUG: 'server/templates/images/cup/1.jpeg' indexed with no language
+20:44:11.662 DEBUG: 'server/templates/images/cup/8.jpeg' indexed with no language
+20:44:11.666 DEBUG: 'server/templates/images/cup/4.jpeg' indexed with no language
+20:44:11.674 DEBUG: 'server/templates/images/1.jpeg' indexed with no language
+20:44:11.676 DEBUG: 'server/templates/images/four.jpeg' indexed with no language
+20:44:11.678 DEBUG: 'server/templates/images/letter.jpeg' indexed with no language
+20:44:11.682 DEBUG: 'server/templates/images/main.jpg' indexed with no language
+20:44:11.684 DEBUG: 'server/templates/haha.html' indexed with language 'web'
+20:44:11.686 DEBUG: 'server/templates/index.html' indexed with language 'web'
+20:44:11.688 DEBUG: 'server/__init__.py' indexed with language 'py'
+20:44:11.692 DEBUG: 'server/app.py' indexed with language 'py'
+20:44:11.695 DEBUG: 'helm-chart/templates/deployment.yaml' indexed with language 'yaml'
+20:44:11.698 DEBUG: 'helm-chart/templates/_helpers.tpl' indexed with no language
+20:44:11.702 DEBUG: 'helm-chart/templates/service.yaml' indexed with language 'yaml'
+20:44:11.705 DEBUG: 'helm-chart/values.yaml' indexed with language 'yaml'
+20:44:11.709 DEBUG: 'helm-chart/Chart.yaml' indexed with language 'yaml'
+20:44:11.713 DEBUG: 'Flask-docker-deployment.yaml' indexed with language 'yaml'
+20:44:11.715 DEBUG: 'Jenkinsfile2' indexed with no language
+20:44:11.716 DEBUG: 'Jenkinsfile' indexed with no language
+20:44:11.719 DEBUG: 'tests/test_server.py' indexed with language 'py'
+20:44:11.721 DEBUG: 'tests/test_dummy2.py' indexed with language 'py'
+20:44:11.724 DEBUG: 'tests/__init__.py' indexed with language 'py'
+20:44:11.726 DEBUG: 'README.md' indexed with no language
+20:44:11.727 DEBUG: 'poetry.lock' indexed with no language
+20:44:11.729 DEBUG: 'docker-compose.yaml' indexed with language 'yaml'
+20:44:11.732 DEBUG: 'Test-jenkinsfile' indexed with no language
+20:44:11.734 DEBUG: 'deploy.sh' indexed with no language
+20:44:11.738 DEBUG: 'Jenkinsfile_first' indexed with no language
+20:44:11.739 DEBUG: 'kubeconfig.yaml' indexed with language 'yaml'
+20:44:11.760 INFO: 47 files indexed
+20:44:11.761 INFO: 0 files ignored because of scm ignore settings
+20:44:11.763 INFO: Quality profile for css: Sonar way
+20:44:11.764 INFO: Quality profile for py: Sonar way
+20:44:11.765 INFO: Quality profile for terraform: Sonar way
+20:44:11.766 INFO: Quality profile for web: Sonar way
+20:44:11.766 INFO: Quality profile for yaml: Sonar way
+20:44:11.767 INFO: ------------- Run sensors on module sonarqube-test
+20:44:11.987 INFO: Load metrics repository
+20:44:12.045 DEBUG: GET 200 http://35.247.164.137:9000/api/metrics/search?ps=500&p=1 | time=48ms
+20:44:12.073 INFO: Load metrics repository (done) | time=86ms
+20:44:14.192 DEBUG: delta [ns] since modification FileSnapshot failed to detect
+count, failures, racy limit [ns], delta min [ns], delta max [ns], delta avg [ns], delta stddev [ns]
+1688, 35, 15000, 3248000.0, 6351000.0, 4682599.999999999, 907320.9497649402
+20:44:14.193 DEBUG: FileStoreAttributes[fsTimestampResolution=6 µs, minimalRacyInterval=6,351 µs]
+20:44:14.233 DEBUG: Thread[JGit-FileStoreAttributeReader-1,5,main]: start measure timestamp resolution / (overlay) in /tmp/jgit
+20:44:14.234 DEBUG: Thread[JGit-FileStoreAttributeReader-1,5,main]: end measure timestamp resolution / (overlay) in /tmp/jgit; got PT0.000002S
+20:44:14.235 DEBUG: Thread[JGit-FileStoreAttributeReader-1,5,main]: start measure minimal racy interval in /tmp/jgit
+20:44:14.337 DEBUG: Thread[JGit-FileStoreAttributeWriter-2,5,main]: use fallback timestamp resolution for directory /tmp/jgit
+20:44:14.512 DEBUG: 'JavaSensor' skipped because there is no related file in current project
+20:44:14.514 DEBUG: 'Import external issues report' skipped because one of the required properties is missing
+20:44:14.516 DEBUG: 'Import of Pylint issues' skipped because one of the required properties is missing
+20:44:14.518 DEBUG: 'Import of Bandit issues' skipped because one of the required properties is missing
+20:44:14.519 DEBUG: 'Import of Flake8 issues' skipped because one of the required properties is missing
+20:44:14.519 DEBUG: 'Code Quality and Security for Go' skipped because there is no related file in current project
+20:44:14.521 DEBUG: 'Go Unit Test Report' skipped because there is no related file in current project
+20:44:14.522 DEBUG: 'Go Cover sensor for Go coverage' skipped because one of the required properties is missing
+20:44:14.525 DEBUG: 'Import of go vet issues' skipped because there is no related file in current project
+20:44:14.526 DEBUG: 'Import of Golint issues' skipped because there is no related file in current project
+20:44:14.527 DEBUG: 'Import of GoMetaLinter issues' skipped because there is no related file in current project
+20:44:14.528 DEBUG: 'Import of GolangCI-Lint issues' skipped because there is no related file in current project
+20:44:14.530 DEBUG: 'Kotlin Sensor' skipped because there is no related file in current project
+20:44:14.533 DEBUG: 'KotlinSurefireSensor' skipped because there is no related file in current project
+20:44:14.534 DEBUG: 'Import of detekt issues' skipped because there is no related file in current project
+20:44:14.535 DEBUG: 'Import of Android Lint issues' skipped because one of the required properties is missing
+20:44:14.536 DEBUG: 'Import of ktlint issues' skipped because there is no related file in current project
+20:44:14.546 DEBUG: 'JavaScript analysis' skipped because there is no related file in current project
+20:44:14.547 DEBUG: 'TypeScript analysis' skipped because there is no related file in current project
+20:44:14.549 DEBUG: 'JavaScript/TypeScript Coverage' skipped because there is no related file in current project
+20:44:14.550 DEBUG: 'Import of ESLint issues' skipped because one of the required properties is missing
+20:44:14.550 DEBUG: 'Import of TSLint issues' skipped because one of the required properties is missing
+20:44:14.551 DEBUG: 'Import of stylelint issues' skipped because one of the required properties is missing
+20:44:14.552 DEBUG: 'Ruby Sensor' skipped because there is no related file in current project
+20:44:14.554 DEBUG: 'Import of RuboCop issues' skipped because there is no related file in current project
+20:44:14.554 DEBUG: 'SimpleCov Sensor for Ruby coverage' skipped because there is no related file in current project
+20:44:14.555 DEBUG: 'Scala Sensor' skipped because there is no related file in current project
+20:44:14.560 DEBUG: 'Scoverage sensor for Scala coverage' skipped because there is no related file in current project
+20:44:14.563 DEBUG: 'Import of Scalastyle issues' skipped because there is no related file in current project
+20:44:14.565 DEBUG: 'Import of Scapegoat issues' skipped because there is no related file in current project
+20:44:14.569 DEBUG: 'Import of Checkstyle issues' skipped because there is no related file in current project
+20:44:14.572 DEBUG: 'Import of PMD issues' skipped because one of the required properties is missing
+20:44:14.575 DEBUG: 'Import of SpotBugs issues' skipped because there is no related file in current project
+20:44:14.575 DEBUG: 'SurefireSensor' skipped because there is no related file in current project
+20:44:14.576 DEBUG: 'Removed properties sensor' skipped because there is no related file in current project
+20:44:14.578 DEBUG: 'Flex' skipped because there is no related file in current project
+20:44:14.578 DEBUG: 'Flex Cobertura' skipped because there is no related file in current project
+20:44:14.579 DEBUG: 'XML Sensor' skipped because there is no related file in current project
+20:44:14.580 DEBUG: 'PHP sensor' skipped because there is no related file in current project
+20:44:14.582 DEBUG: 'Analyzer for "php.ini" files' skipped because there is no related file in current project
+20:44:14.584 DEBUG: 'Import of PHPStan issues' skipped because there is no related file in current project
+20:44:14.585 DEBUG: 'Import of Psalm issues' skipped because there is no related file in current project
+20:44:14.593 DEBUG: 'Generic Test Executions Report' skipped because one of the required properties is missing
+20:44:14.595 DEBUG: Sensors : Python Sensor -> Cobertura Sensor for Python coverage -> PythonXUnitSensor -> JaCoCo XML Report Importer -> IaC Terraform Sensor -> IaC CloudFormation Sensor -> CSS Metrics -> CSS Rules -> C# Project Type Information -> C# Analysis Log -> C# Properties -> JavaXmlSensor -> HTML -> VB.NET Project Type Information -> VB.NET Analysis Log -> VB.NET Properties
+20:44:14.604 INFO: Sensor Python Sensor [python]
+20:44:14.618 WARN: Your code is analyzed as compatible with python 2 and 3 by default. This will prevent the detection of issues specific to python 2 or python 3. You can get a more precise analysis by setting a python version in your configuration via the parameter "sonar.python.version"
+20:44:14.637 DEBUG: Input files for indexing: [tests/test_dummy2.py, server/__init__.py, server/app.py, tests/test_server.py, tests/__init__.py]
+20:44:14.640 INFO: Starting global symbols computation
+20:44:14.651 INFO: 5 source files to be analyzed
+20:44:14.673 INFO: Load project repositories
+20:44:14.685 DEBUG: GET 200 http://35.247.164.137:9000/batch/project.protobuf?key=sonarqube-test | time=11ms
+20:44:14.712 INFO: Load project repositories (done) | time=39ms
+20:44:14.714 DEBUG: 'tests/test_dummy2.py' generated metadata with charset 'UTF-8'
+20:44:15.436 DEBUG: 'server/__init__.py' generated metadata with charset 'UTF-8'
+20:44:15.474 DEBUG: 'server/app.py' generated metadata with charset 'UTF-8'
+20:44:17.237 DEBUG: delta [ns] since modification FileSnapshot failed to detect
+count, failures, racy limit [ns], delta min [ns], delta max [ns], delta avg [ns], delta stddev [ns]
+1656, 55, 5000, 2958000.0, 6131000.0, 4547527.2727272725, 989028.2708490797
+20:44:17.238 DEBUG: FileStoreAttributes[fsTimestampResolution=2 µs, minimalRacyInterval=6,131 µs]
+20:44:17.245 DEBUG: loading config FileBasedConfig[/tmp/jgit/config]
+20:44:20.865 DEBUG: 'tests/test_server.py' generated metadata with charset 'UTF-8'
+20:44:20.886 DEBUG: 'tests/__init__.py' generated metadata with charset 'UTF-8'
+20:44:20.892 INFO: 5/5 source files have been analyzed
+20:44:20.893 INFO: Starting rules execution
+20:44:20.901 INFO: 5 source files to be analyzed
+20:44:20.927 DEBUG: Not enough content in 'tests/test_dummy2.py' to have CPD blocks, it will not be part of the duplication detection
+20:44:21.654 DEBUG: Not enough content in 'server/__init__.py' to have CPD blocks, it will not be part of the duplication detection
+20:44:21.846 DEBUG: Not enough content in 'tests/__init__.py' to have CPD blocks, it will not be part of the duplication detection
+20:44:21.849 INFO: 5/5 source files have been analyzed
+20:44:21.850 INFO: Sensor Python Sensor [python] (done) | time=7246ms
+20:44:21.851 INFO: Sensor Cobertura Sensor for Python coverage [python]
+20:44:21.851 DEBUG: Using pattern 'coverage-reports/*coverage-*.xml' to find reports
+20:44:21.873 DEBUG: No report was found for sonar.python.coverage.reportPaths using default pattern coverage-reports/*coverage-*.xml
+20:44:21.874 INFO: Sensor Cobertura Sensor for Python coverage [python] (done) | time=22ms
+20:44:21.874 INFO: Sensor PythonXUnitSensor [python]
+20:44:21.874 DEBUG: Using pattern 'xunit-reports/xunit-result-*.xml' to find reports
+20:44:21.881 DEBUG: No report was found for sonar.python.xunit.reportPath using default pattern xunit-reports/xunit-result-*.xml
+20:44:21.881 INFO: Sensor PythonXUnitSensor [python] (done) | time=7ms
+20:44:21.882 INFO: Sensor JaCoCo XML Report Importer [jacoco]
+20:44:21.886 INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+20:44:21.887 INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+20:44:21.887 INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=5ms
+20:44:21.887 INFO: Sensor IaC Terraform Sensor [iac]
+20:44:21.902 INFO: 2 source files to be analyzed
+20:44:22.016 DEBUG: 'terraform/main.tf' generated metadata with charset 'UTF-8'
+20:44:22.140 DEBUG: 'terraform/provider.tf' generated metadata with charset 'UTF-8'
+20:44:22.144 INFO: 2/2 source files have been analyzed
+20:44:22.145 INFO: Sensor IaC Terraform Sensor [iac] (done) | time=258ms
+20:44:22.145 INFO: Sensor IaC CloudFormation Sensor [iac]
+20:44:22.148 DEBUG: 'docker-compose.yaml' generated metadata with charset 'UTF-8'
+20:44:22.151 DEBUG: 'helm-chart/templates/deployment.yaml' generated metadata with charset 'UTF-8'
+20:44:22.153 DEBUG: 'helm-chart/Chart.yaml' generated metadata with charset 'UTF-8'
+20:44:22.155 DEBUG: 'Flask-docker-deployment.yaml' generated metadata with charset 'UTF-8'
+20:44:22.157 DEBUG: 'helm-chart/templates/service.yaml' generated metadata with charset 'UTF-8'
+20:44:22.159 DEBUG: 'helm-chart/values.yaml' generated metadata with charset 'UTF-8'
+20:44:22.161 DEBUG: 'Flask-docker-service.yaml' generated metadata with charset 'UTF-8'
+20:44:22.165 DEBUG: 'kubeconfig.yaml' generated metadata with charset 'UTF-8'
+20:44:22.176 INFO: 0 source files to be analyzed
+20:44:22.182 INFO: 0/0 source files have been analyzed
+20:44:22.183 INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=38ms
+20:44:22.183 INFO: Sensor CSS Metrics [javascript]
+20:44:22.188 DEBUG: 'server/templates/style.css' generated metadata with charset 'UTF-8'
+20:44:22.224 INFO: Sensor CSS Metrics [javascript] (done) | time=41ms
+20:44:22.226 INFO: Sensor CSS Rules [javascript]
+20:44:22.230 DEBUG: Deploying bundle
+20:44:22.231 DEBUG: Deploying eslint-bridge into /usr/src/.scannerwork/.sonartmp/eslint-bridge-bundle
+20:44:25.217 DEBUG: Deploying bundle (done) | time=2987ms
+20:44:25.218 DEBUG: Starting server
+20:44:25.238 DEBUG: Using default Node.js executable: 'node'.
+20:44:25.238 DEBUG: Checking Node.js version
+20:44:25.239 DEBUG: Launching command node -v
+20:44:25.853 DEBUG: Using Node.js v14.18.1.
+20:44:25.853 DEBUG: Starting Node.js process to start eslint-bridge server at port 45403
+20:44:25.853 DEBUG: Launching command node /usr/src/.scannerwork/.sonartmp/eslint-bridge-bundle/package/bin/server 45403 127.0.0.1 /usr/src/.scannerwork true false 
+20:44:28.715 DEBUG: starting eslint-bridge server at port 45403
+20:44:28.728 DEBUG: eslint-bridge server is running at port 45403
+20:44:28.854 DEBUG: Starting server (done) | time=3636ms
+20:44:28.926 INFO: 4 source files to be analyzed
+20:44:28.935 DEBUG: 'server/templates/nghia.html' generated metadata with charset 'UTF-8'
+20:44:28.935 DEBUG: Analyzing /usr/src/server/templates/nghia.html
+20:44:29.149 DEBUG: Found 0 issue(s)
+20:44:29.157 DEBUG: 'server/templates/index.html' generated metadata with charset 'UTF-8'
+20:44:29.158 DEBUG: Analyzing /usr/src/server/templates/index.html
+20:44:29.235 DEBUG: Found 0 issue(s)
+20:44:29.241 DEBUG: 'server/templates/haha.html' generated metadata with charset 'UTF-8'
+20:44:29.241 DEBUG: Analyzing /usr/src/server/templates/haha.html
+20:44:29.274 DEBUG: Found 0 issue(s)
+20:44:29.278 DEBUG: Analyzing /usr/src/server/templates/style.css
+20:44:29.340 DEBUG: Found 1 issue(s)
+20:44:29.345 INFO: 4/4 source files have been analyzed
+20:44:29.345 INFO: Sensor CSS Rules [javascript] (done) | time=7119ms
+20:44:29.346 INFO: Sensor C# Project Type Information [csharp]
+20:44:29.351 INFO: Sensor C# Project Type Information [csharp] (done) | time=4ms
+20:44:29.352 INFO: Sensor C# Analysis Log [csharp]
+20:44:29.375 DEBUG: Project 'sonarqube-test': Property missing: 'sonar.cs.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+20:44:29.377 INFO: Sensor C# Analysis Log [csharp] (done) | time=25ms
+20:44:29.378 INFO: Sensor C# Properties [csharp]
+20:44:29.378 DEBUG: Project 'sonarqube-test': Property missing: 'sonar.cs.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+20:44:29.379 DEBUG: Project 'sonarqube-test': No Roslyn issues reports have been found.
+20:44:29.379 INFO: Sensor C# Properties [csharp] (done) | time=1ms
+20:44:29.380 INFO: Sensor JavaXmlSensor [java]
+20:44:29.382 INFO: Sensor JavaXmlSensor [java] (done) | time=2ms
+20:44:29.383 INFO: Sensor HTML [web]
+20:44:29.570 DEBUG: HtmlSensor: server/templates/nghia.html: 12,0,1
+20:44:29.617 DEBUG: HtmlSensor: server/templates/index.html: 0,0,1
+20:44:29.694 DEBUG: HtmlSensor: server/templates/haha.html: 0,0,1
+20:44:29.721 INFO: Sensor HTML [web] (done) | time=338ms
+20:44:29.722 INFO: Sensor VB.NET Project Type Information [vbnet]
+20:44:29.726 INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=4ms
+20:44:29.726 INFO: Sensor VB.NET Analysis Log [vbnet]
+20:44:29.748 DEBUG: Project 'sonarqube-test': Property missing: 'sonar.vbnet.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+20:44:29.749 INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=23ms
+20:44:29.750 INFO: Sensor VB.NET Properties [vbnet]
+20:44:29.751 DEBUG: Project 'sonarqube-test': Property missing: 'sonar.vbnet.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+20:44:29.751 DEBUG: Project 'sonarqube-test': No Roslyn issues reports have been found.
+20:44:29.752 INFO: Sensor VB.NET Properties [vbnet] (done) | time=2ms
+20:44:29.761 INFO: ------------- Run sensors on project
+20:44:29.778 DEBUG: 'Generic Coverage Report' skipped because one of the required properties is missing
+20:44:29.778 DEBUG: 'C#' skipped because there is no related file in current project
+20:44:29.779 DEBUG: 'C# Tests Coverage Report Import' skipped because there is no related file in current project
+20:44:29.779 DEBUG: '[Deprecated] C# Integration Tests Coverage Report Import' skipped because there is no related file in current project
+20:44:29.779 DEBUG: 'C# Unit Test Results Import' skipped because there is no related file in current project
+20:44:29.779 DEBUG: 'VB.NET' skipped because there is no related file in current project
+20:44:29.780 DEBUG: 'VB.NET Tests Coverage Report Import' skipped because there is no related file in current project
+20:44:29.780 DEBUG: '[Deprecated] VB.NET Integration Tests Coverage Report Import' skipped because there is no related file in current project
+20:44:29.781 DEBUG: 'VB.NET Unit Test Results Import' skipped because there is no related file in current project
+20:44:29.781 DEBUG: 'Java CPD Block Indexer' skipped because there is no related file in current project
+20:44:29.781 DEBUG: Sensors : Zero Coverage Sensor
+20:44:29.782 INFO: Sensor Zero Coverage Sensor
+20:44:29.816 INFO: Sensor Zero Coverage Sensor (done) | time=34ms
+20:44:29.889 INFO: CPD Executor 3 files had no CPD blocks
+20:44:29.889 INFO: CPD Executor Calculating CPD for 5 files
+20:44:29.890 DEBUG: Detection of duplications for /usr/src/server/templates/index.html
+20:44:29.931 DEBUG: Detection of duplications for /usr/src/server/templates/nghia.html
+20:44:29.934 DEBUG: Detection of duplications for /usr/src/server/app.py
+20:44:29.936 DEBUG: Detection of duplications for /usr/src/server/templates/haha.html
+20:44:29.938 DEBUG: Detection of duplications for /usr/src/tests/test_server.py
+20:44:29.966 INFO: CPD Executor CPD calculation finished (done) | time=50ms
+20:44:29.997 DEBUG: loading config FileBasedConfig[/tmp/jgit/config]
+20:44:30.008 DEBUG: SCM revision ID '877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d'
+20:44:30.142 INFO: Analysis report generated in 171ms, dir size=164.8 kB
+20:44:30.321 INFO: Analysis report compressed in 178ms, zip size=44.4 kB
+20:44:30.323 INFO: Analysis report generated in /usr/src/.scannerwork/scanner-report
+20:44:30.323 DEBUG: Upload report
+20:44:30.495 DEBUG: POST 200 http://35.247.164.137:9000/api/ce/submit?projectKey=sonarqube-test&projectName=sonarqube-test | time=171ms
+20:44:30.508 INFO: Analysis report uploaded in 180ms
+20:44:30.511 DEBUG: Report metadata written to /usr/src/.scannerwork/report-task.txt
+20:44:30.511 INFO: ANALYSIS SUCCESSFUL, you can browse http://35.247.164.137:9000/dashboard?id=sonarqube-test
+20:44:30.512 INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+20:44:30.512 INFO: More about the report processing at http://35.247.164.137:9000/api/ce/task?id=AX4r_G10NcwuSSX-5LN1
+20:44:30.521 DEBUG: Post-jobs : 
+20:44:30.536 DEBUG: eslint-bridge server will shutdown
+20:44:36.131 INFO: Analysis total time: 30.309 s
+20:44:36.133 INFO: ------------------------------------------------------------------------
+20:44:36.134 INFO: EXECUTION SUCCESS
+20:44:36.134 INFO: ------------------------------------------------------------------------
+20:44:36.134 INFO: Total time: 38.709s
+20:44:36.468 INFO: Final Memory: 102M/275M
+20:44:36.468 INFO: ------------------------------------------------------------------------
+[8mha:////4PY2ylSuOd8VFZMiuUjaL7BMc+jhhtCAnfMtRFZQDobvAAAApB+LCAAAAAAAAP9tjbEOwiAURV9rHFwd/QiaJm7GyZWw+AXYIkLJexSodPKL/DX/QbSJk3e4uecu5/mCdQxwpKCZVTgYjJ1h3k26LJYpDFdHmVm6sI4wklNMqCyoV6cFBSUFS6oaVhw2CjtH0aBOsOVW3mXjJOrmnEL5Dhxq04/wgIoXc5IhfWEOsLtNfST8ef4KYPY+Qd3uP9W+ATnVfPq+AAAA[0m[Pipeline] }
+[8mha:////4G90YOhVE9ElXDLEUbeNsh9vcotYkaENjZCm88yZYD+GAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBRWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7Bgo2J0a+AAAA[0m[Pipeline] // withEnv
+[8mha:////4InHiv49BaznE/9jmb4GlorGc68SSF75fCZwuwHX2BFAAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRDUJCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5NudINt/AA6Ss1S9AAAA[0m[Pipeline] }
+[8mha:////4HT781CSvcE0ZTUUJcQSLsxjjenxxByKGsNq1QqhahpgAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiKMFYVjZZuh8QQRYgxkdjFZhMoTeTXvICMzVv7qv9e81xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwAL6Zs+b0AAAA=[0m[Pipeline] // node
+[8mha:////4KAikXtBBRQ3MnDUeqwi48GvCd8gTVp0XwJQdzQNeWmFAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRDUJCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9AGgBOwy9AAAA[0m[Pipeline] }
+[8mha:////4P5nS0rbifIefR6LfS5PVWTshUvpbIkfSwbB/tcCTFWgAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRBQVCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9AGJ5Uqi9AAAA[0m[Pipeline] // stage
+[8mha:////4EyRWlY8SQkeLEpldBk1Lc30dnPFYemlWsuqqxdK9xBcAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYSDEB2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INK/7CYMEAAAA=[0m[Pipeline] stage
+[8mha:////4PHr1cY8mcvneRiJm9diAFb3QqCjRXyRTiIAnEBuEXTdAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUWBFT1ygLJwhNCGmj/8tPSjtxIq7GHWipxIQHy7ZkvdcbishwInaisdh6jLUXXejdlMRA3F4DDaKhi6gJIwUrlB0UGVstVVGysCjLYSVhbbEOFD26BBvZ6Icug0ZXnhNP21FC7s0dnpDJiZw0p28ZGba33kTCH+cvAMYuQX7Yzbafn8UHbGnGmsIAAAA=[0m[Pipeline] { (Test)
+[8mha:////4JGuQrV7/NDspgVt30s5Hso3D5vYqfIsbb7gxZa/vUH3AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohUdEVMrFEXThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbyhjgRMFwp7GzGFvLez+aOfFMobt5ytzRlbeEkbzmjc4NKX1ea0NJw6qCwUbAVmPrKVo0CXbCyYesvERTXVKYt6MAZtUATyjETE4ypG+ZAuzvo4qEP85fAEx9AlYfFquXZ/kBAsTc3cIAAAA=[0m[Pipeline] node
+Running on [8mha:////4H8qy94SiiQreLqxOMt7rEcbO/xGHMEFKqHLW6flZkHZAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/jenkins_home/workspace/CICD-pipeline
+[8mha:////4I8lj0sAbFZLU3bRe0piQdhy4de3aj1AGzRZLzyt3bEhAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUKiNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPpnFij8IAAAA=[0m[Pipeline] {
+[8mha:////4JIOucRgv14WjXctjArLvTgFcA+vwg12Z3IvliSMhhmVAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAR2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBrANZ3i+AAAA[0m[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/CICD-pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+Checking out Revision 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d # timeout=10
+Commit message: "ff"
+[8mha:////4J7FQqqRfQx0xvzuAjqG2xRVwyiC+DA6xVZF3nPPPDvmAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD3tNtZjCAAAA[0m[Pipeline] withEnv
+[8mha:////4I3NUhdtNlxDNHxJhCNuDap112vn0h3gv3uLmOzc9nNFAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQoIFMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfACW9ZT2wgAAAA==[0m[Pipeline] {
+[8mha:////4AuiYkv/kldZwpE7gb5nF/YjQWSmd0HQjHcUsk0IxjUiAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUUCBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAHUcXIBvgAAAA==[0m[Pipeline] isUnix
+[8mha:////4E2x0PpieO0MCnMSYa02mmV26OC4YR8PlxXe4dvydFG7AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUSAkRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q0bbeqGvgAAAA==[0m[Pipeline] sh
++ docker inspect -f . python:3.8-slim-buster
+.
+[8mha:////4KR6BDwT9HMOBoktbtKIP/nuNeLjMIQwrj9eAt9jq0dQAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYkBCiKlrlIUThCaEtNH/5SelnTgRV+MOtFRiwoNlW7Le6w1FZDgRO9FYbD3G2osu9G5KYiBur4EG0dBF1ISRghXKDoqMrZaqKFlYlOWwkrC2WAeKHl2CjWz0Q5dBoyvPiaftKCH35g5PyORETprTt4wM21tvIuGP8xcAY5cg3+1nO8zP4gNCISCewgAAAA==[0m[Pipeline] withDockerContainer
+Jenkins seems to be running inside container 322f5210f9a2dbbec411b254074901afe720ea3420f95922585baa9fd9c00dbb
+$ docker run -t -d -u 1002:998 -u 0:0 -v /tmp:/root/.cache -w /var/jenkins_home/workspace/CICD-pipeline --volumes-from 322f5210f9a2dbbec411b254074901afe720ea3420f95922585baa9fd9c00dbb -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.8-slim-buster cat
+$ docker top 3e47aa67a5bf4c63397ad93203eac8a71dff1132c59d865e75cca22e15de1129 -eo pid,comm
+[8mha:////4C25YT8ONKv2f4n/u+ADyGNQmZILodvYs7gl10665xEaAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUwYRQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCi3+2y7zedZvQH4j6CMwgAAAA==[0m[Pipeline] {
+[8mha:////4KyP0fqL/CbZ+cPZ4ObTaFLqXjlaVFUIDx4n8MgOOyjCAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICokRUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud9+ahfewYmQ+b4AAAA=[0m[Pipeline] sh
++ pip install poetry
+Collecting poetry
+  Using cached poetry-1.1.12-py2.py3-none-any.whl (175 kB)
+Collecting tomlkit<1.0.0,>=0.7.0
+  Using cached tomlkit-0.8.0-py3-none-any.whl (33 kB)
+Collecting cachecontrol[filecache]<0.13.0,>=0.12.9
+  Using cached CacheControl-0.12.10-py2.py3-none-any.whl (20 kB)
+Collecting requests-toolbelt<0.10.0,>=0.9.1
+  Using cached requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Collecting cachy<0.4.0,>=0.3.0
+  Using cached cachy-0.3.0-py2.py3-none-any.whl (20 kB)
+Collecting cleo<0.9.0,>=0.8.1
+  Using cached cleo-0.8.1-py2.py3-none-any.whl (21 kB)
+Collecting crashtest<0.4.0,>=0.3.0
+  Using cached crashtest-0.3.1-py3-none-any.whl (7.0 kB)
+Collecting keyring<22.0.0,>=21.2.0
+  Using cached keyring-21.8.0-py3-none-any.whl (32 kB)
+Collecting packaging<21.0,>=20.4
+  Using cached packaging-20.9-py2.py3-none-any.whl (40 kB)
+Collecting poetry-core<1.1.0,>=1.0.7
+  Using cached poetry_core-1.0.7-py2.py3-none-any.whl (424 kB)
+Collecting requests<3.0,>=2.18
+  Using cached requests-2.27.1-py2.py3-none-any.whl (63 kB)
+Collecting html5lib<2.0,>=1.0
+  Using cached html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Collecting shellingham<2.0,>=1.1
+  Using cached shellingham-1.4.0-py2.py3-none-any.whl (9.4 kB)
+Collecting virtualenv<21.0.0,>=20.0.26
+  Using cached virtualenv-20.13.0-py2.py3-none-any.whl (6.5 MB)
+Collecting clikit<0.7.0,>=0.6.2
+  Using cached clikit-0.6.2-py2.py3-none-any.whl (91 kB)
+Collecting pkginfo<2.0,>=1.4
+  Using cached pkginfo-1.8.2-py2.py3-none-any.whl (26 kB)
+Collecting pexpect<5.0.0,>=4.7.0
+  Using cached pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting msgpack>=0.5.2
+  Using cached msgpack-1.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+Collecting lockfile>=0.9
+  Using cached lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Collecting pastel<0.3.0,>=0.2.0
+  Using cached pastel-0.2.1-py2.py3-none-any.whl (6.0 kB)
+Collecting pylev<2.0,>=1.3
+  Using cached pylev-1.4.0-py2.py3-none-any.whl (6.1 kB)
+Collecting webencodings
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting six>=1.9
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting SecretStorage>=3.2
+  Using cached SecretStorage-3.3.1-py3-none-any.whl (15 kB)
+Collecting jeepney>=0.4.2
+  Using cached jeepney-0.7.1-py3-none-any.whl (54 kB)
+Collecting pyparsing>=2.0.2
+  Using cached pyparsing-3.0.6-py3-none-any.whl (97 kB)
+Collecting ptyprocess>=0.5
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting charset-normalizer~=2.0.0
+  Using cached charset_normalizer-2.0.10-py3-none-any.whl (39 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.3-py3-none-any.whl (61 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.7-py2.py3-none-any.whl (138 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+Collecting cryptography>=2.0
+  Using cached cryptography-36.0.1-cp36-abi3-manylinux_2_24_x86_64.whl (3.6 MB)
+Collecting cffi>=1.12
+  Using cached cffi-1.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (446 kB)
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting filelock<4,>=3.2
+  Using cached filelock-3.4.2-py3-none-any.whl (9.9 kB)
+Collecting platformdirs<3,>=2
+  Using cached platformdirs-2.4.1-py3-none-any.whl (14 kB)
+Collecting distlib<1,>=0.3.1
+  Using cached distlib-0.3.4-py2.py3-none-any.whl (461 kB)
+Installing collected packages: pycparser, urllib3, idna, charset-normalizer, cffi, certifi, requests, pylev, pastel, msgpack, jeepney, cryptography, crashtest, webencodings, six, SecretStorage, pyparsing, ptyprocess, platformdirs, lockfile, filelock, distlib, clikit, cachecontrol, virtualenv, tomlkit, shellingham, requests-toolbelt, poetry-core, pkginfo, pexpect, packaging, keyring, html5lib, cleo, cachy, poetry
+Successfully installed SecretStorage-3.3.1 cachecontrol-0.12.10 cachy-0.3.0 certifi-2021.10.8 cffi-1.15.0 charset-normalizer-2.0.10 cleo-0.8.1 clikit-0.6.2 crashtest-0.3.1 cryptography-36.0.1 distlib-0.3.4 filelock-3.4.2 html5lib-1.1 idna-3.3 jeepney-0.7.1 keyring-21.8.0 lockfile-0.12.2 msgpack-1.0.3 packaging-20.9 pastel-0.2.1 pexpect-4.8.0 pkginfo-1.8.2 platformdirs-2.4.1 poetry-1.1.12 poetry-core-1.0.7 ptyprocess-0.7.0 pycparser-2.21 pylev-1.4.0 pyparsing-3.0.6 requests-2.27.1 requests-toolbelt-0.9.1 shellingham-1.4.0 six-1.16.0 tomlkit-0.8.0 urllib3-1.26.7 virtualenv-20.13.0 webencodings-0.5.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[8mha:////4Ej3+q7kQbF9c9EopZCvU137BtGIwEN6T61FH8GuFH3mAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud9+ahfeAtq90r4AAAA=[0m[Pipeline] sh
++ poetry install
+Installing dependencies from lock file
+
+No dependencies to install or update
+[8mha:////4G0U07rx1OmMdbNDgq0ntiEilKqQk6tVHI5CjRbmzjlNAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKClBJR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMPkEZb3/VO3fQ+umy74AAAA=[0m[Pipeline] sh
++ poetry run pytest
+============================= test session starts ==============================
+platform linux -- Python 3.8.12, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /var/jenkins_home/workspace/CICD-pipeline
+collected 7 items
+
+tests/test_dummy2.py ..                                                  [ 28%]
+tests/test_server.py .....                                               [100%]
+
+============================== 7 passed in 0.23s ===============================
+[8mha:////4DhJabb13LlfXYQrmozANKowtcbxJERY0EwPNOQMZXL6AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BgSW0ii+AAAA[0m[Pipeline] }
+$ docker stop --time=1 3e47aa67a5bf4c63397ad93203eac8a71dff1132c59d865e75cca22e15de1129
+$ docker rm -f 3e47aa67a5bf4c63397ad93203eac8a71dff1132c59d865e75cca22e15de1129
+[8mha:////4KFpFTH8RwkDI8tBAfjkm65H8ATBukfk/94XiGnmBbWiAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigSgQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwARMxJg74AAAA=[0m[Pipeline] // withDockerContainer
+[8mha:////4AD6CljGcDgnuhuVRzCuZv7I72w1i7GM3MIP+BAsNopYAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigZQGUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkF5qHPt6w97o2KVvgAAAA==[0m[Pipeline] }
+[8mha:////4LSUDnqVfIBhuAStQDvGtd5BSvJLomu8LcX4hkZERoDQAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigRAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryd8i13X8AZCE3x74AAAA=[0m[Pipeline] // withEnv
+[8mha:////4O6RsV4M0sXUubaWZnEiR57jmx+elAKtVbOWF3fbNn4ZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRSIOEqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZH3Lt6w+ENgLfvgAAAA==[0m[Pipeline] }
+[8mha:////4P+JTR8jWqherR793LpGemJ5W2CdMinvnTeYGp+Zh5isAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihQohqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3h1x1/QG31VljvgAAAA==[0m[Pipeline] // node
+[8mha:////4DpR3TLIqU+s+pQsNc2OSe+QtLG8YlYKzoaU7/AD4Ve/AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICiA6lorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYhQnnY5trvPkvr+Bi+AAAA[0m[Pipeline] }
+[8mha:////4KkkXciBkqvCj3iFFNf1SZvc/6DDh9f7loxDUi+1607oAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICiA6lorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYhQnnY5dpvP3gIo6S+AAAA[0m[Pipeline] // stage
+[8mha:////4AAtR018ATGIga9Qm+Bs0KSPJAcWM/xx2ZE2jqt6dwH+AAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjoXSIitZywwtMYowT6y7YF5KKF/E1/oAhEhVb7ay0mucLyhThQNHJzmLvMTVeDmF0ucmJYn8JNMmOzrIhTBSs1HbS1NrjgprYwhJRwErB2mITKHl0DBvVmbupgkFXnTjmba+g8O0NHiBUNrOJ/IU5wvY6tonw5/krgHlgEDVDUe8+x/INGmraTsEAAAA=[0m[Pipeline] stage
+[8mha:////4LP5r8/58tnxad36FRHa86/B5pxGuzRqmkIFKejpryQKAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAXzhjwPCAAAA[0m[Pipeline] { (Build)
+[8mha:////4JKEJDtmjoCEkr/geLijiZ2/5dbVNHRhIyzrF6tbMDgAAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0oBtiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsPBA4E38IAAAA=[0m[Pipeline] node
+Running on [8mha:////4GcGUJYILzcXDUILh5IX5PSxj+2hDQ3DlKcvAXQn/vDZAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYp/eT83ILSktQi/azUvOzMvGJVI5fE9NS8En0A4Zrl388AAAA=[0mjenkins-agent in /jenkins-agent/workspace/CICD-pipeline
+[8mha:////4H91oZ5ojkYcqrxyfB/2M4uSTr63XukuIaoKaCjTZDlqAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KRNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPIshjPcIAAAA=[0m[Pipeline] {
+[8mha:////4D0EUArGF3o3vybe9mVyrwBcL6lA+jBtQ2EJv/BeWXYcAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSAA2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBj0vY+u+AAAA[0m[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+Fetching changes from the remote Git repository
+Checking out Revision 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d (refs/remotes/origin/develop)
+Commit message: "ff"
+[8mha:////4K9dibUACI+8x+m1EL/rOTRvxgt0aFZC9TB8O4R5wWLzAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ATEgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD+m2JbHCAAAA[0m[Pipeline] withEnv
+[8mha:////4LaDUU3dNvuE0p6JR0WrWLXH654VyGcF61/u3uBeD4FYAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QQIJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD9vR8YwgAAAA==[0m[Pipeline] {
+[8mha:////4O/SgGzULAhKb7cAF96afsczpuZ40euAi7SnnPHcPbXXAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YQAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD56au0DCAAAA[0m[Pipeline] withEnv
+[8mha:////4IYfepm4ow6ekc55g1m4VlNqhgFVCGWdmfo3B4r82jT/AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUAQaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0iH00AwgAAAA==[0m[Pipeline] {
+[8mha:////4NIH6HtqCyepW3S/+aEJhWnwV1vZDTpwfkU/0o/jQRq2AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUBibE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAW2++SvCAAAA[0m[Pipeline] script
+[8mha:////4JBPBxrBbES2zA5+bm4WWEQtstsZpTXGscth3igFEam1AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIDEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LDwMT42zCAAAA[0m[Pipeline] {
+[8mha:////4IRGSTC4+Xbg+b9ouzOaLhYgYF6dADb8Wb7scWSuEYU8AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD6emXT7CAAAA[0m[Pipeline] withEnv
+[8mha:////4LAakj2jGvY77utcr2cSAO7X/X799RbJgVYEvCAMegKrAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ACbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAd9J1uLCAAAA[0m[Pipeline] {
+[8mha:////4PDpdKNPs7qAAtJe63kByMs0reiE/ZDkEHtY9/uOmbZJAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0oRNiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsP+Y+xAMIAAAA=[0m[Pipeline] withDockerRegistry
+Using the existing docker config file.Removing blacklisted property: auths$ docker login -u admin -p ******** http://34.150.85.230:5000
+ > git rev-parse --resolve-git-dir /jenkins-agent/workspace/CICD-pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d # timeout=10
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /jenkins-agent/workspace/CICD-pipeline@tmp/8766f527-fc02-4096-9342-c2e14d1e1fb5/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[8mha:////4P8J9E9UutAfwHkSqq3XEjOkUjNap8hTEqkjTqr+6B69AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KgtiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPlyKrR8IAAAA=[0m[Pipeline] {
+[8mha:////4Hl+HRUvsPl5749LRorS5nCuKCfM2GlrWp19wWUsQ08bAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAQWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBkhu+A6+AAAA[0m[Pipeline] sh
++ docker build -t flask-docker:develop-877c2b7 .
+Sending build context to Docker daemon  3.454MB
+Step 1/7 : FROM python:3.8-slim-buster
+ ---> 5cc8cb0c433a
+Step 2/7 : RUN pip install poetry
+ ---> Running in 5d5789daf212
+Collecting poetry
+  Downloading poetry-1.1.12-py2.py3-none-any.whl (175 kB)
+Collecting pexpect<5.0.0,>=4.7.0
+  Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting cleo<0.9.0,>=0.8.1
+  Downloading cleo-0.8.1-py2.py3-none-any.whl (21 kB)
+Collecting packaging<21.0,>=20.4
+  Downloading packaging-20.9-py2.py3-none-any.whl (40 kB)
+Collecting pkginfo<2.0,>=1.4
+  Downloading pkginfo-1.8.2-py2.py3-none-any.whl (26 kB)
+Collecting requests<3.0,>=2.18
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+Collecting html5lib<2.0,>=1.0
+  Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Collecting shellingham<2.0,>=1.1
+  Downloading shellingham-1.4.0-py2.py3-none-any.whl (9.4 kB)
+Collecting tomlkit<1.0.0,>=0.7.0
+  Downloading tomlkit-0.8.0-py3-none-any.whl (33 kB)
+Collecting poetry-core<1.1.0,>=1.0.7
+  Downloading poetry_core-1.0.7-py2.py3-none-any.whl (424 kB)
+Collecting cachecontrol[filecache]<0.13.0,>=0.12.9
+  Downloading CacheControl-0.12.10-py2.py3-none-any.whl (20 kB)
+Collecting virtualenv<21.0.0,>=20.0.26
+  Downloading virtualenv-20.13.0-py2.py3-none-any.whl (6.5 MB)
+Collecting crashtest<0.4.0,>=0.3.0
+  Downloading crashtest-0.3.1-py3-none-any.whl (7.0 kB)
+Collecting cachy<0.4.0,>=0.3.0
+  Downloading cachy-0.3.0-py2.py3-none-any.whl (20 kB)
+Collecting clikit<0.7.0,>=0.6.2
+  Downloading clikit-0.6.2-py2.py3-none-any.whl (91 kB)
+Collecting keyring<22.0.0,>=21.2.0
+  Downloading keyring-21.8.0-py3-none-any.whl (32 kB)
+Collecting requests-toolbelt<0.10.0,>=0.9.1
+  Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Collecting msgpack>=0.5.2
+  Downloading msgpack-1.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+Collecting lockfile>=0.9
+  Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Collecting pastel<0.3.0,>=0.2.0
+  Downloading pastel-0.2.1-py2.py3-none-any.whl (6.0 kB)
+Collecting pylev<2.0,>=1.3
+  Downloading pylev-1.4.0-py2.py3-none-any.whl (6.1 kB)
+Collecting six>=1.9
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting webencodings
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting SecretStorage>=3.2
+  Downloading SecretStorage-3.3.1-py3-none-any.whl (15 kB)
+Collecting jeepney>=0.4.2
+  Downloading jeepney-0.7.1-py3-none-any.whl (54 kB)
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-3.0.6-py3-none-any.whl (97 kB)
+Collecting ptyprocess>=0.5
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+Collecting charset-normalizer~=2.0.0
+  Downloading charset_normalizer-2.0.10-py3-none-any.whl (39 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.7-py2.py3-none-any.whl (138 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+Collecting cryptography>=2.0
+  Downloading cryptography-36.0.1-cp36-abi3-manylinux_2_24_x86_64.whl (3.6 MB)
+Collecting cffi>=1.12
+  Downloading cffi-1.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (446 kB)
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting filelock<4,>=3.2
+  Downloading filelock-3.4.2-py3-none-any.whl (9.9 kB)
+Collecting platformdirs<3,>=2
+  Downloading platformdirs-2.4.1-py3-none-any.whl (14 kB)
+Collecting distlib<1,>=0.3.1
+  Downloading distlib-0.3.4-py2.py3-none-any.whl (461 kB)
+Installing collected packages: pycparser, urllib3, idna, charset-normalizer, cffi, certifi, requests, pylev, pastel, msgpack, jeepney, cryptography, crashtest, webencodings, six, SecretStorage, pyparsing, ptyprocess, platformdirs, lockfile, filelock, distlib, clikit, cachecontrol, virtualenv, tomlkit, shellingham, requests-toolbelt, poetry-core, pkginfo, pexpect, packaging, keyring, html5lib, cleo, cachy, poetry
+Successfully installed SecretStorage-3.3.1 cachecontrol-0.12.10 cachy-0.3.0 certifi-2021.10.8 cffi-1.15.0 charset-normalizer-2.0.10 cleo-0.8.1 clikit-0.6.2 crashtest-0.3.1 cryptography-36.0.1 distlib-0.3.4 filelock-3.4.2 html5lib-1.1 idna-3.3 jeepney-0.7.1 keyring-21.8.0 lockfile-0.12.2 msgpack-1.0.3 packaging-20.9 pastel-0.2.1 pexpect-4.8.0 pkginfo-1.8.2 platformdirs-2.4.1 poetry-1.1.12 poetry-core-1.0.7 ptyprocess-0.7.0 pycparser-2.21 pylev-1.4.0 pyparsing-3.0.6 requests-2.27.1 requests-toolbelt-0.9.1 shellingham-1.4.0 six-1.16.0 tomlkit-0.8.0 urllib3-1.26.7 virtualenv-20.13.0 webencodings-0.5.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container 5d5789daf212
+ ---> 9c89fc03888d
+Step 3/7 : WORKDIR /app
+ ---> Running in e4445d46148c
+Removing intermediate container e4445d46148c
+ ---> f492446120b9
+Step 4/7 : COPY ./ /app
+ ---> 94020d4ad35f
+Step 5/7 : RUN poetry install
+ ---> Running in 9f78a0a7cc3f
+Creating virtualenv flask-docker-9TtSrW0h-py3.8 in /root/.cache/pypoetry/virtualenvs
+Installing dependencies from lock file
+
+Package operations: 16 installs, 0 updates, 0 removals
+
+  • Installing markupsafe (1.1.1)
+  • Installing pyparsing (2.4.7)
+  • Installing six (1.15.0)
+  • Installing attrs (19.3.0)
+  • Installing click (7.1.2)
+  • Installing itsdangerous (1.1.0)
+  • Installing jinja2 (2.11.2)
+  • Installing packaging (20.4)
+  • Installing more-itertools (8.4.0)
+  • Installing pluggy (0.13.1)
+  • Installing py (1.9.0)
+  • Installing wcwidth (0.2.5)
+  • Installing werkzeug (1.0.1)
+  • Installing flask (1.1.2)
+  • Installing gunicorn (20.0.4)
+  • Installing pytest (5.4.3)
+Removing intermediate container 9f78a0a7cc3f
+ ---> 48c9173c009a
+Step 6/7 : ENTRYPOINT ["poetry","run"]
+ ---> Running in 6428eca24b14
+Removing intermediate container 6428eca24b14
+ ---> c39540f50ad5
+Step 7/7 : CMD ["gunicorn","-b","0.0.0.0:5000", "server:app"]
+ ---> Running in bedd52daa432
+Removing intermediate container bedd52daa432
+ ---> 39693b1b6b54
+Successfully built 39693b1b6b54
+Successfully tagged flask-docker:develop-877c2b7
+[8mha:////4BpNnYZ/NpOl9tJfmDB7aW+DeLvzXw/mEKIJpSnug9jLAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgZAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN4dyYIm+AAAA[0m[Pipeline] sh
++ docker tag flask-docker:develop-877c2b7 flask-docker:latest
+[8mha:////4IZP3UBDvyDNi9BwB+3zFiBpeDRWPipDj7PaoSPrj5WQAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgYQQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN8ZDe5C+AAAA[0m[Pipeline] sh
++ grep flask-docker
++ docker image ls
+flask-docker                    develop-877c2b7   39693b1b6b54   Less than a second ago   202MB
+flask-docker                    latest            39693b1b6b54   Less than a second ago   202MB
+[8mha:////4GafqXRGKptQGPBR3YZbJAdPcPKYW9Sl5z2iJs3bmIpVAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCQxpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNknKA91rnrvP9ZG/0O+AAAA[0m[Pipeline] sh
++ docker tag flask-docker 34.150.85.230:5000/flask-docker:develop-877c2b7
+[8mha:////4MuipJ1n3XHlub3ALv7V5spdgL+um/IdigOgefVTDQEaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCtIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QXmoc9V7/wGXd+RavgAAAA==[0m[Pipeline] sh
++ docker push 34.150.85.230:5000/flask-docker:develop-877c2b7
+The push refers to repository [34.150.85.230:5000/flask-docker]
+9819c6b8d950: Preparing
+ab25ce8cea5c: Preparing
+36bf11d96a18: Preparing
+da555cde8eaf: Preparing
+c0c176f8b748: Preparing
+527dab09f1a0: Preparing
+f2404ba18ea9: Preparing
+c42229255bc9: Preparing
+ad6b69b54919: Preparing
+527dab09f1a0: Waiting
+f2404ba18ea9: Waiting
+c42229255bc9: Waiting
+ad6b69b54919: Waiting
+c0c176f8b748: Layer already exists
+527dab09f1a0: Layer already exists
+f2404ba18ea9: Layer already exists
+c42229255bc9: Layer already exists
+36bf11d96a18: Pushed
+ad6b69b54919: Layer already exists
+ab25ce8cea5c: Pushed
+9819c6b8d950: Pushed
+da555cde8eaf: Pushed
+develop-877c2b7: digest: sha256:582e94c4ac7b22c2b4c25d6de9c35063a15ce8fe66d6eb6ef02a7716bbb6e539 size: 2212
+[8mha:////4EHAcls5ezsPes3lT4aqqlzWakU6letTEEPgf8GyDdJoAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIZEGUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2CcpDnave+w9UJMlxvgAAAA==[0m[Pipeline] sh
++ docker tag flask-docker 34.150.85.230:5000/flask-docker:latest
+[8mha:////4MIil8vr2B8LUJuSuElR2Te6X6ASISNw600xZhbbdYyVAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSINIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QXmoc9V7/wEVFdJovgAAAA==[0m[Pipeline] sh
++ docker push 34.150.85.230:5000/flask-docker:latest
+The push refers to repository [34.150.85.230:5000/flask-docker]
+9819c6b8d950: Preparing
+ab25ce8cea5c: Preparing
+36bf11d96a18: Preparing
+da555cde8eaf: Preparing
+c0c176f8b748: Preparing
+527dab09f1a0: Preparing
+f2404ba18ea9: Preparing
+c42229255bc9: Preparing
+ad6b69b54919: Preparing
+527dab09f1a0: Waiting
+f2404ba18ea9: Waiting
+c42229255bc9: Waiting
+ad6b69b54919: Waiting
+36bf11d96a18: Layer already exists
+da555cde8eaf: Layer already exists
+ab25ce8cea5c: Layer already exists
+c0c176f8b748: Layer already exists
+9819c6b8d950: Layer already exists
+f2404ba18ea9: Layer already exists
+527dab09f1a0: Layer already exists
+ad6b69b54919: Layer already exists
+c42229255bc9: Layer already exists
+latest: digest: sha256:582e94c4ac7b22c2b4c25d6de9c35063a15ce8fe66d6eb6ef02a7716bbb6e539 size: 2212
+[8mha:////4O7YlRgd8oCIkQFa4xSz4C/VQgL2Y5b9H+CLOLOrjCC5AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSQBpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNknKA91rnrvP9KDkye+AAAA[0m[Pipeline] sh
++ grep flask-docker
++ docker image ls
+34.150.85.230:5000/flask-docker   develop-877c2b7   39693b1b6b54   8 seconds ago   202MB
+34.150.85.230:5000/flask-docker   latest            39693b1b6b54   8 seconds ago   202MB
+flask-docker                      develop-877c2b7   39693b1b6b54   8 seconds ago   202MB
+flask-docker                      latest            39693b1b6b54   8 seconds ago   202MB
+[8mha:////4ODrb+OUZtfOh7KERQkCHbrEAfvqzVGWPHe107X/x4s2AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKpkgZR0VppeIGJjXFi3Tn2haTiRXyNP2ARiYotVjvbzOsN2xThRNGK3uDgMHVOBD/ZvMRMcbh5mkVPV9ERJvJGtGZuSZvzii2xgTVFCRsJO4Odp+TQMuxlrx6q8gptdeGYv6OE0ukRnlDIbGYV+QtLhMN90onw5/krgCUEhrKpc9XNB7Vojw6+AAAA[0m[Pipeline] }
+[8mha:////4EaNcuFo6QCoH8FI3mtf0Xx85Rh8WaxFs8X1sUrpI8B6AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKpkgZR0VppeIGJjXFi3Tn2haTiRXyNP2ARiYotVjvbzOsN2xThRNGK3uDgMHVOBD/ZvMRMcbh5mkVPV9ERJvJGtGZuSZvzii2xgTVFCRsJO4Odp+TQMuxlrx6q8gptdeGYv6OE0ukRnlDIbGYV+QtLhMN90onw5/krgCUEhrJpctX1B6FLEhG+AAAA[0m[Pipeline] // withDockerRegistry
+[8mha:////4Eh8J7H+L8kclse4Kvlt5Ds4hwgYDOSycEf3q0c48gJxAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGLT8ClQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuD7l22w+SqEmtvgAAAA==[0m[Pipeline] }
+[8mha:////4J78kivu5PeJ0d4iMsapbXMqimb4mOuCBabolaQEFzb3AAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIBASSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryf8i1234A5I97wr4AAAA=[0m[Pipeline] // withEnv
+[8mha:////4KcSNFC9EoXUMGrWBea6I83c5Cvhy/cqjXtNtuHnzG0fAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIYGEUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpGCKU+0Ou3fYD12wgfr4AAAA=[0m[Pipeline] }
+[8mha:////4M+DKfTxq+7le8Hq8iwk6YXwQHduTm8fLGHusyQg/VEHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw8RZ1FmvgAAAA==[0m[Pipeline] // script
+[8mha:////4GtAIR3myJRq2Cd0kOLyWZDNgf7+aXJGkGqyToWxrutZAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnf5jrshg+aKPY4vgAAAA==[0m[Pipeline] sh
++ docker image rm flask-docker:develop-877c2b7
+Untagged: flask-docker:develop-877c2b7
+[8mha:////4IqW3leCVFSaM4TsKbiCrPuQUhiJDLfUHtR+nEAq5LRwAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCkBAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcr9NtdhN3wAWXvbE74AAAA=[0m[Pipeline] sh
++ docker image rm flask-docker:latest
+Untagged: flask-docker:latest
+[8mha:////4JIoAw021Lh8LrMH9A+rvev5fOnZMP5i+6XuamJQzgJpAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKChBAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcr9NtdhN3wAGErACr4AAAA=[0m[Pipeline] sh
++ docker image rm 34.150.85.230:5000/flask-docker:develop-877c2b7
+Untagged: 34.150.85.230:5000/flask-docker:develop-877c2b7
+[8mha:////4EUiqqn2SnhUs1yzKpz+dnlnt/GwuhBk3hztjd5CuyqOAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCAaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnf5jrshg/f3IFFvgAAAA==[0m[Pipeline] sh
++ docker image rm 34.150.85.230:5000/flask-docker:latest
+Untagged: 34.150.85.230:5000/flask-docker:latest
+Untagged: 34.150.85.230:5000/flask-docker@sha256:582e94c4ac7b22c2b4c25d6de9c35063a15ce8fe66d6eb6ef02a7716bbb6e539
+Deleted: sha256:39693b1b6b542f83f019699ce7a65e99e03ebd1f9f12984fda502b05f5378e63
+Deleted: sha256:c39540f50ad58540b517afd5170927cf8ac61a091aa0f7ad34fdeee3a21e5dcd
+Deleted: sha256:48c9173c009a5309385d482256e3ee3f4f62a39d2b53077dbb16de29fb61453e
+Deleted: sha256:e78e4d2c6b33a8836cdeb8b4b88a757855b4b915847a28a5be96c5a92ab99239
+Deleted: sha256:94020d4ad35fc3cfdac66967f2e8d02542688524e210c5b13abc1b14fd7fc26b
+Deleted: sha256:884253bb1a0927eff7057e60dc71dc51403dac5ff07c4ecef2352736171d8957
+Deleted: sha256:f492446120b917eef4510077149ebef8fd6f09723be5e1573682c09cd9c714d0
+Deleted: sha256:cd904c247ca69b43884a91b6222a376755af4aa0f739369ad95ff7861fb762e6
+Deleted: sha256:9c89fc03888d0dce88acc486e6f09ef88f867f1c5c20993690a46aead4261d95
+Deleted: sha256:f7eebc2ad60ac4b7b9e0822eb1b180dc2fdf838bccd232c3bf88f1df4ef47065
+[8mha:////4BReTvcKdd03FuIbIph72cI2EewfUCnTKuwWZN3vWXN1AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKhiSgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+QVnvcx1q/wGe7ZpcvgAAAA==[0m[Pipeline] sh
++ docker image ls
+REPOSITORY                      TAG               IMAGE ID       CREATED       SIZE
+34.150.85.230:5000/busybox      test              beae173ccac6   6 days ago    1.24MB
+busybox                         latest            beae173ccac6   6 days ago    1.24MB
+python                          3.8-slim-buster   5cc8cb0c433a   2 weeks ago   114MB
+sonarsource/sonar-scanner-cli   latest            e60dc38b3b6e   3 weeks ago   326MB
+[8mha:////4GjYb6r114RNSv89h2MOajYBYa+zbUMcdTaSIXmE62YtAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCAxQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDPtdu+wGatA/HvgAAAA==[0m[Pipeline] }
+[8mha:////4CuHzN5WnmBLFnOqUGqXT4vn+rHt7zzUR1aI/xzONH98AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpkCKEqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZ17n2hw/a7pRsvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4PjNTxLfIRKZBwUonYAYB2oYYMf5H4vVh2+AUok7UojtAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIBEJUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkF5qHPt6w+ZbMXqvgAAAA==[0m[Pipeline] }
+[8mha:////4LMdsFCIL0/HQCU+T5aSiN+yOoMT+dXDQD6e601WnXN2AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpkCKEqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZH3Lt6w+toiaxvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4MDrU8rKXpPwDst/WThWXulT8VVwGXIzH2o10o7KbDCDAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCARISSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4TysM21238AoOJvjr4AAAA=[0m[Pipeline] }
+[8mha:////4GdPOQOzeA1/cEsBB2MitkiEaH5sUEDVpWOXWEVtIHFOAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRUgokRJXWSsMLTHwYJ9adsR2SihfxNf6ARSQqtljtbDOvN6xjgBMHI3qkwVLsrPBuNHmJicNwdTyJni+iY4rsULQ4tayxWbDlhLCkKGElYYPUOY6WTIKt7NVDVU6Rqc4p5O8oobT6Dk8oZDYnFdIX5gC726gj08/zVwCz9wnKwz5XXX8AkwE0Mr4AAAA=[0m[Pipeline] // node
+[8mha:////4Blq8a8xCkuwbXiexcn84NCruK5aGOE5HDAGOkxMJb+oAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAQUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4TysM21330AnubEKr4AAAA=[0m[Pipeline] }
+[8mha:////4Fe3/x5YaBG7zR2PAmJRQbjloM5yq8b7Kn8fmxfSgaGyAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAQUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4TysMu1334ArQWflr4AAAA=[0m[Pipeline] // stage
+[8mha:////4Hv4n1OX4/1TkbcSawWTTrsXUIg0nD4hylHHstNJXxCtAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BKWgpeYTTpEBCVLSWG15gYmOcWHfBvpBUvIiv8QcMkajYamel1TxfUKUIB4pOdBZ7j6n1Ygijy01MFPtLoEl0dBYtYaJghbKTImOPCypiC0uKElYS1hbbQMmjY9jITt91HTS6+sQxb3sJpTc3eEAhs5l15C/MEbbX0STCn+evAOaBoWgYyl3zOVZvc+MjX8EAAAA=[0m[Pipeline] stage
+[8mha:////4NXxmGtWsjshN5daE2dWoIpkq30Ytl3MWh17Thq0peKBAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AQkJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfADX78n/wgAAAA==[0m[Pipeline] { (Deploy)
+[8mha:////4NG/QeSvZDFG8MxPnEtqXSSdKqiaOiv4o4hzT3TKMQtJAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AiEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD7lC07jCAAAA[0m[Pipeline] node
+Running on [8mha:////4GcGUJYILzcXDUILh5IX5PSxj+2hDQ3DlKcvAXQn/vDZAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgYp/eT83ILSktQi/azUvOzMvGJVI5fE9NS8En0A4Zrl388AAAA=[0mjenkins-agent in /jenkins-agent/workspace/CICD-pipeline
+[8mha:////4NGp4S6CrstvHLVuw5iwuif8w3+TX+ZAZD6UC56aq6jYAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AyTE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAR33berCAAAA[0m[Pipeline] {
+[8mha:////4MXupzRoE/BA6JJSkzBfGkdXAZlAFP8O7/941Lb2gv90AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSEglR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMPkEZb3/VO3fsf/KvL4AAAA=[0m[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential cc06d1e1-44a5-4361-9e9c-eadedc84103a
+Fetching changes from the remote Git repository
+Checking out Revision 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d (refs/remotes/origin/develop)
+Commit message: "ff"
+[8mha:////4G/ZCwEVNGnpq5vyW/uchpjVa5IXa7Nlptaqf6QNXtIXAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0BISYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfL9brbD/Cw+rUnpEcIAAAA=[0m[Pipeline] withEnv
+[8mha:////4NmUxL3A7pJhjjh3d+XNNK+zC0BMr4naMBUQoUH67yKiAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUkQoxdY2ycIKQhJA2+r8kKe3EibgadyBQiQkPlm3Jes8XVDHAkYJlncHeYVSODX60ObGJQn/xNLGOzkwRRvKGCTMJ0qZdqqBkYFFRworD2qDyFB3aBBveybusvURbn1LI24FD6fQNHlDwTE4ypG+ZA2yvo46EP85fAMxDgnLfZGt2n2f1Btc458LCAAAA[0m[Pipeline] {
+[8mha:////4OJ9T5Ci++3U0eCVp75kVS/Hv02kvfx7VLLWL9QwaDRuAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICJUJUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud9+ahfe3xDHZb4AAAA=[0m[Pipeline] sh
++ helm install -f helm-chart/values.yaml flaskdockerrr helm-chart/
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /root/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /root/.kube/config
+Error: INSTALLATION FAILED: Kubernetes cluster unreachable: Get "https://34.126.169.158/version?timeout=32s": error executing access token command "/usr/lib/google-cloud-sdk/bin/gcloud config config-helper --format=json": err=fork/exec /usr/lib/google-cloud-sdk/bin/gcloud: no such file or directory output= stderr=
+[8mha:////4BmDGaosJGwvawsbd/EYGthOwv1jJ1DiPj52zA6LUGbpAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC6BCiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nffWr7Bt3CFKC+AAAA[0m[Pipeline] }
+[8mha:////4APfZCalNNFFUnFVyXHX7foinwIHhEDd5Iw+zAWqtM8+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJS0BAhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrfa5D/QGdmI8LvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4Fb85k1rTS5sWbxqu2hj1V5aei0UmHtcjJkGvvh/Vv6SAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIAFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw8ihTLxvgAAAA==[0m[Pipeline] }
+[8mha:////4Fb3AeczUWjEcLZP++o7KumecUsXMbyTwgh8xNARZ4YcAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgUAoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDNtd+9wERZmlNvgAAAA==[0m[Pipeline] // node
+[8mha:////4Msh/vC3F9snFmwey1i9jAgnc07ek8FOIZvgJU1lfOXsAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgUAoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDLtd++wEFRfRSvgAAAA==[0m[Pipeline] }
+[8mha:////4OuELNEZgi5dHOd2sq4d8uzYbsGCdHiDNbCs/pDctpntAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIAFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAedrn22w82pq/uvgAAAA==[0m[Pipeline] // stage
+[8mha:////4ARp5VdWeMWiAy02M92TSzapzFQAUlg68RKRb260nSYLAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYTTUIAQFa3lhheY2Bgn1l2wLyQVL+Jr/IFAJCq22llpNc8XlDnBgZKXjcM2YK6D7GLvpyYHSu0l0iAbOsuaMFN0UrtBk3XHGTWxgzmigIWCpcM6Ug7oGVaqMXdTRYO+OnGatr2CItgbPECoycwm8RfGBOtrbzPhz/NXAGPHIDYMxW77OZZvvCiWjsEAAAA=[0m[Pipeline] stage
+[8mha:////4LArR563v+hnbTk72HC8HPK/5DFEtGBYa2/0xrYC6LynAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0pUJMrFEXThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbyhjgRMFwp7GzGFvLez+aOfFMobt5ytzRlbeEkbzmjc4NKX1ea0NJw6qCwUbAVmPrKVo0CXbCyYesvERTXVKYt6MAZtUATyjETE4ypG+ZAuzvo4qEP85fAEx9AlYfFquXZ/kBsPrDv8IAAAA=[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4EjlcPRMAt3UmswaDMSr4RsXHIKWFJbF0+XqUF14Ok1VAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGwZBwr2gyNJ4hJjIHMLiaLUHkir+YdZGTGyl/995r3esMmRThRdKKz2HtM2oshjG55YqLYXwNNoqOL0ISJghWtnVoytlmxJbawLsuhkLC1qAMlj45hJzv1UGVQ6Mozx8UdJeTe3OEJmVzKrCJ/YY6wv40mEf46fwMwDwx5XTMUh6oaPqKpLoK/AAAA[0m[Pipeline] echo
+ > git rev-parse --resolve-git-dir /jenkins-agent/workspace/CICD-pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/nghiattr/flask-docker.git # timeout=10
+Fetching upstream changes from https://github.com/nghiattr/flask-docker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials github-acc-nghiattr
+ > git fetch --tags --force --progress -- https://github.com/nghiattr/flask-docker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 877c2b7634cd8dab57a5d21dddc6bff70ad6fb8d # timeout=10
+FAILED
+[8mha:////4AIvGN7r1C8y1NoVDSRW6mIIXvxWwfEpP95ERCgcnYjmAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGkZBwr2gyNJ4ghxkBmF5NFqDyRV/MOZmTGyl/995r3esMmBjhRsKI3ODiM2onRTzY9MVMYrp5m0dNFaMJI3ojWzC11plmxJTawLsuhkLA1qD1Fh5ZhJ3v1UKVXaMszh+SOEnLX3eEJmUxlVoG/sATY36YuEv46fwOwjCNDUR0qhryuP5Jn9ia/AAAA[0m[Pipeline] }
+[8mha:////4BEDoM6nNGx3ImPksPy/jUygrcw7QVW0DUS9lncC8wLZAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHUSoexss3QeIJIYgxkdjFZhMoTeTXvYEZmrPzVf695rzcsYoAjBStag53D2DjR+8GmJ0YK3dXTKFq6iIYwkjeiNmNN2pxmrIkNzMtyKCQsDTaeokPLsJKteqjSK7TlmUNylYTc6Ts8IZOpzCrwF6YA69ugI+Gv8zcAU98zFNvNjiE/7D+qJWXXvwAAAA==[0m[Pipeline] // stage
+[8mha:////4KC27GeCfOpmvOP39j9y5IuDhVtK32hz0WxAv53wYERPAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDgg5R0VppeIFxjHFi3QX7glPxIr7GH4iIRMVWO9PM6w2LFOFI0cnWYucxGS/7MLjpyUyxuwbKsqWLNISJgpW1zTU19jRjTWxhniigVLC0aAIlj45hpVr90FXQ6Kozx8kdFBS+ucMThJrKrCN/YYywvg1NIvx1/gZg7HuGcrvZMYj9BzEyYQ++AAAA[0m[Pipeline] }
+[8mha:////4Ntfs5GY4h5ayBprQ0mkdGZuvB0/wHNn2r1AW9QQ8YMxAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDgg5R0VppeIFxjHFi3QX7glPxIr7GH4iIRMVWO9PM6w2LFOFI0cnWYucxGS/7MLjpyUyxuwbKsqWLNISJgpW1zTU19jRjTWxhniigVLC0aAIlj45hpVr90FXQ6Kozx8kdFBS+ucMThJrKrCN/YYywvg1NIvx1/gZg7HuGcrvZM4jdB4J7JSO+AAAA[0m[Pipeline] // withEnv
+[8mha:////4MJMvLIssrEuTboYRiknpKOIdilDdBjAZ430J9Lw7FeCAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDSFSIitZKwwuMY4wT6y7YF5yKF/E1/kBEJCq22plmXm9YpAhHik62FjuPyXjZh8FNT2aK3TVQli1dpCFMFKysba6psacZa2IL80QBpYKlRRMoeXQMK9Xqh66CRledOU7uoKDwzR2eINRUZh35C2OE9W1oEuGv8zcAY98zlNvNnkHsPqRiQmm+AAAA[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

@@ -1,0 +1,10 @@
+commit 865c9215bc9bcfa7e724f0c6e4b37971375ec503
+tree f5dacdb7161965f4faf30b98fe8ee225418e3622
+parent 7c2f0323cba2ad1dd607f25c93902f6ff83f1066
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 03:36:46 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 03:36:46 +0700
+
+    asdas
+
+
+:100644 100644 26e9e991b4c145ffc3e608196dad3d765718adc6 b6b8d81b0ac88f12800f34126e281e5999d5380b M	helm-chart/templates/deployment.yaml

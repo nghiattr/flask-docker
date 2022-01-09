@@ -1,0 +1,10 @@
+commit 7dbd318f24501befacabfb54de93f2de060cb6c1
+tree 0b27a46bef3c852f0edabea66eae80db558f34d4
+parent b5afaf516a4b75a34548c55993a8bf041c45e871
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 03:06:04 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 03:06:04 +0700
+
+    ddd
+
+
+:100644 100644 dfe78d068bece777b85bfa0269d77eab022ccfed eaf39fc07d8137e37eaa2963a2c6380ea302451a M	Jenkinsfile

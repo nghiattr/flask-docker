@@ -1,0 +1,10 @@
+commit 00ba90dbf39367bdebec60a71350694d8a838211
+tree df527d03cd5f6d98d9fcfebd9ab18e37c351d98d
+parent 36b0d9dc1b992ecb564c5b45bf15aca618c96227
+author LAB2 <nghiavodich2@gmail.com> 2022-01-06 19:41:22 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-06 19:41:22 +0700
+
+    asdasasdas
+
+
+:100644 100644 44a2c329b7759da340a05655f17c780d59dbf981 b34099f3bec62cbdfa6443a94c839b87e50f89f8 M	helm-chart/values.yaml

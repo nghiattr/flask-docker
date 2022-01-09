@@ -1,0 +1,10 @@
+commit 56b651cfb84e56aebbd2811d81a86cf1f1ec92da
+tree a833c5c7350990488d239beb89f392112a4981c2
+parent f21e0d65a7a266689abde738dfbe0212640bc15e
+author LAB2 <nghiavodich2@gmail.com> 2022-01-07 02:55:53 +0700
+committer LAB2 <nghiavodich2@gmail.com> 2022-01-07 02:55:53 +0700
+
+    small fix 123
+
+
+:100644 100644 35ace93e29501c1be4072dcd18dd2e23874bafba 9f71a8c6a93a363d29f9a6fe1dd38ff39a37a1cb M	Jenkinsfile

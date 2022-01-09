@@ -1,0 +1,90 @@
+SSHLauncher{host='34.124.168.19', port=22, credentialsId='4fc5b150-1b73-4245-bd42-8bed8a9267d0', jvmOptions='', javaPath='', prefixStartSlaveCmd='', suffixStartSlaveCmd='', launchTimeoutSeconds=60, maxNumRetries=10, retryWaitTime=15, sshHostKeyVerificationStrategy=hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy, tcpNoDelay=true, trackCredentials=true}
+[01/05/22 13:00:33] [SSH] Opening SSH connection to 34.124.168.19:22.
+[01/05/22 13:00:33] [SSH] WARNING: SSH Host Keys are not being verified. Man-in-the-middle attacks may be possible against this connection.
+[01/05/22 13:00:33] [SSH] Authentication successful.
+[01/05/22 13:00:34] [SSH] The remote user's environment is:
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_EXECUTION_STRING=set
+BASH_LINENO=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="0" [2]="17" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+BASH_VERSION='5.0.17(1)-release'
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus
+DIRSTACK=()
+EUID=0
+GROUPS=()
+HOME=/root
+HOSTNAME=jenkins-agent
+HOSTTYPE=x86_64
+IFS=$' \t\n'
+LANG=C.UTF-8
+LOGNAME=root
+MACHTYPE=x86_64-pc-linux-gnu
+MOTD_SHOWN=pam
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PIPESTATUS=([0]="0")
+PPID=20338
+PS4='+ '
+PWD=/root
+SHELL=/bin/bash
+SHELLOPTS=braceexpand:hashall:interactive-comments
+SHLVL=1
+SSH_CLIENT='35.198.201.41 42600 22'
+SSH_CONNECTION='35.198.201.41 42600 10.148.0.40 22'
+TERM=dumb
+UID=0
+USER=root
+XDG_RUNTIME_DIR=/run/user/0
+XDG_SESSION_CLASS=user
+XDG_SESSION_ID=10
+XDG_SESSION_TYPE=tty
+_=']'
+Checking Java version in the PATH
+bash: java: command not found
+Java is not in the PATH nor configured with the javaPath setting, Jenkins will try to guess where is Java, this guess will be removed in the future. :Launch agents via SSH
+[01/05/22 13:00:34] [SSH] Checking java version of /jenkins-agent/jdk/bin/java
+Couldn't figure out the Java version of /jenkins-agent/jdk/bin/java
+bash: /jenkins-agent/jdk/bin/java: No such file or directory
+
+[01/05/22 13:00:34] [SSH] Checking java version of java
+Couldn't figure out the Java version of java
+bash: java: command not found
+
+[01/05/22 13:00:34] [SSH] Checking java version of /usr/bin/java
+Couldn't figure out the Java version of /usr/bin/java
+bash: /usr/bin/java: No such file or directory
+
+[01/05/22 13:00:34] [SSH] Checking java version of /usr/java/default/bin/java
+Couldn't figure out the Java version of /usr/java/default/bin/java
+bash: /usr/java/default/bin/java: No such file or directory
+
+[01/05/22 13:00:34] [SSH] Checking java version of /usr/java/latest/bin/java
+Couldn't figure out the Java version of /usr/java/latest/bin/java
+bash: /usr/java/latest/bin/java: No such file or directory
+
+[01/05/22 13:00:34] [SSH] Checking java version of /usr/local/bin/java
+Couldn't figure out the Java version of /usr/local/bin/java
+bash: /usr/local/bin/java: No such file or directory
+
+[01/05/22 13:00:34] [SSH] Checking java version of /usr/local/java/bin/java
+Couldn't figure out the Java version of /usr/local/java/bin/java
+bash: /usr/local/java/bin/java: No such file or directory
+
+java.io.IOException: Java not found on hudson.slaves.SlaveComputer@7addb5d8. Install Java 8 or Java 11 on the Agent.
+	at hudson.plugins.sshslaves.JavaVersionChecker.resolveJava(JavaVersionChecker.java:84)
+	at hudson.plugins.sshslaves.SSHLauncher$1.call(SSHLauncher.java:453)
+	at hudson.plugins.sshslaves.SSHLauncher$1.call(SSHLauncher.java:421)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[01/05/22 13:00:34] Launch failed - cleaning up connection
+[01/05/22 13:00:34] [SSH] Connection closed.

@@ -1,0 +1,808 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1145.v7f2433caa07f">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <com.cloudbees.jenkins.GitHubPushCause plugin="github@1.34.1">
+            <pushedBy>nghiattr</pushedBy>
+          </com.cloudbees.jenkins.GitHubPushCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.triggers.SCMTrigger_-BuildAction/>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@552.vd9cc05b8a2e1">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.9.3">
+      <stagesUUID>a7c1f0d1-c2f8-4652-bac6-e2fed5f42e2a</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@1.9.3">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <agent>
+                  <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTClosureMap">
+                    <variables class="linked-hash-map">
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>label</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="string">jenkins-agent</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                    </variables>
+                  </variables>
+                  <agentType>
+                    <key>node</key>
+                  </agentType>
+                </agent>
+                <name>SonarScanner</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">pwd</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">
+        docker run             --rm             --net host             -e SONAR_HOST_URL=&quot;http://35.247.164.137:9000&quot;             -v ${PWD}:/usr/src              sonarsource/sonar-scanner-cli             -Dsonar.verbose=true             -Dsonar.host.url=http://35.247.164.137:9000             -Dsonar.projectName=sonarqube-test             -Dsonar.projectKey=sonarqube-test             -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8             -Dsonar.sources=.
+         </value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <agent>
+                  <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTClosureMap">
+                    <variables class="linked-hash-map">
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>image</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="string">python:3.8-slim-buster</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>args</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="string">-u 0:0 -v /tmp:/root/.cache</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                    </variables>
+                  </variables>
+                  <agentType>
+                    <key>docker</key>
+                  </agentType>
+                </agent>
+                <name>Test</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">pip install poetry</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">poetry install</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">poetry run pytest</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <agent>
+                  <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTClosureMap">
+                    <variables class="linked-hash-map">
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>label</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="string">jenkins-agent</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                    </variables>
+                  </variables>
+                  <agentType>
+                    <key>node</key>
+                  </agentType>
+                </agent>
+                <environment>
+                  <variables class="linked-hash-map">
+                    <entry>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <key>DOCKER_TAG</key>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                        <value class="string">&quot;${GIT_BRANCH.tokenize(&apos;/&apos;).pop()}-${GIT_COMMIT.substring(0,7)}&quot;</value>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                    </entry>
+                  </variables>
+                </environment>
+                <name>Build</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">docker.withRegistry( &apos;http://&apos;+registry, registryCredentials ) {
+             sh &quot;docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG  } . &quot;
+             sh &quot;docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest&quot;
+             sh &quot;docker image ls | grep ${DOCKER_IMAGE}&quot;
+             sh &quot;docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+             sh &quot;docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+             sh &quot;docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest&quot;
+             sh &quot;docker push ${registry}/${DOCKER_IMAGE}:latest&quot;
+             sh &quot;docker image ls | grep ${DOCKER_IMAGE}&quot;
+          }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">&quot;docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">&quot;docker image rm ${DOCKER_IMAGE}:latest&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">&quot;docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">&quot;docker image rm ${registry}/${DOCKER_IMAGE}:latest&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">docker image ls</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <agent>
+                  <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTClosureMap">
+                    <variables class="linked-hash-map">
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>label</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="string">jenkins-agent</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                    </variables>
+                  </variables>
+                  <agentType>
+                    <key>node</key>
+                  </agentType>
+                </agent>
+                <name>Deploy</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">gcloud container clusters get-credentials k8s-cluster --zone asia-southeast1-a --project jenkins-cicd-project-335209</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">helm  upgrade --install -f helm-chart/values.yaml flaskdockerrr helm-chart/</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">helm list</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>a7c1f0d1-c2f8-4652-bac6-e2fed5f42e2a</uuid>
+          </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>success</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>echo</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>message</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">SUCCESSFULLLLL</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>failure</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>echo</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>message</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">FAILED</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
+          <environment>
+            <variables class="linked-hash-map">
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>DOCKER_IMAGE</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">flask-docker</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>registryCredentials</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">nexus-server</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>registry</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">34.150.85.230:5000</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+            </variables>
+          </environment>
+          <agent>
+            <agentType>
+              <key>none</key>
+            </agentType>
+          </agent>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <hudson.plugins.git.util.BuildData plugin="git@4.10.1">
+      <buildsByBranchName>
+        <entry>
+          <string>origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>5bf17b7a692110b8be0552e85ae6909ca38f4ad7</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@3.11.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>1</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/develop</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>b5afaf516a4b75a34548c55993a8bf041c45e871</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/develop</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@3.11.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>10</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>refs/remotes/origin/develop</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>56b651cfb84e56aebbd2811d81a86cf1f1ec92da</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/develop</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>37</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry[3]/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/nghiattr/flask-docker.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.13">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/nghiattr/flask-docker.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2648.va9433432b33c">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <org.jenkinsci.plugins.docker.workflow.ImageAction plugin="docker-workflow@1.26">
+      <names class="sorted-set">
+        <string>python:3.8-slim-buster</string>
+      </names>
+    </org.jenkinsci.plugins.docker.workflow.ImageAction>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1055.v1346ba467ba1">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+  </actions>
+  <queueId>157</queueId>
+  <timestamp>1641498973360</timestamp>
+  <startTime>1641498973381</startTime>
+  <result>SUCCESS</result>
+  <duration>116007</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>pipeline {
+
+  agent none 
+
+  environment {
+    DOCKER_IMAGE = &quot;flask-docker&quot;
+    
+    registryCredentials = &quot;nexus-server&quot;
+    registry = &quot;34.150.85.230:5000&quot;
+  }
+
+  stages {
+    stage(&quot;SonarScanner&quot;){
+      // agent{ node {label &apos;Sonarqube-Agent&apos;}}
+      // steps {
+      //    sh &apos;&apos;&apos;
+      //     docker run \
+      //       --rm \
+      //       --net host \
+      //       -e SONAR_HOST_URL=&quot;http://172.104.186.34:9000&quot; \
+      //       -v ${PWD}:/sonarqube-agent/workspace/sonarqube-test \
+      //       sonarsource/sonar-scanner-cli \
+      //       -Dsonar.host.url=http://172.104.186.34:9000 \
+      //       -Dsonar.projectName=sonarqube-test \
+      //       -Dsonar.projectKey=sonarqube-test \
+      //       -Dsonar.projectBaseDir=/sonarqube-agent/workspace/sonarqube-test \
+      //       -Dsonar.login=0c943233fe7741a82d27de1d70c3aa4269b62914 \
+      //       -Dsonar.sources=. &quot;
+      //    &apos;&apos;&apos;
+      // }
+      agent { node {label &apos;jenkins-agent&apos;}}
+      // agent { node {label &apos;Agent-deploy&apos;}}
+      // agent {
+      //    docker {
+      //       image &apos;sonarsource/sonar-scanner-cli&apos;
+      //       args &apos;--rm -u 0:0 -v /tmp:/root/src --net host -e SONAR_HOST_URL=&quot;http://172.104.186.34:9000&quot;&apos;
+      //     }
+      // }
+      steps{
+        sh&quot;pwd&quot;
+        sh &apos;&apos;&apos;
+        docker run \
+            --rm \
+            --net host \
+            -e SONAR_HOST_URL=&quot;http://35.247.164.137:9000&quot; \
+            -v ${PWD}:/usr/src  \
+            sonarsource/sonar-scanner-cli \
+            -Dsonar.verbose=true \
+            -Dsonar.host.url=http://35.247.164.137:9000 \
+            -Dsonar.projectName=sonarqube-test \
+            -Dsonar.projectKey=sonarqube-test \
+            -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8 \
+            -Dsonar.sources=.
+         &apos;&apos;&apos;
+      }
+    }
+
+    stage(&quot;Test&quot;) {
+      agent {
+         docker {
+            image &apos;python:3.8-slim-buster&apos;
+            args &apos;-u 0:0 -v /tmp:/root/.cache&apos;
+          }
+      }
+      steps {
+        // sh &quot;docker run -d -v /tmp:/root/.cache -w /var/jenkins_home/workspace/Flask-Docker --name pythontest123 python:3.8-slim-buster&quot;
+        // // sh &quot;docker exec -it pythontest123 bash&quot;
+        sh &quot;pip install poetry&quot;
+        sh &quot;poetry install&quot;
+        sh &quot;poetry run pytest&quot;
+        // sh &quot;docker stop pythontest123&quot;
+        // sh &quot;docker rm pythontest123&quot;
+      }
+    }
+  //   stage(&apos;Code Quality Check via SonarQube&apos;) {
+  //     steps {
+  //       script {
+  //       def scannerHome = tool &apos;sonarqube&apos;;
+  //           withSonarQubeEnv(&quot;sonarqube-container&quot;) {
+  //           sh &quot;${tool(&quot;sonarqube&quot;)}/bin/sonar-scanner \
+  //           -Dsonar.projectKey=test-node-js \
+  //           -Dsonar.sources=. \
+  //           -Dsonar.css.node=. \
+  //           -Dsonar.host.url=http://your-ip-here:9000 \
+  //           -Dsonar.login=your-generated-token-from-sonarqube-container&quot;
+  //               }
+  //          }
+  //      }
+  //  }
+    
+    stage(&quot;Build&quot;) {
+      agent { node {label &apos;jenkins-agent&apos;}}
+      environment {
+        DOCKER_TAG=&quot;${GIT_BRANCH.tokenize(&apos;/&apos;).pop()}-${GIT_COMMIT.substring(0,7)}&quot;
+      }
+      steps {
+        // sh &quot;docker build -t ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} . &quot;
+        // sh &quot;docker tag ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest&quot;
+        // sh &quot;docker image ls | grep ${DOCKER_IMAGE}&quot;
+
+        //Push to Nexus repo
+
+
+
+        //Push to dockerhub
+        // withCredentials([usernamePassword(credentialsId: &apos;docker-hub&apos;, usernameVariable: &apos;DOCKER_USERNAME&apos;, passwordVariable: &apos;DOCKER_PASSWORD&apos;)]) {
+        //     sh &apos;echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin&apos;
+        //     sh &quot;docker push ${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+        //     sh &quot;docker push ${DOCKER_IMAGE}:latest&quot;
+        // }
+
+        //sh &quot;docker logout&quot;
+        script {
+             docker.withRegistry( &apos;http://&apos;+registry, registryCredentials ) {
+             sh &quot;docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG  } . &quot;
+             sh &quot;docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest&quot;
+             sh &quot;docker image ls | grep ${DOCKER_IMAGE}&quot;
+             sh &quot;docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+             sh &quot;docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+             sh &quot;docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest&quot;
+             sh &quot;docker push ${registry}/${DOCKER_IMAGE}:latest&quot;
+             sh &quot;docker image ls | grep ${DOCKER_IMAGE}&quot;
+          }
+        }
+
+        //clean to save disk
+        sh &quot;docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+        sh &quot;docker image rm ${DOCKER_IMAGE}:latest&quot;
+        sh &quot;docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+        sh &quot;docker image rm ${registry}/${DOCKER_IMAGE}:latest&quot;
+        sh &quot;docker image ls&quot;
+      }
+    }
+
+    // stage(&quot;Uploading to Nexus&quot;){
+    //   agent {node {label &apos;Agent-deploy&apos;}}
+    //   environment {
+    //     DOCKER_TAG=&quot;${GIT_BRANCH.tokenize(&apos;/&apos;).pop()}-${GIT_COMMIT.substring(0,7)}&quot;
+    //   }
+    //   steps{
+    //     script {
+    //          docker.withRegistry( &apos;http://&apos;+registry, registryCredentials ) {
+    //          //DOCKER_IMAGE.push(${DOCKER_TAG})
+    //          DOCKER_IMAGE.push(&apos;latest&apos;)
+    //       }
+    //     }
+    //     sh &quot;docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}&quot;
+    //     sh &quot;docker image rm ${DOCKER_IMAGE}:latest&quot;
+    //   }
+
+    // }
+
+    stage(&quot;Deploy&quot;){
+      agent { node {label &apos;jenkins-agent&apos;}}
+      steps{
+        sh &quot;gcloud container clusters get-credentials k8s-cluster --zone asia-southeast1-a --project jenkins-cicd-project-335209&quot;
+        //sh &quot;helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/&quot;
+        //sh &quot;helm install -f helm-chart/values.yaml testdocker helm-chart/&quot;
+        //sh &quot;helm  upgrade --install  flask2 helm-chart/&quot;
+        //sh &quot;helm uninstall flask2&quot;
+        sh &quot;helm  upgrade --install -f helm-chart/values.yaml flaskdockerrr helm-chart/&quot;
+        sh &quot;helm list&quot;
+      }
+    }
+  }
+
+
+  post {
+    success {
+      echo &quot;SUCCESSFULLLLL&quot;
+    }
+    failure {
+      echo &quot;FAILED&quot;
+    }
+  }
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>835385895</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>1380627161</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>9151896357</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>388108274</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>2243373014</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>107</iota>
+    <head>1:107</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.10.1">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/nghiattr/flask-docker.git</url>
+            <credentialsId>cc06d1e1-44a5-4361-9e9c-eadedc84103a</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/develop</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+      </scm>
+      <node>jenkins-agent</node>
+      <workspace>/jenkins-agent/workspace/CICD-pipeline</workspace>
+      <changelogFile>/var/jenkins_home/jobs/CICD-pipeline/builds/37/changelog3240828721403039134.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" reference="../../org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout/scm"/>
+      <node></node>
+      <workspace>/var/jenkins_home/workspace/CICD-pipeline</workspace>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" reference="../../org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout/scm"/>
+      <node>jenkins-agent</node>
+      <workspace>/jenkins-agent/workspace/CICD-pipeline</workspace>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" reference="../../org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout/scm"/>
+      <node>jenkins-agent</node>
+      <workspace>/jenkins-agent/workspace/CICD-pipeline</workspace>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>
