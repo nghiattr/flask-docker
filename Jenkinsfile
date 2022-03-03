@@ -167,7 +167,7 @@ pipeline {
 
   post {
     success {
-      echo "SUCCESSFULLLLLLLLLLLLLLLL"
+      echo "SUCCESSFULLLLLLLLLLLLLL"
     }
     failure {
       echo "FAILED"
