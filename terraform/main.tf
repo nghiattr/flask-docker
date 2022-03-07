@@ -1,5 +1,5 @@
-resource "google_service_account" "cicd-project" {
-  account_id   = "nghia-account"
+resource "google_service_account" "cicd-test2" {
+  account_id   = "nghia-accounttestcicd"
   display_name = "NghiaCICD"
 }
 
@@ -25,15 +25,15 @@ resource "google_compute_instance" "jenkins-sv" {
 
   network_interface {
     # A default network is created for all GCP projects
-    network = "local-ip"
-    subnetwork = "local-ip"
+    network = "private-network-cicd"
+    subnetwork = "private-network-cicd"
   }
 
   metadata_startup_script = "apt-get update -y"
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.cicd-project.email
+    email  = google_service_account.cicd-test2.email
     scopes = ["cloud-platform"]
   }
 }
@@ -62,7 +62,7 @@ resource "google_compute_instance" "jenkins-agent" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.cicd-project.email
+    email  = google_service_account.cicd-test2.email
     scopes = ["cloud-platform"]
   }
 }
@@ -91,7 +91,7 @@ resource "google_compute_instance" "sonar-sv" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.cicd-project.email
+    email  = google_service_account.cicd-test2.email
     scopes = ["cloud-platform"]
   }
 }
@@ -120,7 +120,7 @@ resource "google_compute_instance" "nexus-sv" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.cicd-project.email
+    email  = google_service_account.cicd-test2.email
     scopes = ["cloud-platform"]
   }
 }
@@ -146,7 +146,7 @@ resource "google_container_node_pool" "node1" {
     machine_type = "e2-small"
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    service_account = google_service_account.cicd-project.email
+    service_account = google_service_account.cicd-test2.email
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
