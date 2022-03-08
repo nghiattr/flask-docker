@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-docker
-        image: 34.150.85.230:5000/flask-docker:latest
+        image: trongnghiattr/flask-docker:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3200
