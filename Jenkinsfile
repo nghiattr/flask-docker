@@ -28,12 +28,16 @@ pipeline {
     }
     stage("Deploy"){
       agent { node {label 'jenkins-agent'}}
+      environment {
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+      }
       steps{
         sh "gcloud container clusters get-credentials k8s-cluster --zone asia-southeast2-a --project cicd-nghia-test"
         // sh "kubectl delete -f Flask-docker-deployment.yaml"
         // sh "kubectl delete -f Flask-docker-service.yaml"
         sh "kubectl apply -f Flask-docker-deployment.yaml"
         sh "kubectl apply -f Flask-docker-service.yaml"
+        sh "kubectl set image deployment/flask-docker-deployment flask-docker=trongnghiattr/flask-docker:${DOCKER_TAG} --record"
       }
     }
   }
