@@ -12,4 +12,3 @@ spec:
     targetPort: 5000
   selector:
     app: flask-docker
-  sessionAffinity: None
