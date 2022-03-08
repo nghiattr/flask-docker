@@ -30,6 +30,8 @@ pipeline {
       agent { node {label 'jenkins-agent'}}
       steps{
         sh "gcloud container clusters get-credentials k8s-cluster --zone asia-southeast2-a --project cicd-nghia-test"
+        sh "kubectl delete -f Flask-docker-deployment.yaml"
+        sh "kubectl delete -f Flask-docker-service.yaml"
         sh "kubectl apply -f Flask-docker-deployment.yaml"
         sh "kubectl apply -f Flask-docker-service.yaml"
       }
