@@ -14,13 +14,9 @@ pipeline {
           }
       }
       steps {
-        // sh "docker run -d -v /tmp:/root/.cache -w /var/jenkins_home/workspace/Flask-Docker --name pythontest123 python:3.8-slim-buster"
-        // // sh "docker exec -it pythontest123 bash"
         sh "pip install poetry"
         sh "poetry install"
         sh "poetry run pytest"
-        // sh "docker stop pythontest123"
-        // sh "docker rm pythontest123"
       }
     }
 
