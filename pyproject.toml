@@ -2,7 +2,7 @@
 name = "flask-docker"
 version = "0.1.4"
 description = ""
-authors = ["Liam <hoangtua.vn@gmail.com>"]
+authors = ["Nghia <nghiavodich2@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
