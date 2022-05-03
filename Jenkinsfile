@@ -36,23 +36,23 @@ pipeline {
       //       args '--rm -u 0:0 -v /tmp:/root/src --net host -e SONAR_HOST_URL="http://172.104.186.34:9000"'
       //     }
       // }
-      steps{
-        sh"pwd"
-        sh '''
-        docker run \
-            --rm \
-            --net host \
-            -e SONAR_HOST_URL="http://35.247.164.137:9000" \
-            -v ${PWD}:/usr/src  \
-            sonarsource/sonar-scanner-cli \
-            -Dsonar.verbose=true \
-            -Dsonar.host.url=http://35.247.164.137:9000 \
-            -Dsonar.projectName=sonarqube-test \
-            -Dsonar.projectKey=sonarqube-test \
-            -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8 \
-            -Dsonar.sources=.
-         '''
-      }
+      // steps{
+      //   sh"pwd"
+      //   sh '''
+      //   docker run \
+      //       --rm \
+      //       --net host \
+      //       -e SONAR_HOST_URL="http://35.247.164.137:9000" \
+      //       -v ${PWD}:/usr/src  \
+      //       sonarsource/sonar-scanner-cli \
+      //       -Dsonar.verbose=true \
+      //       -Dsonar.host.url=http://35.247.164.137:9000 \
+      //       -Dsonar.projectName=sonarqube-test \
+      //       -Dsonar.projectKey=sonarqube-test \
+      //       -Dsonar.login=2aaca7485ae9a1b0eeec77e6a3a71c87cee7cfe8 \
+      //       -Dsonar.sources=.
+      //    '''
+      // }
     }
 
     stage("Test") {
@@ -93,43 +93,43 @@ pipeline {
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
-      steps {
-        // sh "docker build -t ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} . "
-        // sh "docker tag ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-        // sh "docker image ls | grep ${DOCKER_IMAGE}"
+      // steps {
+      //   // sh "docker build -t ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} . "
+      //   // sh "docker tag ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+      //   // sh "docker image ls | grep ${DOCKER_IMAGE}"
 
-        //Push to Nexus repo
+      //   //Push to Nexus repo
 
 
 
-        //Push to dockerhub
-        // withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-        //     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
-        //     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        //     sh "docker push ${DOCKER_IMAGE}:latest"
-        // }
+      //   //Push to dockerhub
+      //   // withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+      //   //     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+      //   //     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+      //   //     sh "docker push ${DOCKER_IMAGE}:latest"
+      //   // }
 
-        //sh "docker logout"
-        script {
-             docker.withRegistry( 'http://'+registry, registryCredentials ) {
-             sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
-             sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-             sh "docker image ls | grep ${DOCKER_IMAGE}"
-             sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
-             sh "docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
-             sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest"
-             sh "docker push ${registry}/${DOCKER_IMAGE}:latest"
-             sh "docker image ls | grep ${DOCKER_IMAGE}"
-          }
-        }
+      //   //sh "docker logout"
+      //   script {
+      //        docker.withRegistry( 'http://'+registry, registryCredentials ) {
+      //        sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
+      //        sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+      //        sh "docker image ls | grep ${DOCKER_IMAGE}"
+      //        sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+      //        sh "docker push ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+      //        sh "docker tag ${DOCKER_IMAGE} ${registry}/${DOCKER_IMAGE}:latest"
+      //        sh "docker push ${registry}/${DOCKER_IMAGE}:latest"
+      //        sh "docker image ls | grep ${DOCKER_IMAGE}"
+      //     }
+      //   }
 
-        //clean to save disk
-        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${DOCKER_IMAGE}:latest"
-        sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
-        sh "docker image ls"
-      }
+      //   //clean to save disk
+      //   sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+      //   sh "docker image rm ${DOCKER_IMAGE}:latest"
+      //   sh "docker image rm ${registry}/${DOCKER_IMAGE}:${DOCKER_TAG}"
+      //   sh "docker image rm ${registry}/${DOCKER_IMAGE}:latest"
+      //   sh "docker image ls"
+      // }
     }
 
     // stage("Uploading to Nexus"){
@@ -153,13 +153,13 @@ pipeline {
     stage("Deploy"){
       agent { node {label 'jenkins-agent'}}
       steps{
-        sh "gcloud container clusters get-credentials k8s-cluster --zone asia-southeast1-a --project jenkins-cicd-project-335209"
+        // sh "gcloud container clusters get-credentials k8s-cluster --zone asia-southeast1-a --project jenkins-cicd-project-335209"
         //sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml testhelmdeploy helm-chart/"
         //sh "helm install -f helm-chart/values.yaml testdocker helm-chart/"
         //sh "helm  upgrade --install  flask2 helm-chart/"
         //sh "helm uninstall flask2"
-        sh "helm  upgrade --install -f helm-chart/values.yaml flaskdockerrr helm-chart/"
-        sh "helm list"
+        // sh "helm  upgrade --install -f helm-chart/values.yaml flaskdockerrr helm-chart/"
+        // sh "helm list"
       }
     }
   }
