@@ -12,6 +12,9 @@ pipeline {
   stages {
     stage("SonarScanner"){
       agent { node {label 'jenkins-agent'}}
+      steps{
+        sh "whoami"
+      }
     }
 
     stage("Test") {
@@ -33,6 +36,9 @@ pipeline {
     }
     stage("Deploy"){
       agent { node {label 'jenkins-agent'}}
+      steps{
+        sh "whoami"
+      }
     }
   }
 
