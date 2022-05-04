@@ -21,7 +21,7 @@ pipeline {
       agent { node {label 'jenkins-agent'}}
       steps{
         dir("./server/") {
-        sh 'sudo sl analyze --app HelloShiftLeft --python .'
+        sh 'sudo sl analyze --app Flask-docker --python .'
         }
       } 
     }
@@ -59,10 +59,29 @@ pipeline {
             sh "docker push ${DOCKER_IMAGE}:latest"
         }
 
+        // //clean to save disk
+        // sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        // sh "docker image rm ${DOCKER_IMAGE}:latest"
+      }
+    }
+
+    stage('SLAnalyze') {
+      agent { node {label 'jenkins-agent'}}
+      environment {
+        DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
+      }
+      steps{
+
+        sh 'docker save flask-docker:latest > flask_docker_latest.tar'
+        dir("./server/") {
+        sh 'sudo sl analyze --app Flask-docker-image --python flask_docker_latest.tar'
+        }
+
         //clean to save disk
         sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
         sh "docker image rm ${DOCKER_IMAGE}:latest"
-      }
+        
+      } 
     }
 
     stage("Deploy"){
