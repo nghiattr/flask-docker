@@ -72,8 +72,9 @@ pipeline {
       }
       steps{
 
-        sh 'docker save flask-docker:latest > flask_docker_latest.tar'
+        
         dir("./server/") {
+        sh 'docker save flask-docker:latest > flask_docker_latest.tar'
         sh 'sudo sl analyze --app Flask-docker-image --python flask_docker_latest.tar'
         }
 
