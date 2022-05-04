@@ -54,6 +54,14 @@ pipeline {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
+
+    stage("Deploy"){
+      agent {node {label 'jenkins-agent'}}
+      steps{
+        sh "whoami"
+      }
+    }
+
   }
 
 
