@@ -65,7 +65,7 @@ pipeline {
       }
     }
 
-    stage('SLAnalyze') {
+    stage('SLAnalyze-image') {
       agent { node {label 'jenkins-agent'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
