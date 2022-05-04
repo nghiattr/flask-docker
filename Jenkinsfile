@@ -3,7 +3,7 @@ pipeline {
   agent none 
 
   environment {
-    DOCKER_IMAGE = "flask-docker"
+    DOCKER_IMAGE = "trongnghiattr/flask-docker"
     
     registryCredentials = "nexus-server"
     registry = "34.150.85.230:5000"
