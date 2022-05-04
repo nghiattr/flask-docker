@@ -17,6 +17,15 @@ pipeline {
       }
     }
 
+    stage('SLAnalyze') {
+      agent { node {label 'jenkins-agent'}}
+      steps{
+        dir("./server/") {
+        sh 'sudo sl analyze --app HelloShiftLeft --python .'
+        }
+      } 
+    }
+
     stage("Test") {
       agent {
          docker {
