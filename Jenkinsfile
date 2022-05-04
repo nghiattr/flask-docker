@@ -73,10 +73,17 @@ pipeline {
       steps{
 
         
-        dir("./server/") {
-        sh 'docker save flask-docker:latest > flask_docker_latest.tar'
-        sh 'sudo sl analyze --app Flask-docker-image --python flask_docker_latest.tar'
-        }
+        sh 'docker save flask-docker:latest > flask-docker_latest.tar'
+
+        sh '''
+        docker run -ti --rm \
+          -v $`pwd`/flask-docker_latest.tar:/img/flask-docker_latest.tar \
+          -e CHKP_CLOUDGUARD_ID=$CHKP_CLOUDGUARD_ID \
+          -e CHKP_CLOUDGUARD_SECRET=$CHKP_CLOUDGUARD_SECRET \
+          checkpoint/shiftleft \
+          shiftleft  image-scan -t 900 \
+              -i /img/flask-docker_latest.tar
+        '''
 
         //clean to save disk
         sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
