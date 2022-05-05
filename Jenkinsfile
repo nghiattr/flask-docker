@@ -17,14 +17,15 @@ pipeline {
       }
     }
 
-    // stage('SLAnalyze') {
-    //   agent { node {label 'jenkins-agent'}}
-    //   steps{
-    //     dir("./server/") {
-    //     sh 'sudo sl analyze --app Flask-docker --python .'
-    //     }
-    //   }
-    // }
+    stage('SLAnalyze') {
+      agent { node {label 'jenkins-agent'}}
+      steps{
+        // dir("./server/") {
+        // sh 'sudo sl analyze --app Flask-docker --python .'
+        // }
+        sh 'whoami'
+      }
+    }
 
     stage("Test") {
       agent {
@@ -50,19 +51,19 @@ pipeline {
       }
       steps{
         sh "whoami"
-        // sh "docker logout"
-        // sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
-        // sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-        // sh "docker image ls | grep ${DOCKER_IMAGE}"
-        // withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-        //     sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
-        //     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        //     sh "docker push ${DOCKER_IMAGE}:latest"
-        // }
+        sh "docker logout"
+        sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
+        sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+        sh "docker image ls | grep ${DOCKER_IMAGE}"
+        withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+            sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+            sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+            sh "docker push ${DOCKER_IMAGE}:latest"
+        }
 
-        // //clean to save disk
-        // sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        // sh "docker image rm ${DOCKER_IMAGE}:latest"
+        //clean to save disk
+        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
 
@@ -78,12 +79,12 @@ pipeline {
         sh ''
         sh '''
           docker run --rm \
-            -v `pwd`/flask-docker_latest.tar:/img/flask-docker_latest.tar \
+            -v `pwd`/flask-docker_latest.tar:/img/flask_docker_latest.tar \
             -e CHKP_CLOUDGUARD_ID="9b9b9acf-7fb4-4015-acac-1a30120edb7d" \
             -e CHKP_CLOUDGUARD_SECRET="5gd9p3dw5ix5e353bbzmkfmp" \
             checkpoint/shiftleft \
             shiftleft  image-scan -t 900 \
-                -i /img/flask-docker_latest.tar
+                -i /img/flask_docker_latest.tar
         '''
 
         //clean to save disk
