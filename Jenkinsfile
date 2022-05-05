@@ -17,14 +17,14 @@ pipeline {
       }
     }
 
-    stage('SLAnalyze') {
-      agent { node {label 'jenkins-agent'}}
-      steps{
-        dir("./server/") {
-        sh 'sudo sl analyze --app Flask-docker --python .'
-        }
-      }
-    }
+    // stage('SLAnalyze') {
+    //   agent { node {label 'jenkins-agent'}}
+    //   steps{
+    //     dir("./server/") {
+    //     sh 'sudo sl analyze --app Flask-docker --python .'
+    //     }
+    //   }
+    // }
 
     stage("Test") {
       agent {
