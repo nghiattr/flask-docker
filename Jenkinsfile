@@ -79,7 +79,7 @@ pipeline {
         sh ''
         sh '''
           docker run --rm \
-            -v `pwd`/flask-docker_latest.tar:/img/flask_docker_latest.tar \
+            -v `pwd`/flask_docker_latest.tar:/img/flask_docker_latest.tar \
             -e CHKP_CLOUDGUARD_ID="9b9b9acf-7fb4-4015-acac-1a30120edb7d" \
             -e CHKP_CLOUDGUARD_SECRET="5gd9p3dw5ix5e353bbzmkfmp" \
             checkpoint/shiftleft \
