@@ -75,7 +75,7 @@ pipeline {
       steps{
 
         
-        sh 'sudo docker save trongnghiattr/flask-docker:latest -o flask_docker_latest.tar'
+        sh 'docker save trongnghiattr/flask-docker:latest -o flask_docker_latest.tar'
         sh ''
         sh '''
           docker run --rm \
