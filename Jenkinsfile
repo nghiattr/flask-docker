@@ -52,13 +52,13 @@ pipeline {
       steps{
         sh "whoami"
         sh "docker logout"
-        sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
-        sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-        sh "docker image ls | grep ${DOCKER_IMAGE}"
+        sh "sudo docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
+        sh "sudo docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+        sh "sudo docker image ls | grep ${DOCKER_IMAGE}"
         withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
             sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
-            sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-            sh "docker push ${DOCKER_IMAGE}:latest"
+            sh "sudo docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+            sh "sudo docker push ${DOCKER_IMAGE}:latest"
         }
 
         //clean to save disk
@@ -75,7 +75,7 @@ pipeline {
       steps{
 
         
-        sh "docker save ${DOCKER_IMAGE}:latest -o flask_docker_latest.tar"
+        sh "sudo docker save ${DOCKER_IMAGE}:latest -o flask_docker_latest.tar"
         sh '''
           docker run --rm \
             -v `pwd`/flask_docker_latest.tar:/img/flask_docker_latest.tar \
@@ -87,8 +87,8 @@ pipeline {
         '''
 
         //clean to save disk
-        sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        sh "docker image rm ${DOCKER_IMAGE}:latest"
+        sh "sudo docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        sh "sudo docker image rm ${DOCKER_IMAGE}:latest"
         
       }
     }
