@@ -1,6 +1,6 @@
-image: 34.150.85.230:5000/flask-docker:latest
-imagePullPolicy: IfNotPresent
-replicaCount: 1
+image: reponexus.nghiathang.tk/flask-docker:latest
+imagePullPolicy: Always
+replicaCount: 2
 
 service:
   type: LoadBalancer
